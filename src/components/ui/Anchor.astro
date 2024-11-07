@@ -1,0 +1,41 @@
+---
+import type { DefaultProps } from "./types";
+import { Icon } from "astro-icon/components";
+import { getDefaultClass, getIconSize, getSize, getVariant } from "./variants";
+
+type Target = "_blank" | "_self" | "_parent" | "_top";
+
+type Props = DefaultProps & {
+  href: string;
+  target?: Target;
+};
+
+const {
+  label,
+  href,
+  target = "_self",
+  icon,
+  size = "md",
+  variant = "primary",
+  className = "",
+  isResponsive = false,
+} = Astro.props as Props;
+
+const iconSize = getIconSize(size);
+const anchorSize = getSize(size);
+const anchorVariant = getVariant(variant);
+const classNames = getDefaultClass(className);
+---
+
+<a
+  href={href}
+  target={target}
+  class={classNames + " " + anchorVariant + " " + anchorSize}
+>
+  {icon && <Icon name={icon} class={iconSize} />}
+  {
+    label && (
+      <span class={`${isResponsive ? "hidden md:inline" : ""}`}>{label}</span>
+    )
+  }
+</a>

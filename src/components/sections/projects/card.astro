@@ -1,0 +1,48 @@
+---
+import type { Project } from "../../../types/project";
+
+import { Image } from "astro:assets";
+import Anchor from "../../ui/Anchor.astro";
+
+type Props = {
+  project: Project;
+};
+
+const { project } = Astro.props;
+---
+
+<div class="bg-background-alt rounded-lg shadow-md h-fit">
+  <Image
+    src={project.image}
+    alt={project.name}
+    width={400}
+    height={300}
+    class="w-full h-44 2xl:h-60 object-cover rounded-t-lg"
+  />
+  <div class="p-4">
+    <h2 class="text-lg font-bold text-foreground">{project.name}</h2>
+    <p class="mt-2 text-md text-left text-foreground-alt">
+      {project.description}
+    </p>
+
+    <div
+      class="flex flex-row justify-start gap-4 md:gap-0 md:justify-between mt-4"
+    >
+      <Anchor
+        href={project.sourceCode}
+        label="Source Code"
+        icon="lucide:github"
+        target="_blank"
+        size="sm"
+      />
+      <Anchor
+        href={project.details}
+        label="Details"
+        icon="lucide:info"
+        target="_blank"
+        size="sm"
+        variant="outline"
+      />
+    </div>
+  </div>
+</div>

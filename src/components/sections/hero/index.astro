@@ -1,0 +1,67 @@
+---
+import Anchor from "../../ui/Anchor.astro";
+import ColourfulSpan from "../../ui/ColourfulSpan.astro";
+import Container from "../../ui/Container.astro";
+const socials = [
+  {
+    label: "github",
+    href: "https://github.com/diegorezm",
+    icon: "lucide:github",
+  },
+  {
+    label: "linkedin",
+    href: "https://www.linkedin.com/in/diegorezm/",
+    icon: "lucide:linkedin",
+  },
+  {
+    label: "email",
+    href: "mailto:diegommrez12@gmail.com",
+    icon: "lucide:mail",
+  },
+];
+---
+
+<Container id="home">
+  <main class="flex items-center flex-col gap-12">
+    <div class="text-center max-w-3xl">
+      <h1 class="text-5xl text-center font-bold tracking-wide leading-tight">
+        Hello, my name is <ColourfulSpan label="Diego!" color="primary" /> I’m a
+        <ColourfulSpan label="full-stack" color="primary" />
+        web developer!
+      </h1>
+    </div>
+    <div class="flex flex-col lg:flex-row lg:justify-evenly gap-4">
+      <Anchor
+        icon="lucide:paperclip"
+        label="See my resume!"
+        href="#about"
+        size="lg"
+        variant="primary"
+      />
+
+      <Anchor
+        icon="lucide:mail"
+        label="Contact me!"
+        href="#contact"
+        size="lg"
+        variant="secondary"
+      />
+    </div>
+
+    <div class="flex gap-4">
+      {
+        socials.map((social) => (
+          <Anchor
+            href={social.href}
+            icon={social.icon}
+            label={social.label}
+            target="_blank"
+            variant="ghost"
+            size="sm"
+            className="text-secondary transition-colors"
+          />
+        ))
+      }
+    </div>
+  </main>
+</Container>

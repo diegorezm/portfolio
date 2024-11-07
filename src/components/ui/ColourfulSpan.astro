@@ -1,0 +1,19 @@
+---
+type Props = {
+  label: string;
+  color: "primary" | "secondary" | "accent";
+  className?: string;
+};
+
+const { label, color, className } = Astro.props as Props;
+
+const colours = {
+  primary: "text-primary",
+  secondary: "text-secondary",
+  accent: "text-accent",
+};
+
+const classes = `${colours[color]} ${className} transition-colors`;
+---
+
+<span class={classes}>{label}</span>

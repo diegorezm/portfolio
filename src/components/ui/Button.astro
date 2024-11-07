@@ -1,0 +1,35 @@
+---
+import type { DefaultProps } from "./types";
+import { Icon } from "astro-icon/components";
+import { getDefaultClass, getIconSize, getSize, getVariant } from "./variants";
+
+type ButtonType = "submit" | "reset" | "button";
+
+type Props = DefaultProps & {
+  type?: ButtonType;
+  disabled?: boolean;
+};
+
+const {
+  label,
+  icon,
+  size = "md",
+  variant = "primary",
+  className = "",
+  type = "button",
+  isResponsive = false,
+  disabled = false,
+} = Astro.props as Props;
+
+const iconSize = getIconSize(size);
+const classNames = `${getDefaultClass(className)} ${getVariant(variant)} ${getSize(size)}  disabled:opacity-20 disabled:cursor-not-allowed`;
+---
+
+<button class={classNames} type={type} disabled={disabled}>
+  {icon && <Icon name={icon} class={iconSize} />}
+  {
+    label && (
+      <span class={`${isResponsive ? "hidden md:inline" : ""}`}>{label}</span>
+    )
+  }
+</button>

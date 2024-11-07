@@ -1,0 +1,17 @@
+---
+import Container from "../../ui/Container.astro";
+import ProjectCard from "./card.astro";
+import projects from "../../../content/projects";
+---
+
+<Container
+  id="projects"
+  title="Projects"
+  description="These are some of my projects"
+>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2 place-content-center"
+  >
+    {projects.map((project) => <ProjectCard project={project} />)}
+  </div>
+</Container>

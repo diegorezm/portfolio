@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: #282828;
+    --background-alt: #1D2021;
+    --foreground: #F9F5D7;
+    --foreground-alt: #EBDBB2;
+    --primary-foreground: #076678;
+    --secondary-foreground: #83A598;
+    --accent-foreground: #8EC07C;
+    --warning-foreground: #fb4934;
+
+    --radius: 0.7rem;
+  }
+
+  .input {
+    @apply w-full p-4 bg-background rounded-lg focus:outline-none focus:ring focus:ring-primary;
+  }
+
+  .btn {
+    @apply inline-flex justify-center items-center gap-2 transition-colors
+  }
+}
+
+
+html,
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 16px;
+  line-height: 1.5;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  scrollbar-color: var(--foreground) var(--background);
+  line-height: 1.5;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}

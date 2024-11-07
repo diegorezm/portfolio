@@ -1,0 +1,98 @@
+---
+import jwt from "jsonwebtoken";
+import Button from "../../ui/Button.astro";
+
+const API_SECRET_KEY = import.meta.env.API_SECRET_KEY;
+const TOKEN_SECRET_KEY = import.meta.env.TOKEN_SECRET_KEY;
+const token = jwt.sign({ api_secret: API_SECRET_KEY }, TOKEN_SECRET_KEY);
+const submitFn = `
+  isLoading = true;
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json', 
+      'Authorization': 'Bearer ${token}'
+    },
+    body: JSON.stringify({ name: name, email: email, message: message })
+  })
+  .then(response => response.json())
+  .then(data => {
+    response = data.message;
+    isLoading = false;
+    message = '';
+    name = '';
+    email = '';
+  })
+  .catch(error => {
+    isError = true;
+    response = 'Something went wrong. Please try again later.';
+    isLoading = false;
+}).finally(() => {
+  setTimeout(() => {
+    response = '';
+    isError = false;
+  }, 3000);
+});
+`;
+---
+
+<form
+  x-data="{ 
+    isLoading: false, 
+    name: '', 
+    email: '', 
+    isError: false,
+    message: '',
+    response: ''}"
+  @submit.prevent={submitFn}
+  class="flex flex-col gap-6 mt-2"
+  id="contact-form"
+>
+  <p
+    x-show="response"
+    x-text="response"
+    x-transition:enter="transition-opacity ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition-opacity ease-in duration-300"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    :class="{'text-warning-foreground': isError, 'text-accent': !isError}"
+    class="text-sm"
+  >
+  </p>
+  <input
+    type="text"
+    placeholder="Name"
+    x-model="name"
+    class="input"
+    minlength="3"
+    maxlength="50"
+    required
+  />
+  <input
+    type="email"
+    placeholder="Email"
+    x-model="email"
+    class="input"
+    minlength="6"
+    maxlength="50"
+    required
+  />
+  <textarea
+    placeholder="Message"
+    x-model="message"
+    class="input"
+    minlength="10"
+    maxlength="500"
+    rows="5"
+    required></textarea>
+
+  <div x-show="!isLoading">
+    <Button label="Send" type="submit" icon="lucide:mail" size="md" />
+  </div>
+
+  <div x-show="isLoading">
+    <Button label="Sending..." icon="lucide:loader" size="md" disabled />
+  </div>
+</form>

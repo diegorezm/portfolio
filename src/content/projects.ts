@@ -10,7 +10,7 @@ const projectsContent: Project[] = [
       "Full-stack application consisting of a Spring Boot API that interacts with a SQL database. It includes authentication, tests using JUnit and MockMvc, and utilizes Docker for easy deployment. The frontend is built with Next.js",
     tech: ["java", "docker", "spring boot", "nextjs", "typescript", "tailwind"],
     details: "https://www.youtube.com/watch?v=Qd2bRPsiaZE",
-    image: "https://i.ytimg.com/vi/Qd2bRPsiaZE/maxresdefault.jpg",
+    image: "/convenience-store.jpg",
   },
   {
     id: genId(),
@@ -23,7 +23,7 @@ const projectsContent: Project[] = [
     details: "https://diegorezm-start-page.netlify.app/",
 
     image:
-      "https://raw.githubusercontent.com/diegorezm/start_page/refs/heads/main/public/showcase.png"
+      "/start-page.png"
   },
   {
     id: genId(),
@@ -34,7 +34,7 @@ const projectsContent: Project[] = [
     tech: ["rust", "typescript", "react", "tailwind"],
     details: "https://www.youtube.com/watch?v=n_2mIcaMpBM",
     image:
-      "https://raw.githubusercontent.com/diegorezm/wallpapercl/main/showcase.png",
+      "/wallpapercl.png"
   },
 ];
 

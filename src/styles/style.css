@@ -23,13 +23,24 @@ html[data-theme="catppuccin-latte"] {
   --background-alt: #dce0e8;
   --foreground: #4c4f69;
   --foreground-alt: #eff1f5;
-  --primary: #8839ef;
-  --primary-foreground: #4c4f69;
-  --secondary: #ea76cb;
+  --primary-foreground: #8839ef;
   --secondary-foreground: #4c4f69;
-  --accent: #dd7878;
-  --accent-foreground: #4c4f69;
+  --accent-foreground: #8839ef;
   --warning-foreground: #e64553;
+  --radius: 0.5rem;
+}
+
+html[data-theme="darker"] {
+  --font-family: 'Arial', monospace;
+  --background: #131313;
+  --background-alt: #1D2021;
+  --foreground: #d5dbe5;
+  --foreground-alt: #1D2021;
+  --primary-foreground: #4e5ab7;
+  --secondary-foreground: #2a84d2;
+  --accent-foreground: #5350b9;
+
+  --warning-foreground: #f81118;
   --radius: 0.5rem;
 }
 

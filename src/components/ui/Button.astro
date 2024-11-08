@@ -8,6 +8,7 @@ type ButtonType = "submit" | "reset" | "button";
 type Props = DefaultProps & {
   type?: ButtonType;
   disabled?: boolean;
+  onClick?: string;
 };
 
 const {
@@ -19,17 +20,19 @@ const {
   type = "button",
   isResponsive = false,
   disabled = false,
+  onClick,
 } = Astro.props as Props;
 
 const iconSize = getIconSize(size);
 const classNames = `${getDefaultClass(className)} ${getVariant(variant)} ${getSize(size)}  disabled:opacity-20 disabled:cursor-not-allowed`;
 ---
 
-<button class={classNames} type={type} disabled={disabled}>
+<button class={classNames} type={type} disabled={disabled} @click={onClick}>
   {icon && <Icon name={icon} class={iconSize} />}
   {
     label && (
       <span class={`${isResponsive ? "hidden md:inline" : ""}`}>{label}</span>
     )
   }
+  <slot />
 </button>

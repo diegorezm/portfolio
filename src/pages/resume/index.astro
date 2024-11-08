@@ -3,91 +3,204 @@ import Layout from "../../components/layouts/app.astro";
 import Anchor from "../../components/ui/Anchor.astro";
 import Container from "../../components/ui/Container.astro";
 
-const experiences = [
-  {
-    title: "Scientific Research - Oral Biopathology",
-    description: "UNITAU, Taubaté, SP - 2024",
-    bulletPoints: [
-      "Data analysis and visualization generation using Python libraries like Matplotlib to support academic research and data-driven decision-making.",
-    ],
-  },
-  {
-    title: "Soldier",
-    description:
-      "Brazilian Army, Pindamonhangaba, SP - March 2022 - January 2023",
-    bulletPoints: [
-      "Responsible for the security and guarding of military facilities.",
-      "Team collaboration for the execution of missions and tasks.",
-      "Rigorous access control at military checkpoints.",
-      "Recognized with an honor certificate for exemplary performance.",
-    ],
-  },
-];
+const lang = Astro.url.searchParams.get("lang") || "en";
 
-const projects = [
-  {
-    title: "Clinica Integrada Amaral Haga (Clinic Management System)",
-    description: "PHP, Laravel, Livewire, Alpine.js, MySQL",
-    link: "https://github.com/diegorezm/clinica",
-    bulletPoints: [
-      "Developed a robust backend system with Laravel for managing patient, doctor, and appointment records.",
-      "Complete CRUD functionality, allowing efficient creation, editing, viewing, and deletion of clinical records.",
-      "Automatic verification of doctor availability, facilitating scheduling and organization of appointments.",
-      "Interactive and responsive user interface built with Alpine.js and Livewire.",
-      "Integration with MySQL database for secure and structured information storage.",
-      "Full deployment on Hostinger, ensuring stability and online system accessibility.",
-      "Modular architecture, enabling easy expansion and customization to meet specific clinic demands.",
-    ],
-  },
-];
+const langOptions = ["en", "pt-br"];
 
-const certifications = [
-  {
-    href: "https://cert.efset.org/KdGLiQ",
-    label: "English Proficiency Certificate - EF SET",
-  },
-  {
-    href: "https://udemy-certificate.s3.amazonaws.com/image/UC-6fc7d4af-701d-446a-b69b-8e167018a749.jpg?v=1706800581000",
-    label: "JavaScript and TypeScript from Basic to Advanced - Udemy",
-  },
-  {
-    href: "https://udemy-certificate.s3.amazonaws.com/image/UC-7074fe91-0541-4bfd-bc58-af41912a6361.jpg?v=1703254492000",
-    label: "Data Structures and Algorithms - Udemy",
-  },
-  {
-    href: "https://www.cursoemvideo.com/validacao-de-certificado/?codigo=798CE-654D-9",
-    label: "Excel 40 Hours - Curso em Vídeo",
-  },
-];
+const selectedLang = langOptions.includes(lang) ? lang : "en";
 
-const skills = [
-  {
-    name: "Programming Languages",
-    items: ["Java", "JavaScript/TypeScript", "Python", "PHP"],
-  },
-  {
-    name: "Frameworks",
-    items: ["Spring Boot", "Next.js", "React", "Svelte", "Laravel"],
-  },
-  {
-    name: "Databases",
-    items: ["PostgreSQL", "MySQL", "SQLite", "MongoDB"],
-  },
-  {
-    name: "Tools",
-    items: [
-      "Git",
-      "Docker",
-      "Node.js",
-      "Tailwind CSS",
-      "CI/CD (GitHub Actions)",
-    ],
-  },
-  {
-    name: "Markup",
-    items: ["HTML", "CSS", "Markdown"],
-  },
-];
+const education = selectedLang === "pt-br" 
+  ? [
+      {
+        title: "UNITAU - Taubaté, SP",
+        description: "Análise e Desenvolvimento de Sistemas",
+        startDate: "Janeiro 2023",
+        endDate: "Dezembro 2025",
+      },
+    ]
+  : [
+      {
+        title: "UNITAU - Taubaté, SP",
+        description: "Systems Analysis and Development",
+        startDate: "January 2023",
+        endDate: "December 2025",
+      },
+    ];
+
+const experiences = selectedLang === "pt-br"
+  ? [
+      {
+        title: "Pesquisa Científica - Biopatologia Oral",
+        description: "UNITAU, Taubaté, SP - 2024",
+        bulletPoints: [
+          "Análise de dados e geração de visualizações usando bibliotecas Python como Matplotlib para apoiar pesquisa acadêmica e tomada de decisões baseadas em dados.",
+        ],
+      },
+      {
+        title: "Soldado",
+        description:
+          "Exército Brasileiro, Pindamonhangaba, SP - Março 2022 - Janeiro 2023",
+        bulletPoints: [
+          "Responsável pela segurança e guarda das instalações militares.",
+          "Colaboração em equipe para a execução de missões e tarefas.",
+          "Controle rigoroso de acesso em pontos de controle militar.",
+          "Reconhecido com um certificado de honra pelo desempenho exemplar.",
+        ],
+      },
+    ]
+  : [
+      {
+        title: "Scientific Research - Oral Biopathology",
+        description: "UNITAU, Taubaté, SP - 2024",
+        bulletPoints: [
+          "Data analysis and visualization generation using Python libraries like Matplotlib to support academic research and data-driven decision-making.",
+        ],
+      },
+      {
+        title: "Soldier",
+        description:
+          "Brazilian Army, Pindamonhangaba, SP - March 2022 - January 2023",
+        bulletPoints: [
+          "Responsible for the security and guarding of military facilities.",
+          "Team collaboration for the execution of missions and tasks.",
+          "Rigorous access control at military checkpoints.",
+          "Recognized with an honor certificate for exemplary performance.",
+        ],
+      },
+    ];
+
+const projects = selectedLang === "pt-br"
+  ? [
+      {
+        title: "Clínica Integrada Amaral Haga (Sistema de Gestão de Clínica)",
+        description: "PHP, Laravel, Livewire, Alpine.js, MySQL",
+        link: "https://github.com/diegorezm/clinica",
+        bulletPoints: [
+          "Desenvolvimento de um sistema backend robusto com Laravel para gestão de registros de pacientes, médicos e consultas.",
+          "Funcionalidade completa de CRUD, permitindo criação, edição, visualização e exclusão eficiente de registros clínicos.",
+          "Verificação automática da disponibilidade de médicos, facilitando o agendamento e organização de consultas.",
+          "Interface de usuário interativa e responsiva construída com Alpine.js e Livewire.",
+          "Integração com o banco de dados MySQL para armazenamento seguro e estruturado de informações.",
+          "Implantação completa no Hostinger, garantindo estabilidade e acessibilidade do sistema online.",
+          "Arquitetura modular, permitindo fácil expansão e personalização para atender às demandas específicas da clínica.",
+        ],
+      },
+    ]
+  : [
+      {
+        title: "Clinica Integrada Amaral Haga (Clinic Management System)",
+        description: "PHP, Laravel, Livewire, Alpine.js, MySQL",
+        link: "https://github.com/diegorezm/clinica",
+        bulletPoints: [
+          "Developed a robust backend system with Laravel for managing patient, doctor, and appointment records.",
+          "Complete CRUD functionality, allowing efficient creation, editing, viewing, and deletion of clinical records.",
+          "Automatic verification of doctor availability, facilitating scheduling and organization of appointments.",
+          "Interactive and responsive user interface built with Alpine.js and Livewire.",
+          "Integration with MySQL database for secure and structured information storage.",
+          "Full deployment on Hostinger, ensuring stability and online system accessibility.",
+          "Modular architecture, enabling easy expansion and customization to meet specific clinic demands.",
+        ],
+      },
+    ];
+
+const certifications = selectedLang === "pt-br"
+  ? [
+      {
+        href: "https://cert.efset.org/KdGLiQ",
+        label: "Certificado de Proficiência em Inglês - EF SET",
+      },
+      {
+        href: "https://udemy-certificate.s3.amazonaws.com/image/UC-6fc7d4af-701d-446a-b69b-8e167018a749.jpg?v=1706800581000",
+        label: "JavaScript e TypeScript do Básico ao Avançado - Udemy",
+      },
+      {
+        href: "https://udemy-certificate.s3.amazonaws.com/image/UC-7074fe91-0541-4bfd-bc58-af41912a6361.jpg?v=1703254492000",
+        label: "Estruturas de Dados e Algoritmos - Udemy",
+      },
+      {
+        href: "https://www.cursoemvideo.com/validacao-de-certificado/?codigo=798CE-654D-9",
+        label: "Excel 40 Horas - Curso em Vídeo",
+      },
+    ]
+  : [
+      {
+        href: "https://cert.efset.org/KdGLiQ",
+        label: "English Proficiency Certificate - EF SET",
+      },
+      {
+        href: "https://udemy-certificate.s3.amazonaws.com/image/UC-6fc7d4af-701d-446a-b69b-8e167018a749.jpg?v=1706800581000",
+        label: "JavaScript and TypeScript from Basic to Advanced - Udemy",
+      },
+      {
+        href: "https://udemy-certificate.s3.amazonaws.com/image/UC-7074fe91-0541-4bfd-bc58-af41912a6361.jpg?v=1703254492000",
+        label: "Data Structures and Algorithms - Udemy",
+      },
+      {
+        href: "https://www.cursoemvideo.com/validacao-de-certificado/?codigo=798CE-654D-9",
+        label: "Excel 40 Hours - Curso em Vídeo",
+      },
+    ];
+
+const skills = selectedLang === "pt-br"
+  ? [
+      {
+        name: "Linguagens de Programação",
+        items: ["Java", "JavaScript/TypeScript", "Python", "PHP"],
+      },
+      {
+        name: "Frameworks",
+        items: ["Spring Boot", "Next.js", "React", "Svelte", "Laravel"],
+      },
+      {
+        name: "Bancos de Dados",
+        items: ["PostgreSQL", "MySQL", "SQLite", "MongoDB"],
+      },
+      {
+        name: "Ferramentas",
+        items: [
+          "Git",
+          "Docker",
+          "Node.js",
+          "Tailwind CSS",
+          "CI/CD (GitHub Actions)",
+        ],
+      },
+      {
+        name: "Markup",
+        items: ["HTML", "CSS", "Markdown"],
+      },
+    ]
+  : [
+      {
+        name: "Programming Languages",
+        items: ["Java", "JavaScript/TypeScript", "Python", "PHP"],
+      },
+      {
+        name: "Frameworks",
+        items: ["Spring Boot", "Next.js", "React", "Svelte", "Laravel"],
+      },
+      {
+        name: "Databases",
+        items: ["PostgreSQL", "MySQL", "SQLite", "MongoDB"],
+      },
+      {
+        name: "Tools",
+        items: [
+          "Git",
+          "Docker",
+          "Node.js",
+          "Tailwind CSS",
+          "CI/CD (GitHub Actions)",
+        ],
+      },
+      {
+        name: "Markup",
+        items: ["HTML", "CSS", "Markdown"],
+      },
+    ];
+
+
+
 
 const links = [
   {
@@ -116,11 +229,23 @@ const links = [
 <Layout title="Resume">
   <div class="w-full flex justify-end gap-4 mt-10 mb-4">
     <Anchor
-      label="PDF Version"
+      label={selectedLang === "en" ? "PDF Version" : "Versão em PDF"}
       icon="lucide:file-text"
       variant="secondary"
       size="md"
       href="/cv_en.pdf"
+      isResponsive
+    />
+    <Anchor
+      label={selectedLang === "en" ? "Português" : "English"}
+      icon="lucide:languages"
+      variant="secondary"
+      size="md"
+      href={
+        selectedLang === "en"
+          ? "/resume?lang=pt-br"
+          : "/resume?lang=en"
+      }
       isResponsive
     />
   </div>
@@ -145,22 +270,49 @@ const links = [
     }
   </ul>
   <hr />
-  <h2 class="resume-section-header">Objective</h2>
+  <h2 class="resume-section-header">{
+      selectedLang === "en" ? "Objective" : "Objetivo"
+    }</h2>
   <p class="text-lg text-left text-foreground-alt mb-2">
-    Full Stack Developer focused on PHP, Java, and JavaScript/TypeScript.
-    Seeking opportunities to apply and expand my knowledge, contributing to
-    innovative and challenging projects, enhancing technical solutions, and
-    collaborating with teams.
+    {
+      selectedLang === "en" ? (
+        <span>
+          Full Stack Developer focused on PHP, Java, and JavaScript/TypeScript.
+          Seeking opportunities to apply and expand my knowledge, contributing
+          to innovative and challenging projects, enhancing technical solutions,
+          and collaborating with teams.
+        </span>
+      ) : (
+        <span>
+          Desenvolvedor Full-Stack focado em PHP, Java e JavaScript/TypeScript.
+          Procurando oportunidades para aplicar e expandir meu conhecimento,
+          contribuindo para projetos inovadores e desafiadores, melhorando
+          soluções técnicas e colaborando com equipes.
+        </span>
+      )
+    }
   </p>
   <hr />
-  <h2 class="resume-section-header">Education</h2>
-  <h3 class="italic text-left text-lg">UNITAU - Taubaté, SP</h3>
-  <p class="mb-2">
-    <em>Systems Analysis and Development</em><br />
-    January 2023 - December 2025
-  </p>
+  <h2 class="resume-section-header">{
+      selectedLang === "en" ? "Education" : "Educação"
+    }</h2>
+  {
+    education.map((education) => (
+      <div>
+        <h3 class="italic text-left text-lg">{education.title}</h3>
+        <p class="mb-2">
+          <em>{education.description}</em><br />
+          {education.startDate} - {education.endDate}
+        </p>
+      </div>
+    ))
+  }
   <hr />
-  <h2 class="resume-section-header">Technical Skills</h2>
+  <h2 class="resume-section-header">
+    {
+      selectedLang === "en" ? "Technical Skills" : "Habilidades Técnicas"
+    }
+  </h2>
   <ul class="flex flex-col gap-2 mb-2">
     {
       skills.map((skill) => (
@@ -177,7 +329,9 @@ const links = [
     }
   </ul>
   <hr />
-  <h2 class="resume-section-header">Experience</h2>
+  <h2 class="resume-section-header">{
+      selectedLang === "en" ? "Experience" : "Experiência"
+    }</h2>
   <ul class="flex flex-col gap-4 mb-2">
     {
       experiences.map((experience) => (
@@ -196,7 +350,9 @@ const links = [
     }
   </ul>
   <hr />
-  <h2 class="resume-section-header">Projects</h2>
+  <h2 class="resume-section-header">{
+      selectedLang === "en" ? "Projects" : "Projetos"
+    }</h2>
   <ul class="flex flex-col gap-4 mb-2">
     {
       projects.map((project) => (
@@ -226,7 +382,9 @@ const links = [
     }
   </ul>
   <hr />
-  <h2 class="resume-section-header">Certifications</h2>
+  <h2 class="resume-section-header">{
+      selectedLang === "en" ? "Certifications" : "Certificações"
+    }</h2>
   <ul class="flex flex-col gap-2 mb-2 list-disc list-inside">
     {
       certifications.map((certification) => (

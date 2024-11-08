@@ -11,17 +11,17 @@ type Props = {
 const { project } = Astro.props;
 ---
 
-<div class="bg-background-alt rounded-lg shadow-md h-fit">
+<div class="bg-background-alt rounded-default shadow-md h-fit">
   <Image
     src={project.image}
     alt={project.name}
     width={400}
     height={300}
-    class="w-full h-44 2xl:h-60 object-cover rounded-t-lg"
+    class="w-full h-44 2xl:h-60 object-cover rounded-t-default"
   />
   <div class="p-4">
     <h2 class="text-lg font-bold text-foreground">{project.name}</h2>
-    <p class="mt-2 text-md text-left text-foreground-alt">
+    <p class="mt-2 text-md text-left">
       {project.description}
     </p>
 

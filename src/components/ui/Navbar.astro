@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import Anchor from "./Anchor.astro";
+import ThemeChanger from "../theme-changer.astro";
 
 const navItems = [
   {
@@ -33,7 +34,7 @@ const navItems = [
       </a>
     </div>
     <div></div>
-    <div>
+    <div class="inline-flex items-center gap-4">
       {
         navItems
           .filter(({ label }) => label !== "Home")
@@ -41,6 +42,8 @@ const navItems = [
             <Anchor label={label} href={href} size="md" variant="ghost" />
           ))
       }
+
+      <ThemeChanger />
     </div>
   </nav>
   <div

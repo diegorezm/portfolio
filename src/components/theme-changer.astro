@@ -1,0 +1,19 @@
+<div
+  x-data="{ 
+    theme: localStorage.getItem('theme') || 'catppuccin-latte',
+    updateTheme() {
+      document.documentElement.setAttribute('data-theme', this.theme);
+      localStorage.setItem('theme', this.theme);
+    }
+  }"
+  x-init="updateTheme()"
+  x-effect="updateTheme()"
+>
+  <select
+    x-model="theme"
+    class="w-full rounded-default bg-background-alt p-2 text-center"
+  >
+    <option value="catppuccin-latte">Catppuccin Latte</option>
+    <option value="default">Gruvbox dark</option>
+  </select>
+</div>

@@ -10,7 +10,31 @@ type Props = {
 const { title, showNavbar = true } = Astro.props;
 ---
 
-<html lang="en">
+<script>
+  // const toggleTheme = () => {
+  //   const currentTheme = document.documentElement.getAttribute("data-theme");
+  //   const newTheme =
+  //     currentTheme === "catppuccin-latte" ? "default" : "catppuccin-latte";
+  //
+  //   // Set the new theme on the <html> tag
+  //   document.documentElement.setAttribute("data-theme", newTheme);
+  //
+  //   // Save the theme selection to localStorage to persist across reloads
+  //   localStorage.setItem("theme", newTheme);
+  // };
+  //
+  // Load the saved theme from localStorage on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", "catppuccin-latte");
+    }
+  });
+</script>
+
+<html lang="en" data-theme="catppuccin-latte">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

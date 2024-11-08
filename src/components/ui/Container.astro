@@ -23,6 +23,6 @@ const { title, id, description, className } = Astro.props as Props;
       </h1>
     )
   }
-  {description && <p class="text-lg text-foreground-alt">{description}</p>}
+  {description && <p class="text-lg">{description}</p>}
   <slot />
 </div>

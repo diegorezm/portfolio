@@ -3,37 +3,54 @@
 @tailwind utilities;
 
 
-@layer base {
-  :root {
-    --background: #282828;
-    --background-alt: #1D2021;
-    --foreground: #F9F5D7;
-    --foreground-alt: #EBDBB2;
-    --primary-foreground: #076678;
-    --secondary-foreground: #83A598;
-    --accent-foreground: #8EC07C;
-    --warning-foreground: #fb4934;
+:root {
+  --font-family: 'Fira Code', monospace;
+  --background: #282828;
+  --background-alt: #1D2021;
+  --foreground: #F9F5D7;
+  --foreground-alt: #EBDBB2;
+  --primary-foreground: #076678;
+  --secondary-foreground: #83A598;
+  --accent-foreground: #8EC07C;
+  --warning-foreground: #fb4934;
 
-    --radius: 0.7rem;
-  }
-
-  .input {
-    @apply w-full p-4 bg-background rounded-lg focus:outline-none focus:ring focus:ring-primary;
-  }
-
-  .btn {
-    @apply inline-flex justify-center items-center gap-2 transition-colors
-  }
-
-  .resume-section-header {
-    @apply text-2xl font-bold text-primary mt-2;
-  }
+  --radius: 0.7rem;
 }
+
+html[data-theme="catppuccin-latte"] {
+  --font-family: 'Arial', monospace;
+  --background: #eff1f5;
+  --background-alt: #dce0e8;
+  --foreground: #4c4f69;
+  --foreground-alt: #eff1f5;
+  --primary: #8839ef;
+  --primary-foreground: #4c4f69;
+  --secondary: #ea76cb;
+  --secondary-foreground: #4c4f69;
+  --accent: #dd7878;
+  --accent-foreground: #4c4f69;
+  --warning-foreground: #e64553;
+  --radius: 0.5rem;
+}
+
+
+.input {
+  @apply w-full p-4 bg-background rounded-lg focus:outline-none focus:ring focus:ring-primary;
+}
+
+.btn {
+  @apply inline-flex justify-center items-center gap-2 transition-colors
+}
+
+.resume-section-header {
+  @apply text-2xl font-bold text-primary mt-2;
+}
+
 
 
 html,
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-family);
   background-color: var(--background);
   color: var(--foreground);
   font-size: 16px;

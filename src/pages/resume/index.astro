@@ -61,7 +61,6 @@ const links = [
         variant="secondary"
         size="md"
         href="/cv_en.pdf"
-        isResponsive
       />
       <Anchor
         label={selectedLang === "en" ? "Português" : "English"}
@@ -69,7 +68,6 @@ const links = [
         variant="secondary"
         size="md"
         href={selectedLang === "en" ? "/resume?lang=pt-br" : "/resume?lang=en"}
-        isResponsive
       />
       <ThemeChanger isNavbar />
     </div>
@@ -78,7 +76,7 @@ const links = [
   <h1 class="text-3xl font-bold text-center text-accent">
     DIEGO REZENDE SANTOS DE MOURA
   </h1>
-  <ul class="flex flex-wrap justify-center gap-2 text-center">
+  <ul class="flex flex-row flex-wrap justify-center gap-2 text-center">
     {
       links.map((link, i) => (
         <li>
@@ -89,7 +87,7 @@ const links = [
             variant="ghost"
             label={link.label}
           />
-          {i < links.length - 1 && " | "}
+          <span class="hidden md:inline">{i < links.length - 1 && " | "}</span>
         </li>
       ))
     }

@@ -24,6 +24,10 @@
   .btn {
     @apply inline-flex justify-center items-center gap-2 transition-colors
   }
+
+  .resume-section-header {
+    @apply text-2xl font-bold text-primary mt-2;
+  }
 }
 
 

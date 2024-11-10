@@ -30,6 +30,20 @@ html[data-theme="catppuccin-latte"] {
   --radius: 0.5rem;
 }
 
+html[data-theme="catppuccin-mocha"] {
+  --font-family: 'Arial', monospace;
+  --background: #1e1e2e;
+  --background-alt: #11111b;
+  --foreground: #cdd6f4;
+  --foreground-alt: #181825;
+  --primary-foreground: #cba6f7;
+  --secondary-foreground: #f5c2e7;
+  --accent-foreground: #cba6f7;
+  --warning-foreground: #f38ba8;
+  --radius: 0.5rem;
+}
+
+
 html[data-theme="darker"] {
   --font-family: 'Arial', monospace;
   --background: #131313;

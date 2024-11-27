@@ -7,7 +7,7 @@ const projectsContent: Project[] = [
     name: "Convenience Store",
     sourceCode: "https://github.com/diegorezm/convenience.store.api",
     description:
-      "Full-stack application consisting of a Spring Boot API that interacts with a SQL database. It includes authentication, tests using JUnit and MockMvc, and utilizes Docker for easy deployment. The frontend is built with Next.js",
+      "Convenience store built with Spring Boot as the backend and Next.js as the frontend. It allows users to manage their products, create transactions and generate pdfs of those transactions.",
     tech: ["java", "docker", "spring boot", "nextjs", "typescript", "tailwind"],
     details: "https://www.youtube.com/watch?v=Qd2bRPsiaZE",
     image: "/convenience-store.jpg",
@@ -27,11 +27,11 @@ const projectsContent: Project[] = [
   },
   {
     id: genId(),
-    name: "WallpaperCL",
-    sourceCode: "https://github.com/diegorezm/wallpapercl",
+    name: "Clinic",
+    sourceCode: "https://github.com/diegorezm/clinica",
     description:
-      "WallpaperCL is a lightweight wallpaper management application built with Rust, TypeScript, and React, powered by Tauri. It’s designed specifically for tiling window managers.",
-    tech: ["rust", "typescript", "react", "tailwind"],
+      "A freelance project for managing patients, doctors, and appointments, featuring scheduling, backups, and more. Built with Laravel and Livewire for a smooth user experience.",
+    tech: ["php", "laravel", "livewire", "alpinejs"],
     details: "https://www.youtube.com/watch?v=n_2mIcaMpBM",
     image:
       "/wallpapercl.png"

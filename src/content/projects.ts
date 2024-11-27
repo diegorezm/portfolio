@@ -34,7 +34,7 @@ const projectsContent: Project[] = [
     tech: ["php", "laravel", "livewire", "alpinejs"],
     details: "https://www.youtube.com/watch?v=ZEDnGtRIqUo",
     image:
-      "/clinic.png"
+      "/clinic.jpeg"
   },
 ];
 

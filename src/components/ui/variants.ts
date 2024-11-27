@@ -23,10 +23,10 @@ export const getVariant = (variant: string) => {
     primary: "text-foreground-alt bg-primary hover:opacity-90",
     secondary: "text-secondary bg-background-alt hover:opacity-90",
     ghost: "hover:bg-background-alt hover:opacity-80",
-    outline: "border border-foreground hover:bg-background-alt hover:opacity-80",
+    outline: "border border-foreground hover:bg-background",
   }[variant];
 };
 
 export const getDefaultClass = (className?: string) => {
-  return `btn font-bold rounded-default transition ${className}`;
+  return `btn font-bold rounded-default transition-colors duration-500 ${className}`;
 };

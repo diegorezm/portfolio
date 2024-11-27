@@ -32,9 +32,9 @@ const projectsContent: Project[] = [
     description:
       "A freelance project for managing patients, doctors, and appointments, featuring scheduling, backups, and more. Built with Laravel and Livewire for a smooth user experience.",
     tech: ["php", "laravel", "livewire", "alpinejs"],
-    details: "https://www.youtube.com/watch?v=n_2mIcaMpBM",
+    details: "https://www.youtube.com/watch?v=ZEDnGtRIqUo",
     image:
-      "/wallpapercl.png"
+      "/clinic.png"
   },
 ];
 

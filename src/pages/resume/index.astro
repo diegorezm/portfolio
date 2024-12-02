@@ -60,7 +60,7 @@ const links = [
         icon="lucide:file-text"
         variant="secondary"
         size="md"
-        href="/cv_en.pdf"
+        href={selectedLang === "en" ? "/cv_en.pdf" : "/curriculo.pdf"}
       />
       <Anchor
         label={selectedLang === "en" ? "Português" : "English"}

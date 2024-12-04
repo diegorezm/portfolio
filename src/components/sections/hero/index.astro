@@ -21,17 +21,20 @@ const socials = [
 ];
 ---
 
-<Container id="home">
-  <main class="flex items-center flex-col gap-12">
+<Container id="home" className="lg:h-[calc(100vh-12rem)]">
+  <main
+    class="flex justify-around items-center flex-col h-full gap-12 lg:gap-0"
+  >
     <div class="text-center max-w-3xl">
       <h1
-        class="text-5xl 2xl:text-6xl text-center font-bold tracking-wide leading-tight"
+        class="text-5xl lg:text-6xl text-center font-bold tracking-wide leading-tight"
       >
         Hello, my name is <ColourfulSpan label="Diego!" color="primary" /> I’m a
         <ColourfulSpan label="full-stack" color="primary" />
         web developer!
       </h1>
     </div>
+
     <div class="flex flex-col lg:flex-row lg:justify-evenly gap-4">
       <Anchor
         icon="lucide:paperclip"

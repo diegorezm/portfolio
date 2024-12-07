@@ -1,0 +1,45 @@
+---
+import Anchor from "../ui/Anchor.astro";
+import Layout from "./default.astro";
+type Props = {
+  title: string;
+  description?: string;
+};
+const { title, description } = Astro.props;
+
+const t = `${title} - Blog`;
+
+const links = [
+  {
+    label: "home",
+    icon: "lucide:home",
+    href: "/",
+  },
+  {
+    label: "blog",
+    icon: "lucide:file-text",
+    href: "/blog",
+  },
+];
+---
+
+<Layout title={t} lang="en" description={description}>
+  <nav>
+    <div class="flex flex-row flex-wrap justify-center gap-2 text-center">
+      {
+        links.map((link) => (
+          <Anchor
+            href={link.href}
+            icon={link.icon}
+            size="md"
+            variant="ghost"
+            label={link.label}
+          />
+        ))
+      }
+    </div>
+  </nav>
+  <main class="px-8 lg:px-32 mt-10">
+    <slot />
+  </main>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import Layout from "../components/layouts/app.astro";
+import Anchor from "../components/ui/Anchor.astro";
+---
+
+<Layout title="404">
+  <div class="flex flex-col items-center justify-center gap-12">
+    <h1 class="text-5xl text-center font-bold text-accent">404</h1>
+    <p class="text-center text-lg">
+      The page you are looking for does not exist.
+    </p>
+    <Anchor
+      label="Go back"
+      icon="lucide:arrow-left"
+      variant="primary"
+      size="sm"
+      href="/"
+    />
+  </div>
+</Layout>

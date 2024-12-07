@@ -1,0 +1,36 @@
+---
+import Layout from "../../../components/layouts/blog.astro";
+import { getEntry } from "astro:content";
+import Anchor from "../../../components/ui/Anchor.astro";
+// 1. Get the slug from the incoming server request
+const { id } = Astro.params;
+if (id === undefined) {
+  return Astro.redirect("/404");
+}
+// 2. Query for the entry directly using the request slug
+const post = await getEntry("blog", id);
+// 3. Redirect if the entry does not exist
+if (post === undefined) {
+  return Astro.redirect("/404");
+}
+// 4. Render the entry to HTML in the template
+const { Content } = await post.render();
+---
+
+<Layout
+  title={post.slug}
+  description={post.data.description ?? "Blog post by Diego Rezende"}
+>
+  <Fragment slot="header">
+    <meta name="keywords" content={post.data.tags.join(",")} />
+  </Fragment>
+  <Anchor href="/blog" label="Blog" size="sm" icon="lucide:arrow-left" />
+  <div
+    class="w-full mx-auto prose prose-lg prose-h2:text-foreground prose-h2:font-bold prose-h3:text-foreground prose-h3:font-bold prose-a:text-primary prose-a:font-bold prose-p:text-foreground prose-em:italic prose-strong:font-bold prose-strong:text-foreground prose-code:text-accent mt-8 mb-4"
+  >
+    <h1 class="text-4xl font-bold text-primary mt-8 w-full">
+      {post.data.title}
+    </h1>
+    <Content />
+  </div>
+</Layout>

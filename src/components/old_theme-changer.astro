@@ -1,0 +1,88 @@
+---
+import Button from "./ui/Button.astro";
+type Props = {
+  isNavbar?: boolean;
+};
+const { isNavbar = false } = Astro.props as Props;
+---
+
+<div
+  class="relative text-sm w-full"
+  x-data="{ 
+    themes: [
+      {
+        name: 'Catppuccin Latte',
+        theme: 'catppuccin-latte',
+      },
+      {
+        name: 'Catppuccin Mocha',
+        theme: 'catppuccin-mocha',
+      },
+      {
+        name: 'Gruvbox Dark',
+        theme: 'gruvbox-dark', 
+  },
+  {
+  name: 'Darker',
+  theme: 'darker',
+  }
+    ],
+    showThemes: false,
+    selectedTheme: localStorage.getItem('theme-name')|| 'Catppuccin Latte',
+    setTheme(theme) {
+      this.selectedTheme = theme.name;
+      localStorage.setItem('theme', theme.theme);
+      localStorage.setItem('theme-name', theme.name);
+      document.documentElement.setAttribute('data-theme', theme.theme);
+    }
+  }"
+>
+  <Button
+    variant="outline"
+    size={isNavbar ? "md" : "sm"}
+    icon="lucide:arrow-down-up"
+    onClick="showThemes = !showThemes"
+    className="w-full"
+  >
+    <span x-text="selectedTheme"></span>
+  </Button>
+
+  <div
+    class="absolute right-0 top-full min-w-[200px] z-10 mt-2 h-fit w-full rounded-default shadow-lg bg-background-alt ring-1 ring-black ring-opacity-5 focus:outline-none overflow-y-scroll"
+    x-show="showThemes"
+    x-transition:enter="transition ease-out duration-100"
+    x-transition:enter-start="transform opacity-0 scale-95"
+    x-transition:enter-end="transform opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-75"
+    x-transition:leave-start="transform opacity-100 scale-100"
+    x-transition:leave-end="transform opacity-0 scale-95"
+    @click.outside="showThemes = false"
+  >
+    <template x-for="theme in themes" :key="theme.theme">
+      <div>
+        <div x-show="selectedTheme === theme.name">
+          <Button
+            variant="primary"
+            size="sm"
+            onClick="setTheme(theme)"
+            x-text="theme.name"
+            className="w-full"
+          >
+            <span x-text="theme.name"></span>
+          </Button>
+        </div>
+        <div x-show="selectedTheme !== theme.name">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick="setTheme(theme)"
+            x-text="theme.name"
+            className="w-full"
+          >
+            <span x-text="theme.name"></span>
+          </Button>
+        </div>
+      </div>
+    </template>
+  </div>
+</div>

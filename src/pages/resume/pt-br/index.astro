@@ -1,0 +1,21 @@
+---
+import Layout from "../../../components/layouts/resume.astro";
+import Education from "../_components/Education.astro";
+import Experience from "../_components/Experience.astro";
+import Projects from "../_components/Projects.astro";
+import Skills from "../_components/Skills.astro";
+import Certifications from "../_components/Certifications.astro";
+
+import { RESUME_PT_BR } from "../../../content/resume_pt_br";
+
+const { education, experiences, projects, skills, certifications } =
+  RESUME_PT_BR;
+---
+
+<Layout title="Currículo" lang="pt-br">
+  <Education education={education} selectedLang="pt-br" />
+  <Experience experiences={experiences} selectedLang="pt-br" />
+  <Projects projects={projects} selectedLang="pt-br" />
+  <Skills skills={skills} selectedLang="pt-br" />
+  <Certifications certifications={certifications} selectedLang="pt-br" />
+</Layout>

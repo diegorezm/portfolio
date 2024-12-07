@@ -1,0 +1,38 @@
+---
+type Experience = {
+  title: string;
+  description: string;
+  bulletPoints: string[];
+};
+
+type Props = {
+  experiences: Experience[];
+  selectedLang: "en" | "pt-br";
+};
+
+const { experiences }: { experiences: Experience[] } = Astro.props;
+const { selectedLang }: { selectedLang: "en" | "pt-br" } = Astro.props;
+---
+
+<section>
+  <h2 class="resume-section-header">
+    {selectedLang === "en" ? "Experience" : "Experiência"}
+  </h2>
+  <ul class="flex flex-col gap-4 mb-2">
+    {
+      experiences.map((exp) => (
+        <li>
+          <h3 class="text-left text-lg italic">{exp.title}</h3>
+          <p>
+            <em>{exp.description}</em>
+          </p>
+          <ul class="list-disc list-inside space-y-2">
+            {exp.bulletPoints.map((point) => (
+              <li>{point}</li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
+</section>

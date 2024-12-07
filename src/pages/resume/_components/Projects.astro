@@ -1,0 +1,51 @@
+---
+type ResumeProject = {
+  title: string;
+  link: string;
+  description: string;
+  bulletPoints: string[];
+};
+
+type Props = {
+  projects: ResumeProject[];
+  selectedLang: "en" | "pt-br";
+};
+
+import Anchor from "../../../components/ui/Anchor.astro";
+const { projects }: { projects: ResumeProject[] } = Astro.props;
+const { selectedLang }: { selectedLang: "en" | "pt-br" } = Astro.props;
+---
+
+<section>
+  <h2 class="resume-section-header">
+    {selectedLang === "en" ? "Projects" : "Projetos"}
+  </h2>
+  <ul class="flex flex-col gap-4 mb-2">
+    {
+      projects.map((project) => (
+        <li>
+          <h3 class="text-left text-lg italic">{project.title}</h3>
+          <p>
+            <>
+              <Anchor
+                href={project.link}
+                icon="lucide:github"
+                size="sm"
+                variant="ghost"
+                label="GitHub"
+                target="_blank"
+              />
+              <br />
+            </>
+            <em>{project.description}</em>
+          </p>
+          <ul class="list-disc list-inside mt-2 space-y-2">
+            {project.bulletPoints.map((point) => (
+              <li>{point}</li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
+</section>

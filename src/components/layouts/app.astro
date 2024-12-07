@@ -1,58 +1,115 @@
 ---
-import "../../styles/style.css";
-import Navbar from "../ui/Navbar.astro";
-import "@fontsource/fira-code";
+import { Icon } from "astro-icon/components";
+import ThemeChanger from "../theme-changer.astro";
+import Anchor from "../ui/Anchor.astro";
+import Layout from "./default.astro";
+
 type Props = {
   title?: string;
-  showNavbar?: boolean;
 };
 
-const { title, showNavbar = true } = Astro.props;
+const { title } = Astro.props;
+
+const navItems = [
+  { label: "Home", href: "/#home" },
+  {
+    label: "About",
+    href: "#about",
+  },
+  {
+    label: "Projects",
+    href: "#projects",
+  },
+  {
+    label: "Contact",
+    href: "#contact",
+  },
+];
 ---
 
-<script>
-  // const toggleTheme = () => {
-  //   const currentTheme = document.documentElement.getAttribute("data-theme");
-  //   const newTheme =
-  //     currentTheme === "catppuccin-latte" ? "default" : "catppuccin-latte";
-  //
-  //   // Set the new theme on the <html> tag
-  //   document.documentElement.setAttribute("data-theme", newTheme);
-  //
-  //   // Save the theme selection to localStorage to persist across reloads
-  //   localStorage.setItem("theme", newTheme);
-  // };
-  //
-  // Load the saved theme from localStorage on page load
-  document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    } else {
-      document.documentElement.setAttribute("data-theme", "catppuccin-latte");
-    }
-  });
-</script>
+<Layout title={title} lang="en">
+  <div class="fixed top-0 p-2 w-full bg-background">
+    <nav class="hidden lg:inline-flex justify-between w-full">
+      <div>
+        <a
+          href="#home"
+          class="btn !gap-0 hover:bg-background-alt hover:opacity-80 text-lg p-3 font-bold rounded-md"
+        >
+          <span class="text-primary">D</span>iego
+        </a>
+      </div>
+      <div></div>
+      <div class="inline-flex items-center gap-4">
+        {
+          navItems
+            .filter(({ label }) => label !== "Home")
+            .map(({ label, href }) => (
+              <Anchor label={label} href={href} size="md" variant="ghost" />
+            ))
+        }
+        <Anchor label="Blog" href="/blog" size="md" variant="primary" />
 
-<html lang="en" data-theme="catppuccin-latte">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a0e14" />
-    <meta
-      name="keywords"
-      content="Portifolio, Diego Rezende, freelancer, desenvolvedor, desenvolvedor junior, java, typescript, javascript"
-    />
-    <meta name="description" content="My personal portifolio." />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title ? `${title} | Portfolio` : "Portfolio"}</title>
-  </head>
-  <body>
-    {showNavbar && <Navbar />}
-    <main class={`px-8 lg:px-32 ${showNavbar ? "mt-10 lg:mt-32" : ""}`}>
-      <slot />
-    </main>
-  </body>
-</html>
+        <ThemeChanger />
+      </div>
+    </nav>
+    <div
+      class="flex lg:hidden justify-end items-center w-full"
+      x-data="{ open: false }"
+    >
+      <Icon
+        name="lucide:menu"
+        x-on:click="open = !open"
+        class="w-6 h-6 hover:cursor-pointer"
+      />
+
+      <div
+        x-show="open"
+        x-on:click="open = false"
+        class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
+      >
+      </div>
+      <aside
+        x-bind:class="open ? 'translate-x-0' : 'translate-x-full'"
+        class="fixed right-0 top-0 w-full md:w-1/2
+            bg-background-alt shadow-lg p-8
+            flex flex-col gap-6 z-50 h-screen transition-transform ease-in-out duration-300"
+      >
+        <Icon
+          name="lucide:x"
+          x-on:click="open = false"
+          class="w-6 h-6 absolute right-4 top-4 hover:cursor-pointer"
+        />
+        <div class="flex flex-col gap-4 mt-4">
+          {
+            navItems.map(({ label, href }) => (
+              <div class="w-full" @click="open = false">
+                <Anchor
+                  variant="outline"
+                  label={label}
+                  href={href}
+                  size="lg"
+                  className="w-full"
+                />
+              </div>
+            ))
+          }
+          <div class="w-full">
+            <Anchor
+              variant="primary"
+              label="Blog"
+              href="/blog"
+              size="lg"
+              className="w-full"
+            />
+          </div>
+          <div class="w-full">
+            <ThemeChanger isNavbar />
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <main class="px-8 lg:px-32 mt-10 lg:mt-32">
+    <slot />
+  </main>
+</Layout>

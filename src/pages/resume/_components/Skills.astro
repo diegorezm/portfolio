@@ -1,0 +1,35 @@
+---
+type Skill = {
+  name: string;
+  items: string[];
+};
+
+type Props = {
+  skills: Skill[];
+  selectedLang: "en" | "pt-br";
+};
+
+const { skills }: { skills: Skill[] } = Astro.props;
+const { selectedLang }: { selectedLang: "en" | "pt-br" } = Astro.props;
+---
+
+<section>
+  <h2 class="resume-section-header">
+    {selectedLang === "en" ? "Technical Skills" : "Habilidades Técnicas"}
+  </h2>
+  <ul class="flex flex-col gap-2 mb-2">
+    {
+      skills.map((skill) => (
+        <li>
+          <strong>{skill.name}</strong>:{" "}
+          {skill.items.map((item, i) => (
+            <>
+              <span>{item}</span>
+              {i < skill.items.length - 1 && ", "}
+            </>
+          ))}
+        </li>
+      ))
+    }
+  </ul>
+</section>

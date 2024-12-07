@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.10",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/jsonwebtoken": "^9.0.7"
   }
 }

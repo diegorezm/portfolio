@@ -1,0 +1,92 @@
+---
+import Layout from "./default.astro";
+import ThemeChanger from "../theme-changer.astro";
+import Anchor from "../ui/Anchor.astro";
+
+import "@fontsource/fira-code";
+type Props = {
+  title?: string;
+  lang: "en" | "pt-br";
+};
+const { title, lang } = Astro.props;
+
+const links = [
+  {
+    label: "diegorezm.app",
+    icon: "lucide:globe",
+    href: "https://diegorezm.netlify.app/",
+  },
+  {
+    label: "diegommrez12@gmail.com",
+    icon: "lucide:mail",
+    href: "mailto:diegommrez12@gmail.com",
+  },
+  {
+    label: "linkedin",
+    icon: "lucide:linkedin",
+    href: "https://linkedin.com/in/diegorezm",
+  },
+  {
+    label: "github",
+    icon: "lucide:github",
+    href: "https://github.com/diegorezm",
+  },
+];
+---
+
+<Layout title={title} lang={lang}>
+  <main class="px-8 lg:px-32">
+    <div class="w-full flex justify-between gap-4 mt-10 mb-6">
+      <div>
+        <Anchor
+          label={lang === "en" ? "Home" : "Início"}
+          icon="lucide:home"
+          variant="primary"
+          size="sm"
+          href="/"
+          isResponsive
+        />
+      </div>
+      <div class="flex flex-col space-y-2">
+        <Anchor
+          label={lang === "en" ? "PDF Version" : "Versão em PDF"}
+          icon="lucide:file-text"
+          variant="secondary"
+          size="md"
+          href={lang === "en" ? "/cv_en.pdf" : "/curriculo.pdf"}
+        />
+        <Anchor
+          label={lang === "en" ? "Português" : "English"}
+          icon="lucide:languages"
+          variant="secondary"
+          size="md"
+          href={lang === "en" ? "/resume/pt-br" : "/resume/en"}
+        />
+        <ThemeChanger isNavbar />
+      </div>
+    </div>
+    <h1 class="text-3xl font-bold text-center text-accent">
+      DIEGO REZENDE SANTOS DE MOURA
+    </h1>
+    <ul class="flex flex-row flex-wrap justify-center gap-2 text-center">
+      {
+        links.map((link, i) => (
+          <li>
+            <Anchor
+              href={link.href}
+              icon={link.icon}
+              size="sm"
+              variant="ghost"
+              label={link.label}
+            />
+            <span class="hidden md:inline">
+              {i < links.length - 1 && " | "}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+    <hr />
+    <slot />
+  </main>
+</Layout>

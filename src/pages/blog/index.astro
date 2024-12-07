@@ -1,0 +1,40 @@
+---
+import Layout from "../../components/layouts/blog.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+
+let locale = "en-US";
+if (
+  Astro.request.headers.get("accept-language") !== undefined ||
+  Astro.request.headers.get("accept-language") !== null
+) {
+  locale = Astro.request.headers.get("accept-language")?.split(",")[0]!;
+}
+---
+
+<Layout title="Blog">
+  <div class="flex flex-col gap-12 mt-8">
+    <h1 class="text-4xl font-bold text-accent">Blog</h1>
+    <ul class="space-y-4">
+      {
+        // @ts-ignore
+        posts.map((post) => (
+          <li class="flex flex-col gap-2 p-6 bg-background-alt rounded-default shadow-md hover:cursor-pointer hover:scale-105 transition-transform">
+            <h2 class="text-2xl font-bold text-accent w-full hover:underline">
+              <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+            </h2>
+            <p class="text-lg text-foreground">{post.data.description}</p>
+            <p class="text-sm text-foreground">
+              {post.data.pubDate.toLocaleDateString(locale, {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

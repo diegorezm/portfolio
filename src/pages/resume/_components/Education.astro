@@ -1,0 +1,36 @@
+---
+type Education = {
+  title: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+};
+
+type Props = {
+  education: Education[];
+  selectedLang: "en" | "pt-br";
+};
+
+const { education }: { education: Education[] } = Astro.props;
+const { selectedLang }: { selectedLang: "en" | "pt-br" } = Astro.props;
+---
+
+<section>
+  <h2 class="resume-section-header">
+    {selectedLang === "en" ? "Education" : "Educação"}
+  </h2>
+  {
+    education.map((edu) => (
+      <div>
+        <h3 class="italic text-left text-lg">{edu.title}</h3>
+        <p class="mb-2">
+          <>
+            <em>{edu.description}</em>
+            <br />
+          </>
+          {edu.startDate} - {edu.endDate}
+        </p>
+      </div>
+    ))
+  }
+</section>

@@ -19,6 +19,11 @@ const socials = [
     icon: "lucide:mail",
   },
 ];
+let userLang = "en";
+const langPref = Astro.request.headers.get("Accept-Language")?.split(",")[0];
+if (langPref === "pt-BR" || langPref === "pt-br") {
+  userLang = "pt-br";
+}
 ---
 
 <Container id="home" className="lg:h-[calc(100vh-12rem)]">
@@ -39,7 +44,7 @@ const socials = [
       <Anchor
         icon="lucide:paperclip"
         label="See my resume!"
-        href="/resume?lang=en"
+        href={`/resume/${userLang}`}
         size="lg"
         variant="primary"
       />

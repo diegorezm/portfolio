@@ -1,0 +1,20 @@
+---
+import Layout from "../../../components/layouts/resume.astro";
+import Education from "../_components/Education.astro";
+import Experience from "../_components/Experience.astro";
+import Projects from "../_components/Projects.astro";
+import Skills from "../_components/Skills.astro";
+import Certifications from "../_components/Certifications.astro";
+
+import { RESUME_EN } from "../../../content/resume_en";
+
+const { education, experiences, projects, skills, certifications } = RESUME_EN;
+---
+
+<Layout title="Resume" lang="en">
+  <Education education={education} selectedLang="en" />
+  <Experience experiences={experiences} selectedLang="en" />
+  <Projects projects={projects} selectedLang="en" />
+  <Skills skills={skills} selectedLang="en" />
+  <Certifications certifications={certifications} selectedLang="en" />
+</Layout>

@@ -21,7 +21,7 @@ export const getIconSize = (size: Size) => {
 export const getVariant = (variant: string) => {
   return {
     primary: "text-foreground-alt bg-primary hover:opacity-90",
-    secondary: "text-secondary bg-background-alt hover:opacity-90",
+    secondary: "text-foreground bg-background-alt hover:opacity-90",
     ghost: "hover:bg-background-alt hover:opacity-80",
     outline: "border border-foreground hover:bg-background",
   }[variant];

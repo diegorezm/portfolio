@@ -1,0 +1,46 @@
+---
+import "../../styles/style.css";
+import "@fontsource/fira-code";
+
+type Props = {
+  title?: string;
+  description?: string;
+  lang: "en" | "pt-br";
+};
+
+const { title, description, lang } = Astro.props;
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", "catppuccin-latte");
+    }
+  });
+</script>
+
+<html lang={lang} data-theme="catppuccin-latte">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0e14" />
+    <meta
+      name="keywords"
+      content="Portifolio, Diego Rezende, freelancer, desenvolvedor, desenvolvedor junior, java, typescript, javascript"
+    />
+    <meta
+      name="description"
+      content={description ? description : "My personal portifolio."}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title ? title : "Portfolio"}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

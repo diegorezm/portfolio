@@ -11,7 +11,7 @@
 
 <body>
 
-  <nav class="fixed top-0 left-0 w-full bg-th-background shadow-md" id="nav-wrapper">
+  <nav class="fixed top-0 left-0 w-full bg-th-background shadow-md z-10" id="nav-wrapper">
     <div class="mx-auto flex items-center justify-between px-6 py-2">
       <a href="#" class="text-2xl font-bold">
         <img src="/images/favicon.ico" alt="icon" class="w-8">
@@ -72,10 +72,10 @@
       </div>
       <img src="/images/undraw_drink-coffee.svg" alt="Guy drinking coffe" class="hidden md:block h-96 w-96">
     </section>
-    <section class="section bg-th-primary text-th-background" id="about">
+    <section class="section bg-th-primary text-th-background h-full overflow-y-auto" id="about">
       <h1 class="text-3xl font-bold mb-4 text-th-secondary">About me</h1>
       <div class="flex flex-col lg:flex-row gap-6 items-center">
-        <div class="w-full lg:w-1/3 flex justify-center md:justify-start items-center md:items-start">
+        <div class="w-full lg:w-1/3 flex justify-center items-center">
           <img src="/images/my-picture.jpg" alt="A picture of me in a suit."
             class="w-2/3 h-[400px] md:w-[450px] md:h-[500px] rounded-lg">
         </div>
@@ -99,7 +99,7 @@
         </div>
       </div>
     </section>
-    <section class="section text-th-foreground" id="projects">
+    <section class="section text-th-foreground h-full" id="projects">
       <h1 class="text-3xl font-bold mb-4 text-th-primary">Projects</h1>
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 md:gap-4">
         {projects}
@@ -121,7 +121,7 @@
     </section>
     <footer class="p-2 w-full flex items-center gap-6 border-t border-th-foreground">
       <img src="/images/favicon.ico" alt="logo" class="w-12">
-      <p>@ 2025 Diego Rezende</p>
+      <p>@ {year} Diego Rezende</p>
     </footer>
   </main>
 

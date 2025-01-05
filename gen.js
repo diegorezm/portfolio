@@ -64,9 +64,9 @@ function gen_project_markup(project) {
             ${project.description}
           </p>
           <div class="flex gap-4">
-            <a class="flex items-center group btn btn-outline btn-sm gap-2" href="${project.sourceCode}" target="_blank">
+            <a class="group btn btn-outline btn-sm" href="${project.sourceCode}" target="_blank">
               <img src="/icons/github-dark.svg" alt="github icon"
-                class="w-6 group-hover:hidden transition-opacity duration-300">
+                class="block w-6 group-hover:hidden transition-opacity duration-300">
               <img src="/icons/github.svg" alt="github icon"
                 class="hidden w-6 group-hover:block transition-opacity duration-300">
             </a>
@@ -77,6 +77,7 @@ function gen_project_markup(project) {
         </li>
   `
 }
+
 
 /**
  * Recursively copies a directory and its contents to a new location.
@@ -121,7 +122,8 @@ async function build(html) {
     const m = gen_project_markup(p)
     markup.push(m)
   })
-  const replaced = html.replace("{projects}", markup.join(" "))
+  let replaced = html.replace("{projects}", markup.join(" "))
+  replaced = replaced.replace("{year}", new Date().getFullYear())
   await fs.writeFile("out/index.html", replaced)
 }
 

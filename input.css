@@ -15,64 +15,61 @@
   }
 }
 
-@layer components {
-  .link {
-    @apply hover:underline hover:text-th-secondary
-  }
+.link {
+  @apply hover:underline hover:text-th-secondary
+}
 
-  .input {
-    @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-0 focus:outline-none placeholder:text-th-muted
-  }
+.input {
+  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-0 focus:outline-none placeholder:text-th-muted
+}
 
-  .btn {
-    @apply font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
-  }
+.btn {
+  @apply font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
 
-  .btn-primary {
-    @apply bg-[color:var(--primary)] text-white border-[color:var(--primary)] hover:bg-opacity-90 focus:ring-[color:var(--primary)];
-  }
+.btn-primary {
+  @apply bg-[color:var(--primary)] text-white border-[color:var(--primary)] hover:bg-opacity-90 focus:ring-[color:var(--primary)];
+}
 
-  .btn-secondary {
-    @apply bg-[color:var(--secondary)] text-[color:var(--foreground)] border-[color:var(--secondary)] hover:bg-opacity-90 focus:ring-[color:var(--secondary)];
-  }
+.btn-secondary {
+  @apply bg-[color:var(--secondary)] text-[color:var(--foreground)] border-[color:var(--secondary)] hover:bg-opacity-90 focus:ring-[color:var(--secondary)];
+}
 
-  .btn-outline {
-    @apply bg-transparent text-[color:var(--foreground)] border-2 border-[color:var(--foreground)] hover:bg-[color:var(--foreground)] hover:text-white focus:ring-[color:var(--foreground)];
-  }
+.btn-outline {
+  @apply bg-transparent text-[color:var(--foreground)] border-2 border-[color:var(--foreground)] hover:bg-[color:var(--foreground)] hover:text-white focus:ring-[color:var(--foreground)];
+}
 
-  .btn-ghost {
-    @apply bg-transparent text-[color:var(--foreground)] hover:opacity-85 focus:ring-0;
-  }
+.btn-ghost {
+  @apply bg-transparent text-[color:var(--foreground)] hover:opacity-85 focus:ring-0;
+}
 
-  /* Sizes */
-  .btn-sm {
-    @apply px-[var(--padding-sm)] py-2 text-sm;
-  }
+/* Sizes */
+.btn-sm {
+  @apply px-[var(--padding-sm)] py-2 text-sm;
+}
 
-  .btn-md {
-    @apply px-[var(--padding)] py-3 text-base;
-  }
+.btn-md {
+  @apply px-[var(--padding)] py-3 text-base;
+}
 
-  .btn-lg {
-    @apply px-8 py-4 text-lg;
-  }
+.btn-lg {
+  @apply px-8 py-4 text-lg;
+}
 
+.project-card {
+  @apply shadow-md rounded-md px-4 py-2 hover:shadow-lg space-y-4 hover:hover:transform hover:translate-y-[-8px] transition-all duration-500
+}
 
-  .project-card {
-    @apply shadow-md rounded-md px-4 py-2 hover:shadow-lg space-y-4 hover:hover:transform hover:translate-y-[-8px] transition-all duration-500
-  }
+.project-card-title {
+  @apply text-lg font-medium text-th-primary
+}
 
-  .project-card-title {
-    @apply text-lg font-medium text-th-primary
-  }
+.project-card-image {
+  @apply w-full max-h-64 rounded-md
+}
 
-  .project-card-image {
-    @apply w-full max-h-64 rounded-md
-  }
-
-  .project-card-desc {
-    @apply text-th-muted
-  }
+.project-card-desc {
+  @apply text-th-muted
 }
 
 .section {

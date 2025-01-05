@@ -660,8 +660,17 @@ video {
   height: 400px;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
 .h-\[600px\] {
   height: 600px;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-full {
@@ -771,10 +780,6 @@ video {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -879,10 +884,6 @@ video {
 
 .text-th-secondary {
   color: var(--secondary);
-}
-
-.text-th-muted {
-  color: var(--muted);
 }
 
 .shadow-md {

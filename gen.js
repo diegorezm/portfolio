@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 
+// OMG IT HAS SSR JUST LIKE NEXTJS !!!!!
+
 const FONT_DIR = "./font";
 const IMAGES_DIR = "./images";
 const ICONS_DIR = "./icons";

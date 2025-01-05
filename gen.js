@@ -60,7 +60,7 @@ function gen_project_markup(project) {
     <li class="project-card">
           <h2 class="project-card-title">${project.name}</h2>
           <img src="/images/projects/${project.image}" alt='${project.name} showcase' class="project-card-image">
-          <p class="project-card-desc">
+          <p class="project-card-desc text-md">
             ${project.description}
           </p>
           <div class="flex gap-4">

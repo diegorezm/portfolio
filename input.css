@@ -16,11 +16,11 @@
 }
 
 .link {
-  @apply hover:underline hover:text-th-secondary
+  @apply hover:underline hover:text-th-secondary;
 }
 
 .input {
-  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-0 focus:outline-none placeholder:text-th-muted
+  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-0 focus:outline-none placeholder:text-th-muted;
 }
 
 .btn {
@@ -57,23 +57,23 @@
 }
 
 .project-card {
-  @apply shadow-md rounded-md px-4 py-2 hover:shadow-lg space-y-4 hover:hover:transform hover:translate-y-[-8px] transition-all duration-500
+  @apply shadow-md rounded-md px-4 py-2 hover:shadow-lg space-y-4 hover:hover:transform hover:translate-y-[-8px] transition-all duration-500;
 }
 
 .project-card-title {
-  @apply text-lg font-medium text-th-primary
+  @apply text-lg font-medium text-th-primary;
 }
 
 .project-card-image {
-  @apply w-full max-h-64 rounded-md
+  @apply w-full max-h-64 rounded-md;
 }
 
 .project-card-desc {
-  @apply text-th-muted
+  @apply text-th-muted;
 }
 
 .section {
-  @apply p-mobile lg:p w-full
+  @apply p-mobile lg:p w-full;
 }
 
 @font-face {

@@ -2,7 +2,22 @@
 export default {
   content: ["index.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        th: {
+          background: "var(--background)",
+          foreground: "var(--foreground)",
+          primary: "var(--primary)",
+          secondary: "var(--secondary)",
+          muted: "var(--muted)",
+          red: "var(--red)"
+        }
+      },
+      padding: {
+        DEFAULT: "var(--padding)",
+        mobile: "var(--padding-sm)"
+      }
+    },
   },
   plugins: [],
 }

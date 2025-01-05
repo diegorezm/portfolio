@@ -7,14 +7,14 @@
   "scripts": {
     "dev": "concurrently \"pnpm tailwind:dev\" \"live-server\"",
     "start": "live-server out",
-    "build": "node gen.js && pnpm run tailwind:build",
-    "tailwind:dev": "tailwindcss -i ./style.css -o ./out/style.css --watch",
-    "tailwind:build": "tailwindcss -i ./style.css -o ./out/style.css"
+    "build": "node gen.js pnpm && pnpm tailwind:build",
+    "tailwind:dev": "tailwindcss -i ./input.css -o ./style.css --watch",
+    "tailwind:build": "tailwindcss -i ./input.css -o ./out/style.css"
   },
   "keywords": [
     "portfolio"
   ],
-  "author": "",
+  "author": "Diego Rezende",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^9.1.2",

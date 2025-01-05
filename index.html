@@ -4,12 +4,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./out/style.css">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/style.css">
   <title>Portfolio</title>
 </head>
 
 <body>
-  <h1 class="bg-red-200 text-2xl focus:">yeah </h1>
+
+  <nav class="fixed top-0 left-0 w-full bg-th-background shadow-md" id="nav-wrapper">
+    <div class="mx-auto flex items-center justify-between px-6 py-2">
+      <a href="#" class="text-2xl font-bold">
+        <img src="/images/favicon.ico" alt="icon" class="w-8">
+      </a>
+      <!-- Hamburger Menu for Small Screens -->
+      <button id="menu-toggle" class="block md:hidden text-th-primary focus:outline-none">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <!-- Navbar Links -->
+      <ul id="menu" class="hidden md:flex space-x-6">
+        <li><a href="#hero" class="link">Home</a></li>
+        <li><a href="#about" class="link">About</a></li>
+        <li><a href="#projects" class="link">Projects</a></li>
+        <li><a href="#contact" class="link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sidebar for Small Screens -->
+  <aside id="sidebar"
+    class="hidden fixed inset-y-0 right-0 w-64 bg-th-primary text-th-background z-50 transform translate-x-full transition-transform duration-300">
+    <button id="sidebar-close" class="absolute top-4 right-4 text-th-background focus:outline-none">
+      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <ul class="mt-12 space-y-6 px-6 text-2xl">
+      <li><a href="#hero" class="link">Home</a></li>
+      <li><a href="#about" class="link">About</a></li>
+      <li><a href="#projects" class="link">Projects</a></li>
+      <li><a href="#contact" class="link">Contact</a></li>
+    </ul>
+  </aside>
+
+  <main class="flex flex-col items-center justify-center mt-10 md:mt-0">
+    <section class="section flex flex-col md:flex-row h-[600px] items-center " id="hero">
+      <div class="flex flex-col items-center w-2/3 gap-6">
+        <h1 class="text-5xl font-bold leading-tight tracking-wide text-center">
+          Welcome! My name is Diego, I&apos;m a <span class="text-th-secondary">fullstack developer
+          </span>
+        </h1>
+        <a class="btn btn-primary btn-lg w-fit" href="#contact">
+          Contact me!
+        </a>
+        <ul class="flex gap-12">
+          <li>
+            <img src="/icons/nextjs.svg" alt="Nextjs icon" class="w-12">
+          </li>
+          <li>
+            <img src="/icons/laravel.svg" alt="Nextjs icon" class="w-12">
+          </li>
+          <li>
+            <img src="/icons/springboot.svg" alt="Nextjs icon" class="w-12">
+          </li>
+        </ul>
+      </div>
+      <img src="/images/undraw_drink-coffee.svg" alt="Guy drinking coffe" class="hidden md:block h-96 w-96">
+    </section>
+    <section class="section bg-th-primary text-th-background" id="about">
+      <h1 class="text-3xl font-bold mb-4 text-th-secondary">About me</h1>
+      <div class="flex flex-col lg:flex-row gap-6 items-center">
+        <div class="w-full lg:w-1/3 flex justify-center md:justify-start items-center md:items-start">
+          <img src="/images/my-picture.jpg" alt="A picture of me in a suit."
+            class="w-2/3 h-[400px] md:w-[450px] md:h-[500px] rounded-lg">
+        </div>
+        <div class="flex flex-col lg:w-2/3 space-y-6 my-auto w-2/3 h-[400px] md:w-[450px] md:h-[500px] rounded-lg">
+          <p class="text-2xl text-justify font-semibold">
+            Hello! I'm Diego Rezende, a software developer from Brazil with a
+            passion for coding and learning new things. I'm currently in college,
+            but I'm always on the lookout for challenges and opportunities. I’m a
+            big fan of open-source and have created a few projects myself—feel free
+            to check them out on my GitHub! I’ve been using Linux since high school
+            (Arch btw)
+          </p>
+          <div class="flex gap-6">
+            <a href="">
+              <img src="/icons/github.svg" alt="github icon" class="w-10 h-10">
+            </a>
+            <a href="">
+              <img src="/icons/linkedin.svg" alt="github icon" class="w-10 h-10">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section text-th-foreground" id="projects">
+      <h1 class="text-3xl font-bold mb-4 text-th-primary">Projects</h1>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 md:gap-4">
+        {projects}
+      </ul>
+    </section>
+    <section class="section bg-th-secondary" id="contact">
+      <h1 class="text-3xl font-bold mb-4 text-th-primary">Contact</h1>
+      <form action="" class="space-y-6" id="contact-form">
+        <h1 class="text-lg font-medium">Get in touch</h1>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="email" class="input" placeholder="Your email..." name="email">
+        <input type="text" class="input" placeholder="Your name..." maxlength="255" minlength="2" name="name">
+        <textarea cols="10" rows="5" class="input" placeholder="Your message..." minlength="10" maxlength="1200"
+          name="message"></textarea>
+        <button class="btn btn-outline btn-md">
+          Send
+        </button>
+      </form>
+    </section>
+    <footer class="p-2 w-full flex items-center gap-6 border-t border-th-foreground">
+      <img src="/images/favicon.ico" alt="logo" class="w-12">
+      <p>@ 2025 Diego Rezende</p>
+    </footer>
+  </main>
+
+  <script>
+    const contactForm = document.getElementById("contact-form");
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarClose = document.getElementById('sidebar-close');
+    const navWrapper = document.getElementById("nav-wrapper");
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle("hidden")
+      sidebar.classList.remove('translate-x-full');
+      sidebar.classList.add('translate-x-0');
+    });
+
+    sidebarClose.addEventListener('click', () => {
+      sidebar.classList.toggle("hidden")
+      sidebar.classList.remove('translate-x-0');
+      sidebar.classList.add('translate-x-full');
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const formData = new FormData(contactForm)
+      fetch("/", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: new URLSearchParams(formData).toString()
+      })
+        .then(() => alert("Thank you for your submission"))
+        .catch(error => alert(error));
+    };
+    })
+
+    // Close sidebar when resizing back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        sidebar.classList.add('translate-x-full');
+      }
+    });
+
+    window.addEventListener('scroll', (e) => {
+      if (window.scrollY > 5) {
+        navWrapper.classList.add('shadow-md')
+      } else {
+        navWrapper.classList.remove('shadow-md')
+
+      }
+    })
+  </script>
 </body>
 
 </html>

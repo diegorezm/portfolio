@@ -4,18 +4,28 @@
 
 @layer base {
   :root {
-    --background: #f5f5f5;
-    --foreground: #2b3031;
-    --primary: #523b2e;
-    --secondary: #efc994;
-    --muted: #96917f;
+    --background: #f9f4e4;
+    --foreground: #000000;
+    --primary: #605f4b;
+    --secondary: #9c9e80;
+    --muted: #e0dbcd;
     --padding: 24px;
     --padding-sm: 16px;
   }
 }
 
+.styled-shadow-primary {
+  @apply border-2 border-th-primary;
+  box-shadow: 4px 4px var(--primary);
+}
+
+.styled-shadow-secondary {
+  @apply border-2 border-th-primary;
+  box-shadow: 4px 4px var(--secondary);
+}
+
 .link {
-  @apply hover:underline hover:text-th-secondary;
+  @apply transition-colors duration-300 hover:underline hover:text-th-secondary;
 }
 
 .input {
@@ -23,7 +33,7 @@
 }
 
 .btn {
-  @apply font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  @apply font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-0;
 }
 
 .btn-primary {
@@ -34,8 +44,9 @@
   @apply bg-[color:var(--secondary)] text-[color:var(--foreground)] border-[color:var(--secondary)] hover:bg-opacity-90 focus:ring-[color:var(--secondary)];
 }
 
+/* https://uiverse.io/Melo034/stupid-bear-67 */
 .btn-outline {
-  @apply bg-transparent text-[color:var(--foreground)] border-2 border-[color:var(--foreground)] hover:bg-[color:var(--foreground)] hover:text-white focus:ring-[color:var(--foreground)];
+  @apply relative z-10 inline-flex items-center justify-center overflow-hidden text-sm font-semibold text-black bg-transparent border-2 rounded-lg border-th-foreground isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-right-full before:hover:right-0 before:rounded-full before:bg-th-primary before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 shadow-sm gap-x-2 hover:text-th-background hover:bg-th-secondary disabled:opacity-50 hover:border-th-primary disabled:pointer-events-none;
 }
 
 .btn-ghost {
@@ -57,6 +68,8 @@
 
 .project-card {
   @apply shadow-md rounded-md px-4 py-2 hover:shadow-lg space-y-4 hover:hover:transform hover:translate-y-[-8px] transition-all duration-500;
+  border: 2px solid var(--primary);
+  box-shadow: 4px 4px var(--primary);
 }
 
 .project-card-title {
@@ -68,11 +81,11 @@
 }
 
 .project-card-desc {
-  @apply text-th-muted;
+  @apply text-th-secondary;
 }
 
 .section {
-  @apply p-mobile lg:p w-full;
+  @apply w-full p-mobile lg:p;
 }
 
 @font-face {
@@ -96,6 +109,7 @@
   font-style: normal;
 }
 
+html,
 body {
   font-family: 'JetBrainsMono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: var(--background);

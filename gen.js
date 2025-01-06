@@ -59,7 +59,7 @@ const PROJECTS = [
  */
 function gen_project_markup(project) {
   return `
-    <li class="project-card">
+    <li class="project-card styled-shadow-primary">
           <h2 class="project-card-title">${project.name}</h2>
           <img src="/images/projects/${project.image}" alt='${project.name} showcase' class="project-card-image">
           <p class="project-card-desc text-md">

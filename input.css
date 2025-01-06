@@ -29,7 +29,7 @@
 }
 
 .input {
-  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-0 focus:outline-none placeholder:text-th-muted;
+  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-2 focus:outline-none placeholder:text-th-muted focus:ring-th-primary focus:ring-offset-1 focus:ring-offset-th-primary;
 }
 
 .btn {

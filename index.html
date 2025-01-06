@@ -71,7 +71,7 @@
 
   <main class="flex flex-col items-center justify-center mt-10 md:mt-0">
     <section class="section flex flex-col md:flex-row h-[650px] 2xl:h-[960px] items-center " id="hero">
-      <div class="flex flex-col items-center w-2/3 gap-6">
+      <div class="flex flex-col items-center w-2/3 gap-12">
         <h1 class="text-5xl font-bold leading-tight tracking-wide text-center">
           Welcome! My name is Diego, I&apos;m a <span class="text-th-secondary">fullstack developer
           </span>
@@ -81,13 +81,51 @@
         </a>
         <ul class="flex gap-12">
           <li>
-            <img src="/icons/nextjs.svg" alt="Nextjs icon" class="w-12">
+            <div class="relative group">
+              <button>
+                <img src="/icons/nextjs.svg" alt="Nextjs icon" class="w-12">
+              </button>
+              <span class="absolute -top-12 left-[50%] -translate-x-[50%] 
+      z-20 origin-left scale-0 px-3 rounded-lg 
+       bg-th-primary py-2 text-sm font-bold
+                  text-th-background
+      shadow-lg transition-all duration-300 ease-in-out 
+        group-hover:scale-100">nextjs<span>
+                </span>
+              </span>
+            </div>
+
           </li>
           <li>
-            <img src="/icons/laravel.svg" alt="Nextjs icon" class="w-12">
+            <div class="relative group">
+              <button>
+                <img src="/icons/laravel.svg" alt="Nextjs icon" class="w-12">
+              </button>
+              <span class="absolute -top-12 left-[50%] -translate-x-[50%] 
+      z-20 origin-left scale-0 px-3 rounded-lg 
+       bg-th-primary py-2 text-sm font-bold
+                  text-th-background
+      shadow-lg transition-all duration-300 ease-in-out 
+        group-hover:scale-100">laravel<span>
+                </span>
+              </span>
+            </div>
           </li>
           <li>
-            <img src="/icons/springboot.svg" alt="Nextjs icon" class="w-12">
+            <div class="relative group">
+              <button>
+                <img src="/icons/springboot.svg" alt="Nextjs icon" class="w-12">
+              </button>
+              <span class="absolute -top-14 left-[50%] -translate-x-[50%] 
+      z-20 origin-left scale-0 px-3 rounded-lg 
+       bg-th-primary py-2 text-sm font-bold
+        text-th-background
+      shadow-lg transition-all duration-300 ease-in-out 
+        group-hover:scale-100">spring boot<span>
+                </span>
+              </span>
+
+            </div>
           </li>
         </ul>
       </div>
@@ -122,14 +160,32 @@
           </p>
           <!-- Links Section -->
           <div class="flex justify-center lg:justify-start gap-6">
-            <a href="https://github.com/diegorezm" class="btn btn-ghost" target="_blank">
-              <img src="/icons/github.svg" alt="GitHub icon"
-                class="w-8 h-8 transition-transform duration-300 hover:scale-110">
-            </a>
-            <a href="https://www.linkedin.com/in/diegorezm/" class="btn btn-ghost" target="_blank">
-              <img src="/icons/linkedin.svg" alt="LinkedIn icon"
-                class="w-8 h-8 transition-transform duration-300 hover:scale-110">
-            </a>
+
+            <div class="relative group">
+              <a href="https://github.com/diegorezm" target="_blank">
+                <img src="/icons/github.svg" alt="GitHub icon" class="w-8 h-8">
+              </a>
+              <span class="absolute -top-12 left-[50%] -translate-x-[50%] 
+      z-20 origin-left scale-0 px-3 rounded-lg 
+       bg-th-primary py-2 text-sm font-bold
+      shadow-lg transition-all duration-300 ease-in-out 
+        group-hover:scale-100">github<span>
+                </span>
+              </span>
+            </div>
+
+            <div class="relative group">
+              <a href="https://www.linkedin.com/in/diegorezm/" target="_blank">
+                <img src="/icons/linkedin.svg" alt="LinkedIn icon" class="w-8 h-8">
+              </a>
+              <span class="absolute -top-12 left-[50%] -translate-x-[50%] 
+      z-20 origin-left scale-0 px-3 rounded-lg 
+       bg-th-primary py-2 text-sm font-bold
+      shadow-lg transition-all duration-300 ease-in-out 
+        group-hover:scale-100">linkedin<span>
+                </span>
+              </span>
+            </div>
           </div>
         </div>
       </div>

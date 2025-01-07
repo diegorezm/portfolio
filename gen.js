@@ -50,6 +50,16 @@ const PROJECTS = [
     image:
       "/clinic.jpeg"
   },
+  {
+    name: "Resumemk",
+    sourceCode: "https://github.com/diegorezm/resumemk",
+    description:
+      "This project is a resume builder that allows you to generate a resume from a Markdown file. It also includes a Markdown editor that can be run directly in your browser to help you write your resume.",
+    tech: ["rust", "react"],
+    details: "https://www.youtube.com/watch?v=5VUemNrsJc4",
+    image:
+      "/resumemk.png"
+  },
 ];
 
 

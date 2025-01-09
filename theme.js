@@ -18,6 +18,9 @@ const setup = () => {
     localStorage.setItem(THEME_STORAGE_KEY, themes[0])
     return themes[0]
   }
+  if (!themes.includes(theme)) {
+    return themes[0]
+  }
   return theme
 }
 

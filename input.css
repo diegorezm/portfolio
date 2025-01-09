@@ -6,12 +6,51 @@
   :root {
     --background: #f9f4e4;
     --foreground: #000000;
+    --red: #fff;
     --primary: #605f4b;
     --secondary: #9c9e80;
     --muted: #e0dbcd;
     --padding: 24px;
     --padding-sm: 16px;
   }
+
+  [data-theme='autumn'] {
+    --background: #f4ddb8;
+    --foreground: #000000;
+    --primary: #90533b;
+    --secondary: #b87b6c;
+    --muted: #e0dbcd;
+    --padding: 24px;
+    --padding-sm: 16px;
+  }
+
+  [data-theme='summer'] {
+    --background: #fcded6;
+    --foreground: #000000;
+    --primary: #f26749;
+    --secondary: #ea9836;
+    --muted: #e0dbcd;
+    --padding: 24px;
+    --padding-sm: 16px;
+  }
+
+  [data-theme='winter'] {
+    --background: #cbdced;
+    --foreground: #323d42;
+    --primary: #3f778c;
+    --secondary: #8fa9b5;
+    --muted: #6587a1;
+    --padding: 24px;
+    --padding-sm: 16px;
+  }
+}
+
+.icon {
+  @apply w-12 h-12 fill-th-secondary;
+}
+
+.theme-icon {
+  @apply w-6 h-6 fill-th-muted hover:fill-th-primary;
 }
 
 .styled-shadow-primary {

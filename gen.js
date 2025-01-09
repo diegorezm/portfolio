@@ -125,10 +125,13 @@ async function build(html) {
     recursive: true,
     force: true
   })
+
   await fs.mkdir("out")
   await copy_dir(ICONS_DIR, "out/icons")
   await copy_dir(IMAGES_DIR, "out/images")
   await copy_dir(FONT_DIR, "out/font")
+  await fs.cp('theme.js', 'out/theme.js')
+
   const markup = [];
   PROJECTS.forEach((p) => {
     const m = gen_project_markup(p)

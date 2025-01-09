@@ -1,6 +1,7 @@
 const THEME_STORAGE_KEY = 'theme';
 const themes = ['spring', 'summer', 'autumn', 'winter'];
 const desktopThemeButton = document.getElementById('desktop-theme-button');
+const mobileThemeButton = document.getElementById('mobile-theme-button');
 const navLogo = document.getElementById('nav-logo')
 const footerLogo = document.getElementById('footer-logo')
 const link = document.querySelector("link[rel~='icon']");
@@ -11,7 +12,16 @@ const themeIcons = {
   'winter': `<svg xmlns="http://www.w3.org/2000/svg" class='theme-icon' viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-snowflake"><path d="m10 20-1.25-2.5L6 18"/><path d="M10 4 8.75 6.5 6 6"/><path d="m14 20 1.25-2.5L18 18"/><path d="m14 4 1.25 2.5L18 6"/><path d="m17 21-3-6h-4"/><path d="m17 3-3 6 1.5 3"/><path d="M2 12h6.5L10 9"/><path d="m20 10-1.5 2 1.5 2"/><path d="M22 12h-6.5L14 15"/><path d="m4 10 1.5 2L4 14"/><path d="m7 21 3-6-1.5-3"/><path d="m7 3 3 6h4"/></svg>`
 }
 
-let currentTheme = localStorage.getItem(THEME_STORAGE_KEY) || themes[0];
+const setup = () => {
+  const theme = localStorage.getItem(THEME_STORAGE_KEY)
+  if (theme === null) {
+    localStorage.setItem(THEME_STORAGE_KEY, theme[0])
+    return theme[0]
+  }
+  return theme
+}
+
+let currentTheme = setup()
 
 const changeFavicons = (theme) => {
   const faviconSrc = `images/favicon-${theme}.ico`;
@@ -25,6 +35,7 @@ const setTheme = (theme) => {
   changeFavicons(theme)
   localStorage.setItem(THEME_STORAGE_KEY, theme);
   desktopThemeButton.innerHTML = themeIcons[theme]
+  mobileThemeButton.innerHTML = theme
 };
 
 const nextTheme = (current) => {
@@ -36,5 +47,11 @@ desktopThemeButton.addEventListener('click', () => {
   currentTheme = nextTheme(currentTheme);
   setTheme(currentTheme);
 });
+
+mobileThemeButton.addEventListener('click', () => {
+  currentTheme = nextTheme(currentTheme);
+  setTheme(currentTheme);
+});
+
 setTheme(currentTheme);
 

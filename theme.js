@@ -15,8 +15,8 @@ const themeIcons = {
 const setup = () => {
   const theme = localStorage.getItem(THEME_STORAGE_KEY)
   if (theme === null) {
-    localStorage.setItem(THEME_STORAGE_KEY, theme[0])
-    return theme[0]
+    localStorage.setItem(THEME_STORAGE_KEY, themes[0])
+    return themes[0]
   }
   return theme
 }

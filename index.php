@@ -130,7 +130,7 @@ ob_start();
   </aside>
 
   <main class="flex flex-col items-center justify-center mt-10 md:mt-0">
-    <section class="section flex flex-col md:flex-row h-[650px] 2xl:h-[1050px] items-center gap-12 " id="hero">
+    <section class="section flex flex-col md:flex-row h-[720px] 2xl:h-[1050px] items-center gap-12 " id="hero">
       <div class="flex flex-col items-center w-2/3 gap-12">
         <h1 class="text-5xl font-bold leading-tight tracking-wide text-center">
           Welcome! My name is Diego, I&apos;m a <span class="text-th-secondary">fullstack developer

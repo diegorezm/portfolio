@@ -1,3 +1,64 @@
+<?php
+$isDevelopment = getenv('DEV_MODE') === 'true';
+
+$PROJECTS = [
+  [
+    "name" => "Convenience Store",
+    "sourceCode" => "https://github.com/diegorezm/convenience.store.api",
+    "description" => "Convenience store built with Spring Boot as the backend and Next.js as the frontend. It allows users to manage their products, create transactions, and generate PDFs of those transactions.",
+    "tech" => ["java", "docker", "spring boot", "nextjs", "typescript", "tailwind"],
+    "details" => "https://www.youtube.com/watch?v=Qd2bRPsiaZE",
+    "image" => "/convenience-store.jpg",
+  ],
+  [
+    "name" => "Start page",
+    "sourceCode" => "https://github.com/diegorezm/start_page",
+    "description" => "A customizable browser start page built with Next.js and TypeScript. Users can manage bookmarks, switch themes, and change the background image for a personalized experience.",
+    "tech" => ["typescript", "nextjs", "tailwind"],
+    "details" => "https://diegorezm-start-page.netlify.app/",
+    "image" => "/start-page.png",
+  ],
+  [
+    "name" => "Clinic",
+    "sourceCode" => "https://github.com/diegorezm/clinica",
+    "description" => "A freelance project for managing patients, doctors, and appointments, featuring scheduling, backups, and more. Built with Laravel and Livewire for a smooth user experience.",
+    "tech" => ["php", "laravel", "livewire", "alpinejs"],
+    "details" => "https://www.youtube.com/watch?v=ZEDnGtRIqUo",
+    "image" => "/clinic.jpeg",
+  ],
+  [
+    "name" => "Resumemk",
+    "sourceCode" => "https://github.com/diegorezm/resumemk",
+    "description" => "This project is a resume builder that allows you to generate a resume from a Markdown file. It also includes a Markdown editor that can be run directly in your browser to help you write your resume.",
+    "tech" => ["rust", "react"],
+    "details" => "https://resumemk.xyz/",
+    "image" => "/resumemk.png",
+  ],
+];
+
+function gen_project_markup($project)
+{
+  return "
+        <li class='project-card styled-shadow-primary'>
+            <h2 class='project-card-title'>{$project['name']}</h2>
+            <img src='/images/projects/{$project['image']}' alt='{$project['name']} showcase' class='project-card-image'>
+            <p class='project-card-desc text-md'>
+                {$project['description']}
+            </p>
+            <div class='flex gap-4'>
+                <a class='group btn btn-outline btn-sm' href='{$project['sourceCode']}' target='_blank'>
+                    <img src='/icons/github-dark.svg' alt='github icon' class='block w-6 group-hover:hidden transition-opacity duration-300'>
+                    <img src='/icons/github.svg' alt='github icon' class='hidden w-6 group-hover:block transition-opacity duration-300'>
+                </a>
+                <a class='btn btn-ghost btn-sm' href='{$project['details']}' target='_blank'>
+                    <img src='/icons/info.svg' alt='github icon' class='w-6'>
+                </a>
+            </div>
+        </li>
+    ";
+}
+ob_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -180,75 +241,12 @@
         <span class="block w-12 h-1 mx-auto mt-2 bg-th-primary"></span>
       </h1>
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 md:gap-4">
-        
-        <li class='project-card styled-shadow-primary'>
-            <h2 class='project-card-title'>Convenience Store</h2>
-            <img src='/images/projects//convenience-store.jpg' alt='Convenience Store showcase' class='project-card-image'>
-            <p class='project-card-desc text-md'>
-                Convenience store built with Spring Boot as the backend and Next.js as the frontend. It allows users to manage their products, create transactions, and generate PDFs of those transactions.
-            </p>
-            <div class='flex gap-4'>
-                <a class='group btn btn-outline btn-sm' href='https://github.com/diegorezm/convenience.store.api' target='_blank'>
-                    <img src='/icons/github-dark.svg' alt='github icon' class='block w-6 group-hover:hidden transition-opacity duration-300'>
-                    <img src='/icons/github.svg' alt='github icon' class='hidden w-6 group-hover:block transition-opacity duration-300'>
-                </a>
-                <a class='btn btn-ghost btn-sm' href='https://www.youtube.com/watch?v=Qd2bRPsiaZE' target='_blank'>
-                    <img src='/icons/info.svg' alt='github icon' class='w-6'>
-                </a>
-            </div>
-        </li>
-    
-        <li class='project-card styled-shadow-primary'>
-            <h2 class='project-card-title'>Start page</h2>
-            <img src='/images/projects//start-page.png' alt='Start page showcase' class='project-card-image'>
-            <p class='project-card-desc text-md'>
-                A customizable browser start page built with Next.js and TypeScript. Users can manage bookmarks, switch themes, and change the background image for a personalized experience.
-            </p>
-            <div class='flex gap-4'>
-                <a class='group btn btn-outline btn-sm' href='https://github.com/diegorezm/start_page' target='_blank'>
-                    <img src='/icons/github-dark.svg' alt='github icon' class='block w-6 group-hover:hidden transition-opacity duration-300'>
-                    <img src='/icons/github.svg' alt='github icon' class='hidden w-6 group-hover:block transition-opacity duration-300'>
-                </a>
-                <a class='btn btn-ghost btn-sm' href='https://diegorezm-start-page.netlify.app/' target='_blank'>
-                    <img src='/icons/info.svg' alt='github icon' class='w-6'>
-                </a>
-            </div>
-        </li>
-    
-        <li class='project-card styled-shadow-primary'>
-            <h2 class='project-card-title'>Clinic</h2>
-            <img src='/images/projects//clinic.jpeg' alt='Clinic showcase' class='project-card-image'>
-            <p class='project-card-desc text-md'>
-                A freelance project for managing patients, doctors, and appointments, featuring scheduling, backups, and more. Built with Laravel and Livewire for a smooth user experience.
-            </p>
-            <div class='flex gap-4'>
-                <a class='group btn btn-outline btn-sm' href='https://github.com/diegorezm/clinica' target='_blank'>
-                    <img src='/icons/github-dark.svg' alt='github icon' class='block w-6 group-hover:hidden transition-opacity duration-300'>
-                    <img src='/icons/github.svg' alt='github icon' class='hidden w-6 group-hover:block transition-opacity duration-300'>
-                </a>
-                <a class='btn btn-ghost btn-sm' href='https://www.youtube.com/watch?v=ZEDnGtRIqUo' target='_blank'>
-                    <img src='/icons/info.svg' alt='github icon' class='w-6'>
-                </a>
-            </div>
-        </li>
-    
-        <li class='project-card styled-shadow-primary'>
-            <h2 class='project-card-title'>Resumemk</h2>
-            <img src='/images/projects//resumemk.png' alt='Resumemk showcase' class='project-card-image'>
-            <p class='project-card-desc text-md'>
-                This project is a resume builder that allows you to generate a resume from a Markdown file. It also includes a Markdown editor that can be run directly in your browser to help you write your resume.
-            </p>
-            <div class='flex gap-4'>
-                <a class='group btn btn-outline btn-sm' href='https://github.com/diegorezm/resumemk' target='_blank'>
-                    <img src='/icons/github-dark.svg' alt='github icon' class='block w-6 group-hover:hidden transition-opacity duration-300'>
-                    <img src='/icons/github.svg' alt='github icon' class='hidden w-6 group-hover:block transition-opacity duration-300'>
-                </a>
-                <a class='btn btn-ghost btn-sm' href='https://resumemk.xyz/' target='_blank'>
-                    <img src='/icons/info.svg' alt='github icon' class='w-6'>
-                </a>
-            </div>
-        </li>
-          </ul>
+        <?php
+        foreach ($PROJECTS as $project) {
+          echo gen_project_markup($project);
+        }
+        ?>
+      </ul>
     </section>
     <section class="section bg-th-secondary" id="contact">
       <h1 class="mb-8 text-3xl font-bold text-center text-th-background">
@@ -274,9 +272,23 @@
       <a href="/#hero">
         <img src="/images/favicon.ico" alt="logo" class="w-8" id="footer-logo">
       </a>
-      <p>2025 Diego Rezende</p>    </footer>
+      <?php
+      $year = date("Y");
+      echo "<p>$year Diego Rezende</p>"
+      ?>
+    </footer>
   </main>
 </body>
 
 </html>
 
+<?php
+$htmlContent = ob_get_clean();
+if ($isDevelopment) {
+  echo $htmlContent;
+} else {
+  file_put_contents('index.html', $htmlContent);
+  echo "Static HTML file generated successfully!\n";
+}
+
+?>

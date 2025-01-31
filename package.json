@@ -5,11 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"pnpm tailwind:dev\" \"live-server\"",
-    "start": "live-server out",
-    "build": "node gen.js pnpm && pnpm tailwind:build",
-    "tailwind:dev": "tailwindcss -i ./input.css -o ./style.css --watch",
-    "tailwind:build": "tailwindcss -i ./input.css -o ./out/style.css"
+    "dev": "DEV_MODE=true concurrently \"pnpm tailwind:dev\" \"php -S localhost:3030\"",
+    "build": "DEV_MODE=false php index.php",
+    "tailwind:dev": "tailwindcss -i ./styles/input.css -o ./styles/style.css --watch",
+    "tailwind:build": "tailwindcss -i ./styles/input.css -o ./styles/style.css"
   },
   "keywords": [
     "portfolio"

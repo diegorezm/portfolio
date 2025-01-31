@@ -1,6 +1,37 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@source '../index.html';
+
+@theme {
+  --color-th-background: var(--background);
+  --color-th-foreground: var(--foreground);
+  --color-th-primary: var(--primary);
+  --color-th-secondary: var(--secondary);
+  --color-th-muted: var(--muted);
+  --color-th-red: var(--red);
+
+  --padding-sm: var(--padding);
+  --padding-mobile: var(--padding-sm);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 @layer base {
   :root {
@@ -68,24 +99,24 @@
 }
 
 .input {
-  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-2 focus:outline-none placeholder:text-th-muted focus:ring-th-primary focus:ring-offset-1 focus:ring-offset-th-primary;
+  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-2 focus:outline-hidden placeholder:text-th-muted focus:ring-th-primary focus:ring-offset-1 focus:ring-offset-th-primary;
 }
 
 .btn {
-  @apply font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-0;
+  @apply font-semibold rounded-lg transition-colors duration-200 focus:outline-hidden focus:ring-0;
 }
 
 .btn-primary {
-  @apply bg-[color:var(--primary)] text-white border-[color:var(--primary)] hover:bg-opacity-90 focus:ring-[color:var(--primary)];
+  @apply bg-[color:var(--primary)] text-white border-[color:var(--primary)] hover:opacity-75 focus:ring-[color:var(--primary)];
 }
 
 .btn-secondary {
-  @apply bg-[color:var(--secondary)] text-[color:var(--foreground)] border-[color:var(--secondary)] hover:bg-opacity-90 focus:ring-[color:var(--secondary)];
+  @apply bg-[color:var(--secondary)] text-[color:var(--foreground)] border-[color:var(--secondary)] hover:opacity-75 focus:ring-[color:var(--secondary)];
 }
 
 /* https://uiverse.io/Melo034/stupid-bear-67 */
 .btn-outline {
-  @apply relative z-10 inline-flex items-center justify-center overflow-hidden text-sm font-semibold text-black bg-transparent border-2 rounded-lg border-th-foreground isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-right-full before:hover:right-0 before:rounded-full before:bg-th-primary before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 shadow-sm gap-x-2 hover:text-th-background hover:bg-th-secondary disabled:opacity-50 hover:border-th-primary disabled:pointer-events-none;
+  @apply relative z-10 inline-flex items-center justify-center overflow-hidden text-sm font-semibold text-black bg-transparent border-2 rounded-lg border-th-foreground isolation-auto before:absolute before:w-full before:transition-all before:duration-700 hover:before:w-full before:-right-full hover:before:right-0 before:rounded-full before:bg-th-primary before:-z-10 before:aspect-square hover:before:scale-150 hover:before:duration-700 shadow-xs gap-x-2 hover:text-th-background hover:bg-th-secondary disabled:opacity-50 hover:border-th-primary disabled:pointer-events-none;
 }
 
 .btn-ghost {
@@ -124,7 +155,7 @@
 }
 
 .section {
-  @apply w-full p-mobile lg:p;
+  @apply w-full p-mobile lg:p-sm;
 }
 
 @font-face {

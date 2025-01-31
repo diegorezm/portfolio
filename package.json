@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "DEV_MODE=true concurrently \"pnpm tailwind:dev\" \"php -S localhost:3030\"",
-    "build": "DEV_MODE=false php index.php",
+    "build": "DEV_MODE=false php index.php && pnpm run tailwind:build",
     "tailwind:dev": "tailwindcss -i ./styles/input.css -o ./styles/style.css --watch",
     "tailwind:build": "tailwindcss -i ./styles/input.css -o ./styles/style.css"
   },

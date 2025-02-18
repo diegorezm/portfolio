@@ -2,3 +2,5 @@ out
 node_modules
 style.css
 index.html
+.php-cs-fixer.cache
+

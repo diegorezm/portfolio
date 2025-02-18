@@ -1,6 +1,5 @@
 <?php
 $isDevelopment = getenv('DEV_MODE') === 'true';
-
 $PROJECTS = [
   [
     "name" => "Convenience Store",
@@ -38,7 +37,7 @@ $PROJECTS = [
 
 function gen_project_markup($project)
 {
-  return "
+    return "
         <li class='project-card styled-shadow-primary'>
             <h2 class='project-card-title'>{$project['name']}</h2>
             <img src='/images/projects/{$project['image']}' alt='{$project['name']} showcase' class='project-card-image'>
@@ -243,9 +242,9 @@ ob_start();
       <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8 md:gap-4">
         <?php
         foreach ($PROJECTS as $project) {
-          echo gen_project_markup($project);
+            echo gen_project_markup($project);
         }
-        ?>
+?>
       </ul>
     </section>
     <section class="section bg-th-secondary" id="contact">
@@ -274,8 +273,8 @@ ob_start();
       </a>
       <?php
       $year = date("Y");
-      echo "<p>$year Diego Rezende</p>"
-      ?>
+echo "<p>$year Diego Rezende</p>"
+?>
     </footer>
   </main>
 </body>
@@ -285,10 +284,10 @@ ob_start();
 <?php
 $htmlContent = ob_get_clean();
 if ($isDevelopment) {
-  echo $htmlContent;
+    echo $htmlContent;
 } else {
-  file_put_contents('index.html', $htmlContent);
-  echo "Static HTML file generated successfully!\n";
+    file_put_contents('index.html', $htmlContent);
+    echo "Static HTML file generated successfully!\n";
 }
 
 ?>

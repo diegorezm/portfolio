@@ -128,8 +128,8 @@ ob_start();
     </ul>
   </aside>
 
-  <main class="flex flex-col items-center justify-center mt-10 md:mt-0">
-    <section class="section flex flex-col md:flex-row h-[720px] 2xl:h-[1050px] items-center gap-12 " id="hero">
+  <main class="flex flex-col items-center justify-center mt-10 md:mt-0 gap-4 px-4">
+    <section class="section w-full flex flex-col md:flex-row h-[720px] 2xl:h-[1050px] items-center gap-12 " id="hero">
       <div class="flex flex-col items-center w-2/3 gap-12">
         <h1 class="text-5xl font-bold leading-tight tracking-wide text-center">
           Welcome! My name is Diego, I&apos;m a <span class="text-th-secondary">fullstack developer
@@ -179,7 +179,7 @@ ob_start();
       </div>
     </section>
 
-    <section class="py-12 section bg-th-primary text-th-background" id="about">
+    <section class="py-12 px-12 bg-th-primary text-th-background rounded-sm border-2 border-th-foreground" id="about">
       <h1 class="mb-8 text-3xl font-bold text-center text-th-secondary">
         About Me
         <span class="block w-12 h-1 mx-auto mt-2 bg-th-secondary"></span>
@@ -247,7 +247,7 @@ ob_start();
 ?>
       </ul>
     </section>
-    <section class="section bg-th-secondary" id="contact">
+    <section class="px-12 py-12 bg-th-secondary border-2 border-th-foreground rounded-sm" id="contact">
       <h1 class="mb-8 text-3xl font-bold text-center text-th-background">
         Contact
         <span class="block w-12 h-1 mx-auto mt-2 bg-th-background"></span>
@@ -267,7 +267,8 @@ ob_start();
         </button>
       </form>
     </section>
-    <footer class="flex items-center w-full p-2 border-t gap-6 border-th-foreground">
+  </main>
+    <footer class="flex items-center w-full p-2 border-t gap-6 border-th-foreground mt-4">
       <a href="/#hero">
         <img src="/images/favicon.ico" alt="logo" class="w-8" id="footer-logo">
       </a>
@@ -276,7 +277,6 @@ ob_start();
 echo "<p>$year Diego Rezende</p>"
 ?>
     </footer>
-  </main>
 </body>
 
 </html>

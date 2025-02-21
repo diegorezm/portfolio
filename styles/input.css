@@ -99,11 +99,11 @@
 }
 
 .input {
-  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-lg focus:ring-2 focus:outline-hidden placeholder:text-th-muted focus:ring-th-primary focus:ring-offset-1 focus:ring-offset-th-primary;
+  @apply w-full px-[var(--padding-sm)] py-2 bg-transparent border-2 border-th-foreground rounded-sm focus:ring-2 focus:outline-hidden placeholder:text-th-muted focus:ring-th-primary focus:ring-offset-1 focus:ring-offset-th-primary;
 }
 
 .btn {
-  @apply font-semibold rounded-lg transition-colors duration-200 focus:outline-hidden focus:ring-0;
+  @apply font-semibold rounded-sm transition-colors duration-200 focus:outline-hidden focus:ring-0;
 }
 
 .btn-primary {
@@ -116,7 +116,7 @@
 
 /* https://uiverse.io/Melo034/stupid-bear-67 */
 .btn-outline {
-  @apply relative z-10 inline-flex items-center justify-center overflow-hidden text-sm font-semibold text-black bg-transparent border-2 rounded-lg border-th-foreground isolation-auto before:absolute before:w-full before:transition-all before:duration-700 hover:before:w-full before:-right-full hover:before:right-0 before:rounded-full before:bg-th-primary before:-z-10 before:aspect-square hover:before:scale-150 hover:before:duration-700 shadow-xs gap-x-2 hover:text-th-background hover:bg-th-secondary disabled:opacity-50 hover:border-th-primary disabled:pointer-events-none;
+  @apply relative z-10 inline-flex items-center justify-center overflow-hidden text-sm font-semibold text-black bg-transparent border-2 rounded-sm border-th-foreground isolation-auto before:absolute before:w-full before:transition-all before:duration-700 hover:before:w-full before:-right-full hover:before:right-0 before:rounded-full before:bg-th-primary before:-z-10 before:aspect-square hover:before:scale-150 hover:before:duration-700 shadow-xs gap-x-2 hover:text-th-background hover:bg-th-secondary disabled:opacity-50 hover:border-th-primary disabled:pointer-events-none;
 }
 
 .btn-ghost {
@@ -137,7 +137,7 @@
 }
 
 .project-card {
-  @apply shadow-md rounded-md px-4 py-2 hover:shadow-lg space-y-4 hover:hover:transform hover:translate-y-[-8px] transition-all duration-500;
+  @apply shadow-md rounded-sm px-4 py-2 hover:shadow-lg space-y-4 hover:hover:transform hover:translate-y-[-8px] transition-all duration-500;
   border: 2px solid var(--primary);
   box-shadow: 4px 4px var(--primary);
 }
@@ -154,8 +154,9 @@
   @apply text-th-secondary;
 }
 
+
 .section {
-  @apply w-full p-mobile lg:p-sm;
+  @apply p-mobile lg:p-sm;
 }
 
 @font-face {

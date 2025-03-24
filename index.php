@@ -2,12 +2,12 @@
 $isDevelopment = getenv('DEV_MODE') === 'true';
 $PROJECTS = [
   [
-    "name" => "Convenience Store",
-    "sourceCode" => "https://github.com/diegorezm/convenience.store.api",
-    "description" => "Convenience store built with Spring Boot as the backend and Next.js as the frontend. It allows users to manage their products, create transactions, and generate PDFs of those transactions.",
-    "tech" => ["java", "docker", "spring boot", "nextjs", "typescript", "tailwind"],
-    "details" => "https://www.youtube.com/watch?v=Qd2bRPsiaZE",
-    "image" => "/convenience-store.jpg",
+    "name" => "Remote Jobs",
+    "sourceCode" => "https://github.com/diegorezm/rmtjbs",
+    "description" => "Application for applying to/posting jobs that allows candidates and recruiters to chat with each other in real time, along with many other features",
+    "tech" => ["java", "docker", "spring boot", "reactrouter", "typescript", "tailwind", "s3"],
+    "details" => "https://www.youtube.com/watch?v=mVsjvXnaol4&t=1s",
+    "image" => "/rmtjbs.jpeg",
   ],
   [
     "name" => "Start page",

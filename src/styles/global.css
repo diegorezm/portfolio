@@ -1,0 +1,67 @@
+:root {
+  --background: #ede4d1;
+  --foreground: #282b2e;
+
+  --primary: #282b2e;
+  --on-primary: #ede4d1;
+
+  --secondary: #cfde67;
+  --on-secondary: #282b2e;
+
+  --tertiary: #c889bb;
+  --on-tertiary: #f0ece7;
+
+  --surface: #f0ece7;
+  --on-surface: #282b2e;
+
+  --error: #d81e5b;
+  --on-error: #000000;
+
+  --padding-xs: 4px;
+  --padding-sm: 8px;
+  --padding-md: 16px;
+  --padding-lg: 24px;
+  --padding-xl: 32px;
+
+  --margin-xs: 4px;
+  --margin-sm: 8px;
+  --margin-md: 16px;
+  --margin-lg: 24px;
+  --margin-xl: 32px;
+
+  --fs-xs: 12px;
+  --fs-sm: 16px;
+  --fs-md: 20px;
+  --fs-lg: 24px;
+  --fs-xl: 32px;
+  --fs-xxl: 40px;
+
+  --radius: 6px;
+}
+
+html,
+body {
+  font-family:
+    "JetBrainsMono",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 16px;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+  font-weight: 500;
+  font-style: normal;
+  scrollbar-color: var(--foreground) var(--background);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}

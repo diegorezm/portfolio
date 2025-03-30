@@ -1,22 +1,50 @@
+---
+import { SEO } from "astro-seo";
+
+import "../styles/global.css";
+import "../styles/reset.css";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title="Diegorezm | Portfolio"
+      description="The personal portfolio of Diego Rezende, a fullstack developer specializing in Java, TypeScript, and open-source contributions. Explore projects, contact details, and more."
+      openGraph={{
+        basic: {
+          title: "Diegorezm | Portfolio",
+          type: "website",
+          image:
+            "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        },
+      }}
+      twitter={{
+        creator: "@diegorezm",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+        meta: [
+          {
+            name: "twitter:image",
+            content:
+              "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+          },
+          { name: "twitter:title", content: "Diegorezm | portfolio" },
+          {
+            name: "twitter:description",
+            content:
+              "The personal portfolio of Diego Rezende, a fullstack developer specializing in Java, TypeScript, and open-source contributions. Explore projects, contact details, and more.",
+          },
+        ],
+      }}
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

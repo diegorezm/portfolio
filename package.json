@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.5.5"
+    "astro": "^5.5.5",
+    "astro-seo": "^0.8.4"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.28.0",

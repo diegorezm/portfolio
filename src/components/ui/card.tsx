@@ -23,15 +23,23 @@ export function CardRoot({ variant = "primary", children }: CardProps) {
   );
 }
 
-type CardTitleProps = {
+type CardHeaderProps = {
   title: string;
+  image?: {
+    url: string;
+    alt: string;
+    className: string;
+  };
   description?: string;
 };
 
-export function CardTitle({ title, description }: CardTitleProps) {
+export function CardHeader({ title, image, description }: CardHeaderProps) {
   return (
-    <div className="mb-2">
+    <div className="mb-2 space-y-2">
       <h1 className="text-lg font-semibold">{title}</h1>
+      {image && (
+        <img src={image.url} alt={image.alt} className={image.className} />
+      )}
       {description && <p className="text-sm">{description}</p>}
     </div>
   );
@@ -39,8 +47,9 @@ export function CardTitle({ title, description }: CardTitleProps) {
 
 type CardBodyProps = {
   children?: ReactNode;
+  className?: String;
 };
 
-export function CardBody({ children }: CardBodyProps) {
-  return <div className="text-sm">{children}</div>;
+export function CardBody({ children, className }: CardBodyProps) {
+  return <div className={cn("text-sm", className)}>{children}</div>;
 }

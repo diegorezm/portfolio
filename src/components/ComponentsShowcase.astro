@@ -1,0 +1,79 @@
+---
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { CardRoot, CardBody, CardTitle } from "./ui/card";
+---
+
+<div class="space-y-4 p-4">
+  <div>
+    <h2 class="text-lg font-semibold">Primary Variant</h2>
+    <Button variant="primary">Primary Button</Button>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">Secondary Variant</h2>
+    <Button variant="secondary">Secondary Button</Button>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">Tertiary Variant</h2>
+    <Button variant="tertiary">Tertiary Button</Button>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">Outline Variant</h2>
+    <Button variant="outline">Outline Button</Button>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">Ghost Variant</h2>
+    <Button variant="ghost">Ghost Button</Button>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">Sizes</h2>
+    <Button size="sm">Small Button</Button>
+    <Button size="md">Medium Button</Button>
+    <Button size="lg">Large Button</Button>
+  </div>
+
+  <div>
+    <h2 class="text-lg font-semibold">Combined Variants and Sizes</h2>
+    <Button variant="primary" size="sm"> Small Primary </Button>
+    <Button variant="secondary" size="lg"> Large Secondary </Button>
+    <Button variant="outline" size="md"> Medium Outline </Button>
+    <Button variant="ghost" size="sm"> Small Ghost </Button>
+  </div>
+
+  <Input placeholder={"Yeah"} />
+
+  <div class="space-y-4 p-4">
+    <CardRoot variant="primary">
+      <CardTitle title="Primary Card" description="This is a primary card." />
+      <CardBody>Card body content goes here.</CardBody>
+    </CardRoot>
+
+    <CardRoot variant="secondary">
+      <CardTitle
+        title="Secondary Card"
+        description="This is a secondary card."
+      />
+      <CardBody>Card body content goes here.</CardBody>
+    </CardRoot>
+
+    <CardRoot variant="tertiary">
+      <CardTitle title="Ghost Card" description="This is a ghost card." />
+      <CardBody>Card body content goes here.</CardBody>
+    </CardRoot>
+
+    <CardRoot variant="outline">
+      <CardTitle title="Outline Card" description="This is an outline card." />
+      <CardBody>Card body content goes here.</CardBody>
+    </CardRoot>
+
+    <CardRoot variant="ghost">
+      <CardTitle title="Ghost Card" description="This is a ghost card." />
+      <CardBody>Card body content goes here.</CardBody>
+    </CardRoot>
+  </div>
+</div>

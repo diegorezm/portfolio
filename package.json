@@ -9,8 +9,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^4.0.7",
+    "@fontsource/titillium-web": "^5.2.5",
+    "@tailwindcss/vite": "^4.0.17",
     "astro": "^5.5.5",
-    "astro-seo": "^0.8.4"
+    "astro-seo": "^0.8.4",
+    "clsx": "^2.1.1",
+    "lucide-preact": "^0.485.0",
+    "preact": "^10.26.4",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.17"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.28.0",

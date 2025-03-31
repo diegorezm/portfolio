@@ -1,0 +1,42 @@
+---
+import { Button } from "../../components/ui/button";
+---
+
+<section
+  class="w-full h-screen flex flex-col items-center justify-center text-center p-4 md:p-8"
+  id="hero"
+>
+  <h1
+    class="text-4xl md:text-5xl font-bold leading-tight tracking-wide mb-4 text-foreground"
+  >
+    Welcome, my name is Diego. I am a full-stack Developer!
+  </h1>
+  <p class="text-lg text-foreground max-w-2xl">
+    I am available to work on Spring Boot, Next.js, or Laravel! Let's build
+    something amazing together.
+  </p>
+  <div class="flex flex-col md:flex-row gap-2 items-center mt-8">
+    <a href="#contact" class="w-full md:w-fit">
+      <Button size="lg" variant="primary">Contact Me</Button>
+    </a>
+    <a href="#projects" class="w-full md:w-fit">
+      <Button size="lg" variant="outline"> View Projects </Button>
+    </a>
+  </div>
+  <div class="mt-8 flex justify-center space-x-4">
+    <a
+      href="https://github.com/diegorezm"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/github-dark.svg" alt="Github Logo" class="h-8 w-9" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/diegorezm/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/linkedin.png" alt="Linkedin logo" class="h-8 w-9" />
+    </a>
+  </div>
+</section>

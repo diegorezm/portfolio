@@ -1,0 +1,99 @@
+---
+import { Code, Info } from "lucide-preact";
+import { Button } from "../../components/ui/button";
+import { CardBody, CardRoot, CardHeader } from "../../components/ui/card.tsx";
+
+const PROJECTS = [
+  {
+    name: "Remote Jobs",
+    sourceCode: "https://github.com/diegorezm/rmtjbs",
+    description:
+      "Application for applying to/posting jobs that allows candidates and recruiters to chat with each other in real time, along with many other features",
+    tech: [
+      "java",
+      "docker",
+      "spring boot",
+      "reactrouter",
+      "typescript",
+      "tailwind",
+      "s3",
+    ],
+    details: "https://www.youtube.com/watch?v=mVsjvXnaol4&t=1s",
+    image: "/rmtjbs.jpeg",
+  },
+  {
+    name: "Start page",
+    sourceCode: "https://github.com/diegorezm/start_page",
+    description:
+      "A customizable browser start page built with Next.js and TypeScript. Users can manage bookmarks, switch themes, and change the background image for a personalized experience.",
+    tech: ["typescript", "nextjs", "tailwind"],
+    details: "https://diegorezm-start-page.netlify.app/",
+    image: "/start-page.png",
+  },
+  {
+    name: "Clinic",
+    sourceCode: "https://github.com/diegorezm/clinica",
+    description:
+      "A freelance project for managing patients, doctors, and appointments, featuring scheduling, backups, and more. Built with Laravel and Livewire for a smooth user experience.",
+    tech: ["php", "laravel", "livewire", "alpinejs"],
+    details: "https://www.youtube.com/watch?v=ZEDnGtRIqUo",
+    image: "/clinic.jpeg",
+  },
+  {
+    name: "Resumemk",
+    sourceCode: "https://github.com/diegorezm/resumemk",
+    description:
+      "This project is a resume builder that allows you to generate a resume from a Markdown file. It also includes a Markdown editor that can be run directly in your browser to help you write your resume.",
+    tech: ["rust", "react"],
+    details: "https://resumemk.xyz/",
+    image: "/resumemk.png",
+  },
+] as const;
+---
+
+<section class="p-4 md:p-8 w-full h-full" id="projects">
+  <h1 class="text-3xl font-bold">Projects</h1>
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+    {
+      PROJECTS.map((project) => (
+        <CardRoot>
+          <CardHeader
+            title={project.name}
+            description={project.description}
+            image={{
+              url: `/projects/${project.image}`,
+              className: "rounded-lg",
+              alt: `Image for ${project.name}`,
+            }}
+          />
+          <CardBody className="mt-2">
+            <div class="flex flex-col lg:flex-row gap-4">
+              <a
+                href={project.sourceCode}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full"
+              >
+                <Button variant="tertiary">
+                  <Code size={20} />
+                  Code
+                </Button>
+              </a>
+              <a
+                href={project.details}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full"
+              >
+                <Button variant="secondary" className="text-md font-semibold">
+                  <Info size={20} />
+                  Details
+                </Button>
+              </a>
+            </div>
+          </CardBody>
+        </CardRoot>
+      ))
+    }
+  </ul>
+</section>

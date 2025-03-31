@@ -15,14 +15,30 @@ import { Input, TextArea } from "../../components/ui/input";
     class="mt-8 flex flex-col justify-center items-center w-full gap-6"
     data-netlify="true"
   >
-    <Input placeholder="Your name..." minlength={6} maxLength={250} required />
-    <Input placeholder="your@email.com" type="email" maxLength={500} required />
+    <Input
+      placeholder="Your name..."
+      minlength={6}
+      maxLength={250}
+      id="contact_form_name"
+      name="name"
+      required
+    />
+    <Input
+      placeholder="your@email.com"
+      type="email"
+      maxLength={500}
+      id="contact_form_email"
+      name="email"
+      required
+    />
     <TextArea
       placeholder="Your message"
       cols={5}
       rows={5}
       minlength={10}
       maxLength={1000}
+      id="contact_form_message"
+      name="message"
       required
     />
     <p class="hidden">

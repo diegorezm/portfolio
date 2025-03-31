@@ -1,4 +1,4 @@
-import { Menu } from "lucide-preact";
+import { Menu, X } from "lucide-preact";
 import { Button } from "./ui/button";
 import { useState, useEffect } from "preact/hooks";
 
@@ -17,22 +17,32 @@ function MobileNavbar() {
       <Button variant="ghost" onClick={() => setIsOpen(!isOpen)}>
         <Menu size={24} />
       </Button>
-      {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-surface shadow-md rounded-b-lg mt-1 z-10">
-          <ul className="flex flex-col p-4">
-            {navLinks.map((link) => (
-              <li key={link.name} className="mb-2">
-                <a
-                  href={link.href}
-                  className="block p-2 hover:bg-foreground/10 rounded-md"
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div
+        className={`fixed top-0 right-0 h-screen w-2/3 bg-surface shadow-md transform transition-transform duration-300 z-50 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <Button
+          variant="ghost"
+          onClick={() => setIsOpen(false)}
+          className="absolute top-4 right-4 w-fit h-fit"
+        >
+          <X className="text-error" />
+        </Button>
+        <ul className="flex flex-col p-4 mt-8">
+          {navLinks.map((link) => (
+            <li key={link.name} className="mb-2">
+              <a
+                href={link.href}
+                className="block p-2 hover:bg-foreground/10 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

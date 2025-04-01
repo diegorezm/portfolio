@@ -1,44 +1,43 @@
 @import "tailwindcss";
 
-/* :root { */
-/*   --background: #ede4d1; */
-/*   --foreground: #282b2e; */
-/**/
-/*   --primary: #282b2e; */
-/*   --on-primary: #ede4d1; */
-/**/
-/*   --secondary: #cfde67; */
-/*   --on-secondary: #282b2e; */
-/**/
-/*   --tertiary: #c889bb; */
-/*   --on-tertiary: #f0ece7; */
-/**/
-/*   --surface: #f0ece7; */
-/*   --on-surface: #282b2e; */
-/**/
-/*   --error: #d81e5b; */
-/*   --on-error: #000000; */
-/* } */
-/**/
+:root {
+  --background: #ede4d1;
+  --foreground: #282b2e;
+
+  --primary: #282b2e;
+  --on-primary: #ede4d1;
+
+  --secondary: #cfde67;
+  --on-secondary: #282b2e;
+
+  --tertiary: #c889bb;
+  --on-tertiary: #f0ece7;
+
+  --surface: #f0ece7;
+  --on-surface: #282b2e;
+
+  --error: #d81e5b;
+  --on-error: #000000;
+}
 
 @theme {
-  --color-background: #ede4d1;
-  --color-foreground: #282b2e;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
-  --color-primary: #282b2e;
-  --color-on-primary: #ede4d1;
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
 
-  --color-secondary: #cfde67;
-  --color-on-secondary: #282b2e;
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
 
-  --color-tertiary: #c889bb;
-  --color-on-tertiary: #f0ece7;
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
 
-  --color-surface: #f0ece7;
-  --color-on-surface: #282b2e;
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
 
-  --color-error: #d81e5b;
-  --color-on-error: #000000;
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
 }
 
 html,

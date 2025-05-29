@@ -1,3 +1,7 @@
+---
+import { ThemeSelect } from "../../components/ThemeSelect.tsx";
+---
+
 <section
   id="about"
   class="flex w-full flex-col md:flex-row bg-primary text-on-primary p-4 md:p-8 gap-6 2xl:rounded-lg"
@@ -16,10 +20,14 @@
       >, a software developer from Brazil with a passion for coding and learning
       new things. I'm currently in college, but I'm always on the lookout for
       challenges and opportunities. I’m a big fan of open-source and have
-      created a few projects myself—feel free to check them out on my GitHub!
-      I’ve been using Linux since high school
-      <span class="italic text-surface">(Arch btw)</span>.
+      created a few projects myself! Feel free to check them out on my GitHub!
+      I’ve been using Linux since high school.
     </p>
+    <p class="text-lg mt-2">
+      I have collected some themes throughout the years and I like to switch
+      between them from time to time. Here are some of my favorites:
+    </p>
+    <ThemeSelect client:load />
 
     <div class="mt-8 flex justify-center space-x-4">
       <a

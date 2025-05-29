@@ -1,23 +1,102 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ede4d1;
-  --foreground: #282b2e;
+@layer base {
+  :root {
+    --background: #ede4d1;
+    --foreground: #282b2e;
 
-  --primary: #282b2e;
-  --on-primary: #ede4d1;
+    --primary: #282b2e;
+    --on-primary: #ede4d1;
 
-  --secondary: #cfde67;
-  --on-secondary: #282b2e;
+    --secondary: #cfde67;
+    --on-secondary: #282b2e;
 
-  --tertiary: #c889bb;
-  --on-tertiary: #f0ece7;
+    --tertiary: #c889bb;
+    --on-tertiary: #f0ece7;
 
-  --surface: #f0ece7;
-  --on-surface: #282b2e;
+    --surface: #f0ece7;
+    --on-surface: #282b2e;
 
-  --error: #d81e5b;
-  --on-error: #000000;
+    --error: #d81e5b;
+    --on-error: #000000;
+
+    &[data-theme="solarized-light"] {
+      --background: #eee8d5;
+      --foreground: #586e75;
+
+      --primary: #073642;
+      --on-primary: #eee8d5;
+
+      --secondary: #2aa198;
+      --on-secondary: #eee8d5;
+
+      --tertiary: #268bd2;
+      --on-tertiary: #fdf6e3;
+
+      --surface: #fdf6e3;
+      --on-surface: #586e75;
+
+      --error: #dc322f;
+      --on-error: #000000;
+    }
+    &[data-theme="gruvbox-light"] {
+      --background: #fbf1c7;
+      --foreground: #3c3836;
+
+      --primary: #b16286;
+      --on-primary: #fbf1c7;
+
+      --secondary: #2c3836;
+      --on-secondary: #eee8d5;
+
+      --tertiary: #8f3f71;
+      --on-tertiary: #eee8d5;
+
+      --surface: #fdf6e3;
+      --on-surface: #586e75;
+
+      --error: #dc322f;
+      --on-error: #000000;
+    }
+    &[data-theme="moonfly"] {
+      --background: #080808;
+      --foreground: #bdbdbd;
+
+      --primary: #323437;
+      --on-primary: #bdbdbd;
+
+      --secondary: #8f3f71;
+      --on-secondary: #bdbdbd;
+
+      --tertiary: #cf87e8;
+      --on-tertiary: #eee8d5;
+
+      --surface: #323437;
+      --on-surface: #e4e4e4;
+
+      --error: #ff5d5d;
+      --on-error: #000000;
+    }
+    &[data-theme="mocha"] {
+      --background: #1e1e2e;
+      --foreground: #cdd6f4;
+
+      --primary: #45475a;
+      --on-primary: #cdd6f4;
+
+      --secondary: #f5c2e7;
+      --on-secondary: #1e1e2e;
+
+      --tertiary: #89b4fa;
+      --on-tertiary: #1e1e2e;
+
+      --surface: #45475a;
+      --on-surface: #bac2de;
+
+      --error: #ff5d5d;
+      --on-error: #000000;
+    }
+  }
 }
 
 @theme {
@@ -46,6 +125,13 @@
   --gap: 5em;
   --line: 1px;
   --color: rgba(0, 0, 0, 0.1);
+
+  :root[data-theme="moonfly"] & {
+    --color: rgba(255, 255, 255, 0.1);
+  }
+  :root[data-theme="mocha"] & {
+    --color: rgba(255, 255, 255, 0.1);
+  }
 
   background-image:
     linear-gradient(

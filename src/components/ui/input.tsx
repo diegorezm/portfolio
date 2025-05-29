@@ -27,7 +27,7 @@ export function Input({ inputSize = "md", className, ...props }: InputProps) {
         getSize(inputSize),
         "border-foreground",
         "bg-surface",
-        "text-foreground",
+        "text-on-surface",
         className,
       )}
       {...props}

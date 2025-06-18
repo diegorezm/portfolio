@@ -272,6 +272,11 @@ a {
   max-height: 825px;
 }
 
+#home h1,
+p {
+  text-align: center;
+}
+
 .about_content_my_picture img {
   width: 460px;
   height: 540px;

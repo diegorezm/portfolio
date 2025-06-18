@@ -385,7 +385,9 @@ p {
   }
 
   .project_item_card {
-    width: 90%;
+    width: 85%;
+    height: 100%;
+    gap: var(--spacing-md);
   }
 
   .carousel-container {

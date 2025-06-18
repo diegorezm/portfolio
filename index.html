@@ -5,29 +5,230 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./styles.css" rel="stylesheet">
+  <link href="./styles/styles.css" rel="stylesheet">
   <title>Diegorezm | Portfolio</title>
 </head>
 
-<body>
-  <nav class="portfolio_top_navigation" data-flex data-justify="between" data-align="center" data-border-bottom>
-    <div class="portfolio_top_navigation_logo" data-padding="sm" data-border-right>
-      <img src="./favicon.ico" alt="Website logo">
-    </div>
-    <div class="portfolio_top_navigation_links" data-flex data-gap="md" data-border-left="true">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div></div>
-  </nav>
-  <section id="home" data-section data-flex data-gap="lg">
-    <div class="home_line_separator" data-padding="sm" data-border-right></div>
-    <h1>
-      Hi, I'm Diego
-    </h1>
-  </section>
+<body data-padding="md">
+  <main>
+    <nav class="portfolio_top_navigation" data-flex data-justify="between" data-align="center" data-border-bottom>
+      <div class="portfolio_top_navigation_logo" data-padding="sm" data-flex data-justify="center" data-border-right>
+        <img src="./favicon.ico" alt="Website logo">
+      </div>
+      <div class="portfolio_top_navigation_links" data-flex data-gap="sm" data-border-left="true">
+        <!-- <a href="/#home" variant="ghost" size="sm" data-rounded>Home</a> -->
+        <a href="/#about" variant="ghost" size="md" data-rounded>About</a>
+        <a href="/#projects" variant="ghost" size="md" data-rounded>Projects</a>
+        <a href="/#contact" variant="ghost" size="md" data-rounded>Contact</a>
+      </div>
+      <div>
+      </div>
+    </nav>
+
+    <section id="home" data-section data-flex data-flex-direction="col" data-align="center" data-justify="center"
+      data-gap="lg" data-padding="sm">
+      <h1>
+        Welcome, my name is Diego. I am a full-stack Developer!
+      </h1>
+      <p>
+        I am available to work on Spring Boot, Next.js, or Laravel! Let's build something amazing together.
+      </p>
+      <div data-flex data-flex="row" data-gap="sm" data-justify="center" class="home_main_content_buttons">
+        <button size="lg" variant="primary">
+          <a href="/#contact" text-color="on-primary">
+            Contact me!
+          </a>
+        </button>
+        <button size="lg" variant="outline">
+          <a href="/#projects">
+            See my projects!
+          </a>
+        </button>
+      </div>
+      <div data-flex data-gap="md">
+        <a href="https://github.com/diegorezm" target="_blank">
+          <img src="./icons/github.svg" alt="Github" width="32" height="32" />
+        </a>
+        <a href="https://www.linkedin.com/in/diegorezm/" target="_blank">
+          <img src="./icons/linkedin.svg" alt="Linkedin" width="32" height="32" />
+        </a>
+      </div>
+    </section>
+
+    <section id="about" data-section data-flex data-flex-direction="col" data-padding="md" data-gap="md"
+      data-border-top>
+      <h2>About</h2>
+      <div class="about_content" data-flex data-flex-direction="row" data-gap="md" data-justify="between">
+        <div class="about_content_my_picture">
+          <img src="./imgs/my-picture.jpg" alt="My picture in a suit.">
+        </div>
+
+        <div data-flex data-flex-direction="col" data-gap="md">
+          <div class="about_content_desc">
+            <p>
+              Hello! I'm Diego Rezende, a software developer from Brazil with a passion for coding and learning new
+              things. I'm currently in college, but I'm always on the lookout for challenges and opportunities. I’m a
+              big
+              fan of open-source and have created a few projects myself! Feel free to check them out on my GitHub! I’ve
+              been using Linux since high school.
+            </p>
+          </div>
+
+          <div data-flex data-gap="md" data-justify="center">
+            <a href="https://github.com/diegorezm" target="_blank">
+              <img src="./icons/github.svg" alt="Github" width="40" height="40" />
+            </a>
+            <a href="https://www.linkedin.com/in/diegorezm/" target="_blank">
+              <img src="./icons/linkedin.svg" alt="Linkedin" width="40" height="40" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" data-section data-flex data-flex-direction="col" data-padding="md" data-gap="md"
+      data-border-top>
+
+      <h2>Projects</h2>
+
+      <div class="carousel-container" data-flex="row" data-align="center" data-justify="center" data-gap="md">
+        <button class="carousel-nav-btn" data-direction="prev" variant="outline" size="md" aria-label="Previous button">
+          &larr;
+        </button>
+
+        <ul class="project_list">
+          <li class="project_item_card">
+            <h3>Remote Jobs</h3>
+            <img src="./imgs/projects/rmtjbs.jpeg" alt="Remote Jobs image">
+            <p>Application for applying to/posting jobs that allows candidates and recruiters to chat with each
+              other in real time, along with many other features</p>
+            <div data-flex data-gap="md">
+              <button variant="primary" size="md">
+                <a href="https://www.youtube.com/watch?v=mVsjvXnaol4&t=1s" target="_blank" text-
+                  text-color="on-primary">
+                  Details
+                </a>
+              </button>
+              <button variant="outline" size="md">
+                <a href="https://github.com/diegorezm/rmtjbs" target="_blank">
+                  Code
+                </a>
+              </button>
+            </div>
+          </li>
+
+          <li class="project_item_card">
+            <h3>Start page</h3>
+            <img src="./imgs/projects/start-page.png" alt="Start page image">
+            <p>A customizable browser start page built with Next.js and TypeScript. Users can manage bookmarks,
+              switch themes, and change the background image for a personalized experience.</p>
+            <div data-flex data-gap="md">
+              <button variant="primary" size="md">
+                <a href="https://diegorezm-start-page.netlify.app/" target="_blank" text-color="on-primary">
+                  Details
+                </a>
+              </button>
+              <button variant="outline" size="md">
+                <a href="https://github.com/diegorezm/start_page" target="_blank">
+                  Code
+                </a>
+              </button>
+            </div>
+          </li>
+
+          <li class="project_item_card">
+            <h3>Clinic</h3>
+            <img src="./imgs/projects/clinic.jpeg" alt="Clinic image">
+            <p>A freelance project for managing patients, doctors, and appointments, featuring scheduling,
+              backups, and more. Built with Laravel and Livewire for a smooth user experience.</p>
+            <div data-flex data-gap="md">
+              <button variant="primary" size="md">
+                <a href="https://www.youtube.com/watch?v=ZEDnGtRIqUo" target="_blank" text-color="on-primary">
+                  Details
+                </a>
+              </button>
+              <button variant="outline" size="md">
+                <a href="https://github.com/diegorezm/clinica" target="_blank">
+                  Code
+                </a>
+              </button>
+            </div>
+          </li>
+
+          <li class="project_item_card">
+            <h3>Resumemk</h3>
+            <img src="./imgs/projects/resumemk.png" alt="Resumemk image">
+            <p>This project is a resume builder that allows you to generate a resume from a Markdown file. It
+              also includes a Markdown editor that can be run directly in your browser to help you write your
+              resume.</p>
+            <div data-flex data-gap="md">
+              <button variant="primary" size="md">
+                <a href="https://resumemk.xyz/" target="_blank" text-color="on-primary">
+                  Details
+                </a>
+              </button>
+              <button variant="outline" size="md">
+                <a href="https://github.com/diegorezm/resumemk" target="_blank">
+                  Code
+                </a>
+              </button>
+            </div>
+          </li>
+
+        </ul>
+
+        <button class="carousel-nav-btn" data-direction="next" variant="outline" size="md" aria-label="Next button">
+          &rarr;
+        </button>
+      </div>
+    </section>
+
+    <section id="contact" data-flex data-flex-direction="col" data-gap="md" data-padding="md" data-border-top>
+      <div data-flex data-flex-direction="col" data-align="start">
+        <h2>Contact</h2>
+        <p>Let's get in contact!</p>
+      </div>
+
+      <form class="contact_form" data-flex data-flex-direction="col" data-justify="center" data-gap="md"
+        netlify-honeypot="bot-field" method="POST" data-netlify="true">
+        <div class="form_group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="eq. EvilCompany" minlength="2" maxlength="255" required>
+        </div>
+        <div class="form_group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="eq. evil@company.com" required>
+        </div>
+        <div class="form_group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="eq. Hello how are you?" required></textarea>
+        </div>
+
+        <p hidden>
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
+        <div>
+          <button type="submit" variant="primary" size="md">Send Message</button>
+        </div>
+      </form>
+
+      <div data-flex data-flex-direction="col" data-gap="sm" data-align="center">
+        <p>Or if you prefer, you can reach out to me here:</p>
+        <div data-flex data-gap="md">
+          <a href="https://github.com/diegorezm" target="_blank">
+            <img src="./icons/github.svg" alt="Github" width="32" height="32" />
+          </a>
+          <a href="https://www.linkedin.com/in/diegorezm/" target="_blank">
+            <img src="./icons/linkedin.svg" alt="Linkedin" width="32" height="32" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="./js/carousel.js"></script>
 </body>
 
 </html>

@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const scrollCarousel = (direction) => {
+    if (screen.width <= 768) {
+      return
+    }
+
     const itemWidth = projectList.querySelector('.project_item_card').offsetWidth;
     const gap = parseFloat(getComputedStyle(projectList).rowGap);
     const scrollAmount = itemWidth + gap;

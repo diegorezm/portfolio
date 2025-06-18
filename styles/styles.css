@@ -350,6 +350,7 @@ p {
   max-width: calc(var(--project-card-width) * 3 + var(--spacing-md) * 4);
   position: relative;
   overflow: hidden;
+
 }
 
 .form_group {
@@ -377,6 +378,20 @@ p {
 }
 
 @media (max-width: 768px) {
+  .project_list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project_item_card {
+    width: 90%;
+  }
+
+  .carousel-container {
+    max-width: 100%;
+  }
+
   .carousel-nav-btn {
     display: none;
   }

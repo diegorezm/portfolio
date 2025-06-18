@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollEndTolerance = 5;
 
     if ((projectList.scrollWidth - projectList.scrollLeft - projectList.clientWidth) < scrollEndTolerance) {
-      nextBtn.classList.add("hidden")
       nextBtn.disabled = true;
+      nextBtn.classList.add("hidden")
     } else {
       nextBtn.disabled = false;
       nextBtn.classList.remove("hidden")

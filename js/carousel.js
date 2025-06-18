@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const gap = parseFloat(getComputedStyle(projectList).rowGap);
     const scrollAmount = itemWidth + gap;
 
-
     if (direction === 'next') {
       projectList.scrollBy({
         left: scrollAmount,
@@ -30,4 +29,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   nextBtn.addEventListener('click', () => scrollCarousel('next'));
   prevBtn.addEventListener('click', () => scrollCarousel('prev'));
+
+  const updateButtonState = () => {
+    if (projectList.scrollLeft < 1) {
+      prevBtn.disabled = true
+      prevBtn.classList.add("hidden")
+    } else {
+      prevBtn.disabled = false
+      prevBtn.classList.remove("hidden")
+    }
+
+    const scrollEndTolerance = 5;
+
+    if ((projectList.scrollWidth - projectList.scrollLeft - projectList.clientWidth) < scrollEndTolerance) {
+      nextBtn.classList.add("hidden")
+      nextBtn.disabled = true;
+    } else {
+      nextBtn.disabled = false;
+      nextBtn.classList.remove("hidden")
+    }
+  };
+
+  projectList.addEventListener('scroll', updateButtonState);
+  updateButtonState();
 });

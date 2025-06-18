@@ -256,6 +256,14 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
+button[disabled] {
+  cursor: not-allowed;
+}
+
+.hidden {
+  display: none;
+}
+
 a {
   color: var(--foreground);
   text-decoration: none;
@@ -266,6 +274,7 @@ a {
   height: 38px;
   width: 38px;
 }
+
 
 #home {
   height: 100vh;

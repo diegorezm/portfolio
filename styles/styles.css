@@ -15,8 +15,8 @@
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
-  --project-card-width: 30rem;
-  --project-card-height: 30rem;
+  --project-card-width: 24rem;
+  --project-card-height: 24rem;
 }
 
 body {
@@ -298,37 +298,23 @@ p {
 }
 
 .project_list {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-grow: 1;
-  gap: var(--spacing-lg);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  width: calc(var(--project-card-width) + var(--spacing-md) * 2);
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.project_list::-webkit-scrollbar {
-  display: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  place-items: center;
+  gap: var(--spacing-md);
 }
 
 .project_item_card {
   display: flex;
   flex: 0 0 auto;
-  /* Don't grow/shrink, base size is auto */
   flex-direction: column;
   justify-content: space-between;
   border: var(--border);
   padding: var(--spacing-md);
-  width: var(--project-card-width);
-  /* Use the custom property */
   height: var(--project-card-height);
-  /* Use the custom property */
   border-radius: 0rem;
   transition: all 0.2s ease-in-out;
   scroll-snap-align: start;
-  /* Snap to the left edge of the card */
 }
 
 .project_item_card p {
@@ -343,14 +329,6 @@ p {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 16 / 9;
-}
-
-.carousel-container {
-  width: 100%;
-  max-width: calc(var(--project-card-width) * 3 + var(--spacing-md) * 4);
-  position: relative;
-  overflow: hidden;
-
 }
 
 .form_group {
@@ -379,23 +357,16 @@ p {
 
 @media (max-width: 768px) {
   .project_list {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
   }
 
   .project_item_card {
-    width: 85%;
-    height: 100%;
-    gap: var(--spacing-md);
+    width: 80%;
   }
 
-  .carousel-container {
-    max-width: 100%;
-  }
-
-  .carousel-nav-btn {
-    display: none;
+  .about_content_my_picture img {
+    width: 280px;
+    height: 340px;
   }
 
   .home_main_content_buttons>button[size="lg"] {

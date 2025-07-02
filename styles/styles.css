@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto Serif", sans-serif;
   background-color: var(--background);
   color: var(--foreground);
   font-size: 16px;
@@ -293,7 +293,7 @@ p {
 }
 
 .about_content_desc p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: left;
 }
 

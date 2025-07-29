@@ -7,6 +7,9 @@
   --primary: #312f2c;
   --on-primary: #f0ede5;
 
+  --secondary: #56524E;
+  --on-secondary: #F3F2F2;
+
   --border: 2px solid var(--primary);
   --border-radius: 0.25rem;
 
@@ -20,7 +23,7 @@
 }
 
 body {
-  font-family: "Roboto Serif", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   background-color: var(--background);
   color: var(--foreground);
   font-size: 16px;
@@ -285,6 +288,7 @@ a {
 p {
   text-align: center;
 }
+
 
 .about_content_my_picture img {
   width: 460px;

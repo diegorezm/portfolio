@@ -49,13 +49,13 @@ main {
 }
 
 [size="md"] {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   font-size: 1rem;
 }
 
 [size="lg"] {
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.25rem;
 }
 
 [data-section] {
@@ -243,7 +243,6 @@ h6 {
   font-size: 0.8rem;
 }
 
-
 button {
   display: inline-flex;
   align-items: center;
@@ -277,7 +276,6 @@ a {
   height: 38px;
   width: 38px;
 }
-
 
 #home {
   height: 100vh;

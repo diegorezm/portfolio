@@ -42,7 +42,6 @@ main {
   border: var(--border);
 }
 
-
 [size="sm"] {
   padding: 0.25rem 0.5rem;
   font-size: .75rem;
@@ -338,6 +337,66 @@ p {
   flex-direction: column;
   gap: var(--spacing-sm);
   width: 100%;
+}
+
+#bolos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+.bolo_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  height: 400px;
+  transition: all 0.2s ease-in-out;
+  background: var(--background, #fff);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bolo_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bolo_image {
+  width: 100%;
+  height: 300px;
+  background: #eee;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.bolo_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.bolo_title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.bolo_price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary, #333);
 }
 
 @media (max-width: 1025px) {

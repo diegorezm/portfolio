@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Fubá com Goiabada",
+    "price": 30.0,
+    "image": "/imgs/bolos/cenoura_com_chocolate.jpg"
+  },
+  {
+    "title": "Cenoura com Chocolate",
+    "price": 30.0,
+    "image": "../imgs/bolos/cenoura_com_chocolate.jpg"
+  },
+  {
+    "title": "Gotas de Chocolate",
+    "price": 30.0,
+    "image": "/imgs/bolos/gotas_de_chocolate.jpg"
+  },
+  {
+    "title": "Maçã",
+    "price": 25.0,
+    "image": ""
+  },
+  {
+    "title": "Fubá",
+    "price": 25.0,
+    "image": "/imgs/bolos/fuba.jpg"
+  }
+]

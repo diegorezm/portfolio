@@ -1,0 +1,41 @@
+---
+const links = [
+  {
+    href: "/#about",
+    title: "About",
+  },
+  {
+    href: "/#projects",
+    title: "Projects",
+  },
+  {
+    href: "/#contact",
+    title: "Contact",
+  },
+];
+---
+
+<nav class="flex justify-between items-center border-bottom">
+  <div
+    class="portfolio_top_navigation_logo p-sm flex justify-center border-right"
+  >
+    <img src="./favicon.ico" alt="Website logo" />
+  </div>
+  <div class="portfolio_top_navigation_links">
+    {
+      links.map((l) => (
+        <a href={l.href} class="variant-ghost rounded size-md">
+          {l.title}
+        </a>
+      ))
+    }
+  </div>
+  <div></div>
+</nav>
+
+<style>
+  .portfolio_top_navigation_logo img {
+    height: 38px;
+    width: 38px;
+  }
+</style>

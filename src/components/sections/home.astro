@@ -1,0 +1,49 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section
+  id="home"
+  class="section flex flex-col justify-center align-center gap-md"
+>
+  <h1>Welcome, my name is Diego. I am a full-stack Developer!</h1>
+  <p>
+    I am available to work on Spring Boot, Next.js, or Laravel! Let's build
+    something amazing together.
+  </p>
+  <div class="flex flex-row justify-center gap-md">
+    <button class="size-lg variant-primary">
+      <a href="/#contact" class="text-on-primary">Contact me!</a>
+    </button>
+    <button class="size-lg variant-outline">
+      <a href="/#projects"> See my projects! </a>
+    </button>
+  </div>
+  <div class="flex flex-row justify-center gap-md">
+    <a href="https://github.com/diegorezm" target="_blank">
+      <Icon name="github" size={30} />
+    </a>
+    <a href="https://www.linkedin.com/in/diegorezm/" target="_blank">
+      <Icon name="linkedin" size={30} />
+    </a>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 100vh;
+    max-height: 825px;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    button.size-lg {
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+    }
+  }
+</style>

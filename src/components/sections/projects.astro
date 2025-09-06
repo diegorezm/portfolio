@@ -1,0 +1,100 @@
+---
+export const projects = [
+  {
+    title: "Remote Jobs",
+    image: "/projects/rmtjbs.jpeg",
+    description:
+      "Application for applying to/posting jobs that allows candidates and recruiters to chat with each other in real time, along with many other features",
+    detailsUrl: "https://www.youtube.com/watch?v=mVsjvXnaol4&t=1s",
+    codeUrl: "https://github.com/diegorezm/rmtjbs",
+  },
+  {
+    title: "Clinic",
+    image: "/projects/clinic.jpeg",
+    description:
+      "A freelance project for managing patients, doctors, and appointments, featuring scheduling, backups, and more. Built with Laravel and Livewire for a smooth user experience.",
+    detailsUrl: "https://www.youtube.com/watch?v=ZEDnGtRIqUo",
+    codeUrl: "https://github.com/diegorezm/clinica",
+  },
+  {
+    title: "Resumemk",
+    image: "/projects/resumemk.png",
+    description:
+      "This project is a resume builder that allows you to generate a resume from a Markdown file. It also includes a Markdown editor that can be run directly in your browser to help you write your resume.",
+    detailsUrl: "https://resumemk.xyz/",
+    codeUrl: "https://github.com/diegorezm/resumemk",
+  },
+];
+---
+
+<section id="projects" class="section flex flex-col p-md gap-sm border-top">
+  <h2>Projects</h2>
+  <ul class="project_list">
+    {
+      projects.map((project) => (
+        <li class="project_item_card">
+          <h3>{project.title}</h3>
+          <img src={project.image} alt={`${project.title} image`} />
+          <p>{project.description}</p>
+          <div class="flex gap-md">
+            <button class="variant-primary size-md">
+              <a
+                href={project.detailsUrl}
+                target="_blank"
+                class="text-on-primary"
+              >
+                Details
+              </a>
+            </button>
+            <button class="variant-outline size-md">
+              <a href={project.codeUrl} target="_blank">
+                Code
+              </a>
+            </button>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  :root {
+    --project-card-width: 26rem;
+    --project-card-height: 26.5rem;
+  }
+
+  .project_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    place-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .project_item_card {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    border: var(--border);
+    padding: var(--spacing-md);
+    height: var(--project-card-height);
+    border-radius: 0rem;
+    transition: all 0.2s ease-in-out;
+    scroll-snap-align: start;
+  }
+
+  .project_item_card p {
+    text-align: left;
+  }
+
+  .project_item_card:hover {
+    border-radius: var(--border-radius);
+  }
+
+  .project_item_card img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+  }
+</style>

@@ -1,0 +1,97 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section id="contact" class="flex flex-col gap-md p-md border-top">
+  <div class="flex flex-col items-start">
+    <h2>Contact</h2>
+    <p>Let's get in contact!</p>
+  </div>
+
+  <form
+    class="contact_form flex flex-col justify-center gap-md"
+    netlify-honeypot="bot-field"
+    method="POST"
+    data-netlify="true"
+  >
+    <div class="form_group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="eq. EvilCompany"
+        minlength="2"
+        maxlength="255"
+        required
+      />
+    </div>
+
+    <div class="form_group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="eq. evil@company.com"
+        required
+      />
+    </div>
+
+    <div class="form_group">
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="eq. Hello how are you?"
+        minlength="4"
+        maxlength="1024"
+        required></textarea>
+    </div>
+
+    <p hidden>
+      <label>
+        Don’t fill this out if you’re human:
+        <input name="bot-field" />
+      </label>
+    </p>
+
+    <div>
+      <button type="submit" class="variant-primary size-md">
+        Send Message
+      </button>
+    </div>
+  </form>
+
+  <div class="flex flex-col gap-sm items-center">
+    <p>Or if you prefer, you can reach out to me here:</p>
+    <div class="flex gap-md">
+      <a href="https://github.com/diegorezm" target="_blank">
+        <Icon name="github" size={30} />
+      </a>
+      <a href="https://www.linkedin.com/in/diegorezm/" target="_blank">
+        <Icon name="linkedin" size={30} />
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .project_list {
+      place-content: center;
+    }
+
+    .project_item_card {
+      width: 85%;
+    }
+  }
+</style>

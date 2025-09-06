@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section id="about" class="section flex flex-col p-md border-top">
+  <h2>About</h2>
+  <div class="about_content flex flex-row gap-md justify-between">
+    <div>
+      <img
+        class="about_content_my_picture"
+        src="./my-picture.jpg"
+        alt="My picture in a suit."
+      />
+    </div>
+
+    <div class="flex flex-col gap-md">
+      <div class="about_content_desc">
+        <p>
+          Hello! I'm Diego Rezende, a software developer from Brazil with a
+          passion for coding and learning new things. I'm currently in college,
+          but I'm always on the lookout for challenges and opportunities. I’m a
+          big fan of open-source and have created a few projects myself! Feel
+          free to check them out on my GitHub! I’ve been using Linux since high
+          school.
+        </p>
+      </div>
+
+      <div class="flex gap-md justify-center">
+        <a href="https://github.com/diegorezm" target="_blank">
+          <Icon name="github" size={30} />
+        </a>
+        <a href="https://www.linkedin.com/in/diegorezm/" target="_blank">
+          <Icon name="linkedin" size={30} />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about_content_my_picture img {
+    width: 460px;
+    height: 540px;
+    filter: grayscale(50%);
+  }
+
+  .about_content_desc p {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  @media (max-width: 1025px) {
+    .about_content {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .about_content_my_picture {
+      display: flex;
+      justify-content: center;
+    }
+
+    .about_content_my_picture img {
+      width: 380px;
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about_content_my_picture img {
+      width: 280px;
+      height: 340px;
+    }
+  }
+</style>

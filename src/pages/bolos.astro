@@ -1,0 +1,48 @@
+---
+import Layout from "../components/layout.astro";
+import bolos from "../data/bolos.json";
+---
+
+<Layout title="Diegorezm | Bolos">
+  <section id="bolos" class="section flex flex-col gap-sm p-md">
+    <h1>Bolos</h1>
+    <ul>
+      {
+        bolos.map((b) => (
+          <li>
+            <img src={b.image} alt={b.title} />
+            <h3>{b.title}</h3>
+            <p>R${b.price.toFixed(2)}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    place-items: center;
+    gap: var(--spacing-md);
+  }
+
+  li {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    border: var(--border);
+    padding: var(--spacing-md);
+    height: var(--project-card-height);
+    border-radius: 0rem;
+    transition: all 0.2s ease-in-out;
+    scroll-snap-align: start;
+    text-align: center;
+    box-shadow: 4px 4px 0px 0px var(--primary);
+  }
+  li > img {
+    border-radius: var(--radius);
+  }
+</style>

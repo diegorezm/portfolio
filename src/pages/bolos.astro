@@ -1,6 +1,48 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../components/layout.astro";
-import bolos from "../data/bolos.json";
+import CenouraComChocolate from "../images/bolos/cenoura_com_chocolate.jpg";
+import GotasDeChocolate from "../images/bolos/gotas_de_chocolate.jpg";
+import Laranja from "../images/bolos/laranja.jpg";
+import Banana from "../images/bolos/banana.jpg.jpg";
+
+const bolos = [
+  {
+    title: "Fubá com Goiabada",
+    price: 30.0,
+    image: CenouraComChocolate,
+  },
+  {
+    title: "Cenoura com Chocolate",
+    price: 30.0,
+    image: CenouraComChocolate,
+  },
+  {
+    title: "Gotas de Chocolate",
+    price: 30.0,
+    image: GotasDeChocolate,
+  },
+  {
+    title: "Maçã",
+    price: 25.0,
+    image: Laranja,
+  },
+  {
+    title: "Laranja",
+    price: 25.0,
+    image: Laranja,
+  },
+  {
+    title: "Fubá",
+    price: 25.0,
+    image: Laranja,
+  },
+  {
+    title: "Banana",
+    price: 25.0,
+    image: Banana,
+  },
+];
 ---
 
 <Layout title="Diegorezm | Bolos">
@@ -10,7 +52,7 @@ import bolos from "../data/bolos.json";
       {
         bolos.map((b) => (
           <li>
-            <img src={b.image} alt={b.title} />
+            <Image src={b.image} alt={b.title} width="450" height="420" />
             <h3>{b.title}</h3>
             <p>R${b.price.toFixed(2)}</p>
           </li>
@@ -21,6 +63,10 @@ import bolos from "../data/bolos.json";
 </Layout>
 
 <style>
+  :root {
+    --project-card-width: 20rem;
+    --project-card-height: 21.5rem;
+  }
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

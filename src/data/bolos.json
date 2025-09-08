@@ -2,31 +2,31 @@
   {
     "title": "Fubá com Goiabada",
     "price": 30.0,
-    "image": "/bolos/cenoura_com_chocolate.jpg"
+    "image": "/images/bolos/cenoura_com_chocolate.jpg"
   },
   {
     "title": "Cenoura com Chocolate",
     "price": 30.0,
-    "image": "/bolos/cenoura_com_chocolate.jpg"
+    "image": "/images/bolos/cenoura_com_chocolate.jpg"
   },
   {
     "title": "Gotas de Chocolate",
     "price": 30.0,
-    "image": "/bolos/gotas_de_chocolate.jpg"
+    "image": "/images/bolos/gotas_de_chocolate.jpg"
   },
   {
     "title": "Maçã",
     "price": 25.0,
-    "image": "/bolos/laranja.jpg"
+    "image": "/images/bolos/laranja.jpg"
   },
   {
     "title": "Laranja",
     "price": 25.0,
-    "image": "/bolos/laranja.jpg"
+    "image": "/images/bolos/laranja.jpg"
   },
   {
     "title": "Fubá",
     "price": 25.0,
-    "image": "/bolos/laranja.jpg"
+    "image": "/images/bolos/laranja.jpg"
   }
 ]

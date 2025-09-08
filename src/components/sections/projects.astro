@@ -2,7 +2,7 @@
 export const projects = [
   {
     title: "Remote Jobs",
-    image: "/projects/rmtjbs.jpeg",
+    image: "/images/projects/rmtjbs.jpeg",
     description:
       "Application for applying to/posting jobs that allows candidates and recruiters to chat with each other in real time, along with many other features",
     detailsUrl: "https://www.youtube.com/watch?v=mVsjvXnaol4&t=1s",
@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     title: "Clinic",
-    image: "/projects/clinic.jpeg",
+    image: "/images/projects/clinic.jpeg",
     description:
       "A freelance project for managing patients, doctors, and appointments, featuring scheduling, backups, and more. Built with Laravel and Livewire for a smooth user experience.",
     detailsUrl: "https://www.youtube.com/watch?v=ZEDnGtRIqUo",
@@ -18,7 +18,7 @@ export const projects = [
   },
   {
     title: "Resumemk",
-    image: "/projects/resumemk.png",
+    image: "/images/projects/resumemk.png",
     description:
       "This project is a resume builder that allows you to generate a resume from a Markdown file. It also includes a Markdown editor that can be run directly in your browser to help you write your resume.",
     detailsUrl: "https://resumemk.xyz/",
@@ -27,8 +27,11 @@ export const projects = [
 ];
 ---
 
-<section id="projects" class="section flex flex-col p-md gap-sm border-top">
-  <h2>Projects</h2>
+<section
+  id="images/projects"
+  class="section flex flex-col p-md gap-sm border-top"
+>
+  <h2>images/projects</h2>
   <ul class="project_list">
     {
       projects.map((project) => (

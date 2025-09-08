@@ -1,14 +1,16 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import MyPicture from "../../images/my-picture.jpg";
 ---
 
 <section id="about" class="section flex flex-col p-md border-top">
   <h2>About</h2>
   <div class="about_content flex flex-row gap-md justify-between">
     <div>
-      <img
+      <Image
         class="about_content_my_picture"
-        src="/images/my-picture.jpg"
+        src={MyPicture}
         alt="My picture in a suit."
       />
     </div>

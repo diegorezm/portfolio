@@ -1,8 +1,14 @@
 ---
+import RemoteJobs from "../../images/projects/rmtjbs.jpeg";
+import Clinic from "../../images/projects/clinic.jpeg";
+import Resumemk from "../../images/projects/resumemk.png";
+
+import { Image } from "astro:assets";
+
 export const projects = [
   {
     title: "Remote Jobs",
-    image: "/images/projects/rmtjbs.jpeg",
+    image: RemoteJobs,
     description:
       "Application for applying to/posting jobs that allows candidates and recruiters to chat with each other in real time, along with many other features",
     detailsUrl: "https://www.youtube.com/watch?v=mVsjvXnaol4&t=1s",
@@ -10,7 +16,7 @@ export const projects = [
   },
   {
     title: "Clinic",
-    image: "/images/projects/clinic.jpeg",
+    image: Clinic,
     description:
       "A freelance project for managing patients, doctors, and appointments, featuring scheduling, backups, and more. Built with Laravel and Livewire for a smooth user experience.",
     detailsUrl: "https://www.youtube.com/watch?v=ZEDnGtRIqUo",
@@ -18,7 +24,7 @@ export const projects = [
   },
   {
     title: "Resumemk",
-    image: "/images/projects/resumemk.png",
+    image: Resumemk,
     description:
       "This project is a resume builder that allows you to generate a resume from a Markdown file. It also includes a Markdown editor that can be run directly in your browser to help you write your resume.",
     detailsUrl: "https://resumemk.xyz/",
@@ -31,13 +37,13 @@ export const projects = [
   id="images/projects"
   class="section flex flex-col p-md gap-sm border-top"
 >
-  <h2>images/projects</h2>
+  <h2>Projects</h2>
   <ul class="project_list">
     {
       projects.map((project) => (
         <li class="project_item_card">
           <h3>{project.title}</h3>
-          <img src={project.image} alt={`${project.title} image`} />
+          <Image src={project.image} alt={`${project.title} image`} />
           <p>{project.description}</p>
           <div class="flex gap-md">
             <button class="variant-primary size-md">

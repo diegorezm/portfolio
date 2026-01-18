@@ -12,25 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Uncomment if using pnpm
-      # - name: Install pnpm
-      #   uses: pnpm/action-setup@v3
-      #   with:
-      #     version: 8
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      -name: Setup bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
-          cache: npm
+            bun-version: 1.3.5
 
       - name: Install dependencies
-        run: npm i
+        run: bun i
 
       - name: Build
         env:
           BASE_PATH: "/${{ github.event.repository.name }}"
-        run: npm run build
+        run: bun run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3

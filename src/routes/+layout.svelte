@@ -37,7 +37,7 @@
     property="og:description"
     content="Desenvolvedor Full‑Stack especializado em TypeScript, React, Node.js e SvelteKit. Experiência com aplicações modernas e projetos open‑source."
   />
-  <meta property="og:image" content="https://diegorezm.xyz/og.jpg" />
+  <meta property="og:image" content="https://diegorezm.xyz/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="pt_BR" />
@@ -53,7 +53,7 @@
     name="twitter:description"
     content="Portfólio de Diego Rezende, Desenvolvedor Full‑Stack com experiência em TypeScript, React, Node.js e SvelteKit."
   />
-  <meta name="twitter:image" content="https://diegorezm.xyz/og.jpg" />
+  <meta name="twitter:image" content="https://diegorezm.xyz/og.png" />
   <title>Diego Rezende | Portfolio</title>
 </svelte:head>
 

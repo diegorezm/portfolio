@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+
+  --color-dark-blue: #14213d;
+  --color-dark-yellow: #fca311;
+
+  --color-grey: #e5e5e5;
+
+  --font-mono: 'JetBrains Mono Variable', monospace;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+
+.blink {
+  animation: blinker 1500ms linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@utility flicker {
+  animation: flicker 2s infinite;
+}

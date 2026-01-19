@@ -30,7 +30,7 @@
 
     updateClock();
 
-    const interval = setInterval(updateClock, 1000);
+    const interval = setInterval(updateClock, 1000 * 60);
     window.addEventListener("resize", updateClock);
 
     return () => {

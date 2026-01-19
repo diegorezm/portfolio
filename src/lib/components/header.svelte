@@ -15,9 +15,9 @@
 
   /** @type {Workspace[]} */
   const workspaces = [
-    { id: "home", label: "home", icon: HouseIcon, href: "/" },
-    { id: "projects", label: "projects", icon: FolderIcon, href: "/projects" },
-    { id: "about", label: "about", icon: UserIcon, href: "/about" },
+    { id: "home", label: "Início", icon: HouseIcon, href: "/" },
+    { id: "projects", label: "Projetos", icon: FolderIcon, href: "/projects" },
+    { id: "about", label: "Sobre", icon: UserIcon, href: "/about" },
   ];
 
   let time = $state("");

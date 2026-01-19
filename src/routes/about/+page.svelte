@@ -1,5 +1,5 @@
 <script>
-  import Section from "../../components/section.svelte";
+  import Section from "$lib/components/section.svelte";
   import { FileTextIcon } from "@lucide/svelte";
 </script>
 

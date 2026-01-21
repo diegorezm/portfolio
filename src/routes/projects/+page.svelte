@@ -3,6 +3,9 @@
   import ProjectListMobile from "$lib/components/project_list_mobile.svelte";
   import Section from "$lib/components/section.svelte";
 
+  import vibeShowcase from "$lib/assets/projects/vibe.png";
+  import elxGistShowcase from "$lib/assets/projects/elx_gist.jpeg";
+
   /** @type {App.Project[]} */
   const projects = [
     {
@@ -10,7 +13,7 @@
       description:
         "Criador de sites feito com TypeScript, Node.js e TanStack Start. O usuário interage com um chatbot que gera e modifica o código de um projeto em Next.js conforme as instruções recebidas.",
       sourceCode: "https://github.com/diegorezm/vibe",
-      showcaseImage: "/projects/vibe.png",
+      showcaseImage: vibeShowcase,
       showcaseLink:
         "https://www.linkedin.com/posts/diegorezm_ai-ia-desenvolvimento-activity-7346543173751484418-xX1n?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEE98H8BRXB9pIqIEKScL4bMXXlHtXpWqTs",
     },
@@ -34,7 +37,7 @@
         "Clone do GitHub Gist feito em Elixir com o framework Phoenix.",
       sourceCode: "https://github.com/diegorezm/elx_gist",
       showcaseLink: "https://youtu.be/nMKj-lfwp8Y?si=BmJzTeWPhIjkw2kV",
-      showcaseImage: "/projects/elx_gist.jpeg",
+      showcaseImage: elxGistShowcase,
     },
   ];
 

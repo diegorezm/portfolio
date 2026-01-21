@@ -1,5 +1,4 @@
 <script>
-  import { GithubIcon, LinkedinIcon } from "@lucide/svelte";
   import Section from "$lib/components/section.svelte";
 </script>
 

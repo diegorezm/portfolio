@@ -1,4 +1,5 @@
 <script>
+  import "@fontsource/jetbrains-mono";
   import "./layout.css";
   import favicon from "$lib/assets/favicon.ico";
   import Header from "$lib/components/header.svelte";

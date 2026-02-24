@@ -24,7 +24,7 @@ body {
   color: var(--text);
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 a {
@@ -355,7 +355,7 @@ footer {
 
   html,
   body {
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
 
   section {

@@ -43,6 +43,7 @@ main {
 /* ========================
    Lang Switcher
 ======================== */
+
 .lang-switcher {
   display: flex;
   gap: var(--p-md);

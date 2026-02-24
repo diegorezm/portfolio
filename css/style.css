@@ -39,6 +39,43 @@ main {
   margin: 0 auto;
 }
 
+
+/* ========================
+   Lang Switcher
+======================== */
+.lang-switcher {
+  display: flex;
+  gap: var(--p-md);
+  align-items: center;
+  margin-bottom: var(--p-xl);
+}
+
+.lang-switcher__current {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  border: 2px solid var(--border);
+  background: var(--border);
+  color: var(--accent);
+}
+
+.lang-switcher__link {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--border);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lang-switcher__link:hover {
+  background: var(--border);
+  color: var(--accent);
+}
+
 /* ========================
    Sections
 ======================== */
@@ -88,9 +125,10 @@ p {
 ======================== */
 #hero {
   background: var(--accent);
-  min-height: 50vh;
+  min-height: 88vh;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .hero-inner {

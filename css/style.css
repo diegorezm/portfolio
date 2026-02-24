@@ -1,0 +1,371 @@
+:root {
+  --bg: #F9EBE0;
+  --text: #0E181E;
+  --surface: #0E181E;
+  --surface-text: #F9EBE0;
+  --accent: #CB98AA;
+  --accent-dark: #0E181E;
+  --border: #0E181E;
+  --muted: #5a7282;
+
+  --p-sm: 4px;
+  --p-md: 8px;
+  --p-lg: 16px;
+  --p-xl: 32px;
+  --p-2xl: 64px;
+
+  --shadow: 4px 4px 0px var(--border);
+  --shadow-lg: 6px 6px 0px var(--border);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main {
+  border: 2px solid var(--border);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========================
+   Sections
+======================== */
+section {
+  border-bottom: 2px solid var(--border);
+  padding: var(--p-2xl) var(--p-xl);
+}
+
+.section-inner {
+  max-width: 860px;
+}
+
+/* ========================
+   Typography
+======================== */
+.heading-lg {
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.heading-lg em {
+  font-style: normal;
+  color: var(--surface-text);
+  display: block;
+}
+
+.heading-md {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--p-lg);
+  text-transform: uppercase;
+  padding-bottom: var(--p-md);
+  border-bottom: 2px solid var(--border);
+  display: inline-block;
+}
+
+p {
+  max-width: 60ch;
+  color: var(--muted);
+}
+
+/* ========================
+   HERO
+======================== */
+#hero {
+  background: var(--accent);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  gap: var(--p-2xl);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 2px solid var(--border);
+  padding: 3px 10px;
+  background: var(--bg);
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-top: 16px;
+  color: var(--border);
+  font-size: 1rem;
+  max-width: 48ch;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--p-md);
+  margin-top: 28px;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 2px solid var(--border);
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.hero-link:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-link:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.hero-link img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ========================
+   Hero Photo
+======================== */
+.hero-photo-wrap {
+  flex-shrink: 0;
+}
+
+.hero-photo-box {
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  width: 280px;
+}
+
+.hero-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  filter: grayscale(15%);
+  transition: filter 0.3s ease;
+}
+
+.hero-photo:hover {
+  filter: grayscale(0%);
+}
+
+/* ========================
+   ABOUT / SKILLS
+======================== */
+#about {
+  background: var(--bg);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--p-md);
+  margin-top: var(--p-xl);
+}
+
+.tag {
+  border: 2px solid var(--border);
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--bg);
+  box-shadow: 2px 2px 0 var(--border);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+.tag:hover {
+  background: var(--surface);
+  color: var(--surface-text);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+/* ========================
+   PROJECTS
+======================== */
+#projects {
+  background: var(--surface);
+  color: var(--surface-text);
+  border-bottom: 2px solid var(--accent);
+}
+
+#projects .heading-md {
+  color: var(--surface-text);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--p-lg);
+  margin-top: var(--p-xl);
+}
+
+.project-card {
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  padding: var(--p-xl) var(--p-lg);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: var(--p-md);
+  transition: border-color 0.2s ease, background 0.2s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  background: rgba(203, 152, 170, 0.06);
+}
+
+.project-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--surface-text);
+  line-height: 1.2;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: rgba(249, 235, 224, 0.55);
+  max-width: 100%;
+  flex: 1;
+}
+
+/* ========================
+   Buttons
+======================== */
+.button {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--surface-text);
+  cursor: pointer;
+  align-self: flex-start;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ========================
+   CONTACT
+======================== */
+#contact {
+  background: var(--bg);
+}
+
+.contact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--p-xl);
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.contact-inner p {
+  margin-top: var(--p-md);
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 700;
+  border-bottom: 3px solid var(--border);
+  padding-bottom: 4px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.contact-email:hover {
+  color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+  padding: var(--p-lg) var(--p-xl);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  border-top: 2px solid var(--border);
+}
+
+/* ========================
+   Responsive
+======================== */
+@media (max-width: 680px) {
+  section {
+    padding: 48px var(--p-lg);
+  }
+
+  .hero-photo-box {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .contact-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-action {
+    width: 100%;
+  }
+}

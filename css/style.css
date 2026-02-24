@@ -24,7 +24,7 @@ body {
   color: var(--text);
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 a {
@@ -350,7 +350,14 @@ footer {
 /* ========================
    Responsive
 ======================== */
+
 @media (max-width: 680px) {
+
+  html,
+  body {
+    padding: 0.5rem;
+  }
+
   section {
     padding: 48px var(--p-lg);
   }

@@ -400,7 +400,7 @@ footer {
 
   .lang-switcher {
     position: absolute;
-    top: 1rem;
+    top: 1.5rem;
     right: 1rem;
     z-index: 100;
     margin-bottom: 0;

@@ -398,6 +398,19 @@ footer {
     padding: 0.4rem;
   }
 
+  .lang-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    margin-bottom: 0;
+    padding: 2px 6px;
+  }
+
+  .hero-photo-wrap {
+    display: none;
+  }
+
   section {
     padding: 48px var(--p-lg);
   }

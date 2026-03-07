@@ -127,7 +127,7 @@ p {
 ======================== */
 #hero {
   background: var(--accent);
-  min-height: 50vh;
+  min-height: 45vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -136,7 +136,7 @@ p {
 .hero-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   justify-items: center;
   gap: var(--p-2xl);
   width: 100%;
@@ -413,11 +413,6 @@ footer {
 
   section {
     padding: 48px var(--p-lg);
-  }
-
-  .hero-photo-box {
-    width: 100%;
-    max-width: 260px;
   }
 
   .contact-inner {

@@ -1,0 +1,42 @@
+# Diego Rezende — Full-Stack Developer
+
+## Who I am
+
+Diego Rezende is a Full-Stack Developer based in Brazil. He builds full-stack web applications, tinkers with systems programming, and is passionate about open-source software. He has been a Linux user since high school.
+
+## What I do
+
+Diego specializes in building full-stack applications from the ground up — frontend, backend, infrastructure and everything in between. His work spans:
+
+- **Web application development**: TypeScript, Node.js, React
+- **Backend & API development**: Node.js, Go, Elixir (Phoenix), Python
+- **Systems programming**: Zig, Go
+- **Infrastructure & DevOps**: CI/CD pipeline setup, VPS configuration, DNS management, Docker
+- **Database management**: PostgreSQL
+- **Open-source tooling**: Building tools that solve real problems
+
+## Skills & Technologies
+
+TypeScript, Node.js, React, Go, Python, Elixir, Zig, PostgreSQL, Docker, Linux, CI/CD, VPS administration, DNS management
+
+## Projects
+
+- **Vibe** (TypeScript · Node.js · TanStack): A website builder powered by a chatbot that generates and modifies Next.js project code based on user instructions. GitHub: https://github.com/diegorezm/vibe
+- **DBlockchain** (Go): A decentralized blockchain simulation — create wallets, send coins and mine blocks with proof-of-work. GitHub: https://github.com/diegorezm/DBlockchain
+- **Lox Interpreter** (Zig): An implementation of the Lox language in Zig, inspired by the book *Crafting Interpreters*. GitHub: https://github.com/diegorezm/lox-interpreter
+- **GitHub Gist Clone** (Elixir · Phoenix): A GitHub Gist clone built with Elixir and the Phoenix framework. GitHub: https://github.com/diegorezm/elx_gist
+
+## What you can hire Diego for
+
+- Full-stack web application development (TypeScript, Node.js, React)
+- Backend API and microservice development (Node.js, Go, Elixir)
+- Infrastructure setup: CI/CD pipelines, VPS provisioning, Docker, DNS
+- Open-source contributions and tooling
+- Code review and technical consulting
+
+## Contact
+
+- **Email**: contact@diegorezm.xyz
+- **Website**: https://diegorezm.xyz
+- **GitHub**: https://github.com/diegorezm
+- **LinkedIn**: https://linkedin.com/in/diegorezm

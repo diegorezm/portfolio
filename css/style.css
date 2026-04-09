@@ -37,6 +37,7 @@ html, body {
   line-height: 1.6;
   padding: 1rem;
   margin: auto;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
 

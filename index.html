@@ -4,12 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./css/reset.css" rel="stylesheet">
-  <link href="./css/style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&display=swap" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
@@ -21,29 +18,22 @@
 
   <title>Diego Rezende | Full-Stack Developer</title>
 
-  <!-- SEO -->
-  <meta name="description"
-    content="Diego Rezende is a Full-Stack Developer specializing in TypeScript, Node.js and React. Open-source enthusiast and Linux user.">
-  <meta name="keywords"
-    content="Diego Rezende, Full-Stack Developer, TypeScript, Node.js, React, Go, Elixir, Zig, PostgreSQL, Docker, Linux, open-source">
+  <meta name="description" content="Diego Rezende is a Full-Stack Developer specializing in TypeScript, Node.js and React. Open-source enthusiast and Linux user.">
+  <meta name="keywords" content="Diego Rezende, Full-Stack Developer, TypeScript, Node.js, React, Go, Elixir, Zig, PostgreSQL, Docker, Linux, open-source">
   <meta name="author" content="Diego Rezende">
   <link rel="canonical" href="https://diegorezm.xyz/">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://diegorezm.xyz/">
   <meta property="og:title" content="Diego Rezende | Full-Stack Developer">
-  <meta property="og:description"
-    content="Full-Stack Developer specializing in TypeScript, Node.js and React. Check out my projects and get in touch.">
+  <meta property="og:description" content="Full-Stack Developer specializing in TypeScript, Node.js and React. Check out my projects and get in touch.">
   <meta property="og:image" content="https://diegorezm.xyz/assets/og.jpg">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Diego Rezende | Full-Stack Developer">
   <meta name="twitter:description" content="Full-Stack Developer specializing in TypeScript, Node.js and React">
   <meta name="twitter:image" content="https://diegorezm.xyz/assets/og.jpg">
 
-  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,211 +44,342 @@
     "jobTitle": "Full-Stack Developer",
     "description": "Full-Stack Developer specializing in TypeScript, Node.js and React. Open-source enthusiast and Linux user based in Brazil.",
     "image": "https://diegorezm.xyz/assets/og.jpg",
-    "sameAs": [
-      "https://github.com/diegorezm",
-      "https://linkedin.com/in/diegorezm"
-    ],
-    "knowsAbout": [
-      "TypeScript", "Node.js", "React", "Go", "Python", "Elixir", "Zig",
-      "PostgreSQL", "Docker", "Linux", "CI/CD", "VPS administration", "DNS management"
-    ],
-    "hasOccupation": {
-      "@type": "Occupation",
-      "name": "Full-Stack Developer",
-      "skills": "TypeScript, Node.js, React, Go, Elixir, Zig, PostgreSQL, Docker"
+    "sameAs": ["https://github.com/diegorezm", "https://linkedin.com/in/diegorezm"],
+    "knowsAbout": ["TypeScript","Node.js","React","Go","Python","Elixir","Zig","PostgreSQL","Docker","Linux","CI/CD","VPS administration","DNS management"]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background-color: #d6cfc4;
+      background-image: url("https://www.transparenttextures.com/patterns/cork-wallet.png");
+      padding: 48px 32px;
+      font-family: 'Caveat', cursive;
     }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Diego Rezende's Projects",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "SoftwareSourceCode",
-          "name": "Vibe",
-          "description": "A website builder powered by a chatbot that generates and modifies Next.js project code based on user instructions.",
-          "programmingLanguage": ["TypeScript", "Node.js"],
-          "codeRepository": "https://github.com/diegorezm/vibe",
-          "author": { "@type": "Person", "name": "Diego Rezende" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "SoftwareSourceCode",
-          "name": "letmeask",
-          "description": "A web-based AI tool that transcribes audio into text and lets users interact with the content by asking questions about it.",
-          "programmingLanguage": ["TypeScript", "React", "Fastify"],
-          "codeRepository": "https://github.com/diegorezm/letmeask",
-          "author": { "@type": "Person", "name": "Diego Rezende" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "SoftwareSourceCode",
-          "name": "FastShopping",
-          "description": "Performance optimization experiments on a single-node Java API using Spring Boot, PostgreSQL, and Redis with stress testing.",
-          "programmingLanguage": ["Java", "Spring Boot"],
-          "codeRepository": "https://github.com/diegorezm/FastShopping",
-          "author": { "@type": "Person", "name": "Diego Rezende" }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "SoftwareSourceCode",
-          "name": "llm-notebook",
-          "description": "Ask AI about your documents, even with no internet access. Built with Rust and Ollama using RAG.",
-          "programmingLanguage": ["Rust"],
-          "codeRepository": "https://github.com/diegorezm/llm-notebook",
-          "author": { "@type": "Person", "name": "Diego Rezende" }
-        }
-      }
-    ]
-  }
-  </script>
+
+    /* ── TOP BAR ── */
+    .topbar {
+      max-width: 960px;
+      margin: 0 auto 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 2rem; font-weight: 700; color: #2b2318; }
+    .logo span { color: #7a5c3a; }
+    .lang-wrap { display: flex; gap: 6px; }
+    .lang-btn {
+      font-family: 'Indie Flower', cursive;
+      font-size: 0.9rem;
+      color: #2b2318;
+      background: #faf6f0;
+      border: 2px solid #c4b49a;
+      border-radius: 2px;
+      padding: 3px 12px;
+      cursor: pointer;
+      box-shadow: 2px 2px 0 #c4b49a;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover { background: #2b2318; color: #faf6f0; border-color: #2b2318; box-shadow: 2px 2px 0 #2b2318; }
+
+    /* ── BOARD ── */
+    .board {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* ── POST-IT BASE ── */
+    .note {
+      position: relative;
+      padding: 44px 26px 28px;
+      background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.25), inset 0 -5px 0 rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .note::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 26px; height: 26px;
+      background: linear-gradient(225deg, rgba(0,0,0,0.14) 50%, transparent 50%);
+    }
+    .note:hover {
+      box-shadow: 6px 8px 22px rgba(0,0,0,0.3), inset 0 -5px 0 rgba(0,0,0,0.08);
+      z-index: 10;
+    }
+    .pin {
+      position: absolute;
+      top: -12px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.6rem;
+      filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.35));
+      z-index: 2;
+    }
+
+    .note-yellow    { background-color: #f9ef6e; transform: rotate(-1.5deg); }
+    .note-blue      { background-color: #a8d8f0; transform: rotate(1deg); }
+    .note-green     { background-color: #b5edac; transform: rotate(-0.8deg); }
+    .note-pink      { background-color: #f7b8d0; transform: rotate(1.8deg); }
+    .note-white     { background-color: #faf6f0; transform: rotate(0.6deg); }
+    .note-lavender  { background-color: #d8c8f0; transform: rotate(-1deg); }
+    .col-span       { grid-column: 1 / -1; }
+
+    /* ── TYPOGRAPHY ── */
+    .note-label {
+      font-family: 'Indie Flower', cursive;
+      font-size: 0.8rem;
+      color: rgba(0,0,0,0.4);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .note h1 { font-size: 3rem; font-weight: 700; color: #1a1208; line-height: 1.15; }
+    .note h1 em { font-style: normal; text-decoration: underline wavy rgba(0,0,0,0.3); }
+    .note h2 { font-size: 1.7rem; font-weight: 700; color: #1a1208; }
+    .note h3 { font-size: 1.35rem; font-weight: 700; color: #1a1208; }
+    .note p {
+      font-family: 'Indie Flower', cursive;
+      font-size: 1rem;
+      color: #2e2010;
+      line-height: 1.7;
+    }
+    .note p strong {
+      font-weight: 700;
+      background: rgba(0,0,0,0.1);
+      padding: 0 3px;
+      border-radius: 2px;
+    }
+
+    /* hero links (github, linkedin, email) */
+    .hero-links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+    .hero-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1208;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(0,0,0,0.25);
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    .hero-link:hover { border-color: rgba(0,0,0,0.7); }
+    .hero-link img { width: 20px; height: 20px; object-fit: contain; }
+
+    .btn {
+      display: inline-block;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #faf6f0;
+      background: #2b2318;
+      padding: 8px 22px;
+      border-radius: 2px;
+      text-decoration: none;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.25);
+      align-self: flex-start;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn:hover { transform: translate(-2px,-2px); box-shadow: 5px 5px 0 rgba(0,0,0,0.25); }
+
+    /* tags */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      font-family: 'Indie Flower', cursive;
+      font-size: 0.85rem;
+      color: #2e2010;
+      border: 2px solid rgba(0,0,0,0.2);
+      border-radius: 2px;
+      padding: 2px 10px;
+      background: rgba(255,255,255,0.4);
+    }
+
+    /* projects sub-grid */
+    .projects-note-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .mini-card {
+      background: rgba(255,255,255,0.45);
+      border: 2px dashed rgba(0,0,0,0.2);
+      border-radius: 2px;
+      padding: 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .mini-card h3 { font-size: 1.25rem; }
+    .stack-label {
+      font-family: 'Indie Flower', cursive;
+      font-size: 0.75rem;
+      color: rgba(0,0,0,0.4);
+      text-transform: uppercase;
+    }
+    .mini-card p { font-family: 'Indie Flower', cursive; font-size: 0.9rem; color: #2e2010; line-height: 1.6; flex: 1; }
+    .mini-links { display: flex; gap: 10px; margin-top: 4px; }
+    .mini-links a {
+      font-family: 'Caveat', cursive;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1a1208;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(0,0,0,0.25);
+    }
+    .mini-links a:hover { border-color: rgba(0,0,0,0.7); }
+
+    /* contact */
+    .email-link {
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a1208;
+      text-decoration: none;
+      border-bottom: 3px solid rgba(0,0,0,0.3);
+      align-self: flex-start;
+    }
+    .email-link:hover { border-color: rgba(0,0,0,0.7); }
+
+    /* footer */
+    .footer-text {
+      max-width: 960px;
+      margin: 36px auto 0;
+      text-align: center;
+      font-family: 'Indie Flower', cursive;
+      font-size: 0.9rem;
+      color: #6a5a4a;
+    }
+
+    /* responsive */
+    @media (max-width: 640px) {
+      body { padding: 32px 16px; }
+      .board { grid-template-columns: 1fr; }
+      .col-span { grid-column: 1; }
+      .projects-note-grid { grid-template-columns: 1fr; }
+      .note h1 { font-size: 2.2rem; }
+    }
+  </style>
 </head>
 
 <body>
-  <main>
-    <section id="hero">
 
-      <div class="lang-switcher">
-        <span class="lang-switcher__current">EN</span>
-        <a class="lang-switcher__link" href="/pt-br">PT-BR</a>
+  <div class="topbar">
+    <div class="logo">Diego<span>.dev</span></div>
+    <div class="lang-wrap">
+      <span class="lang-btn active">EN</span>
+      <a class="lang-btn" href="/pt-br">PT-BR</a>
+    </div>
+  </div>
+
+  <div class="board">
+
+    <!-- HERO -->
+    <div class="note note-yellow col-span" style="max-width: 520px; justify-self: center;">
+      <span class="pin">📌</span>
+      <span class="note-label">✏️ Fullstack Developer</span>
+      <h1>Hi, my name<br/>is <em>Diego</em></h1>
+      <p>I build full-stack apps, tinker with systems programming and love open-source.</p>
+      <div class="hero-links">
+        <a class="hero-link" href="https://github.com/diegorezm" target="_blank">
+          <img src="./assets/github.svg" alt="GitHub"> GitHub
+        </a>
+        <a class="hero-link" href="https://linkedin.com/in/diegorezm" target="_blank">
+          <img src="./assets/linkedin.webp" alt="LinkedIn"> LinkedIn
+        </a>
+        <a class="hero-link" href="#contact">
+          <img src="./assets/mail.svg" alt="Email"> Contact
+        </a>
       </div>
+    </div>
 
-      <div class="hero-inner">
-        <div class="hero-text">
-          <span class="hero-eyebrow">Fullstack Developer</span>
-          <h1 class="heading-lg">Hi, my name is<br><em>Diego</em></h1>
-          <p>I build full-stack apps, tinker with systems programming and love open-source.</p>
+    <!-- ABOUT -->
+    <div class="note note-white" style="grid-row: span 2;">
+      <span class="pin">📌</span>
+      <h2>About me</h2>
+      <p>I'm a <strong>Full-Stack</strong> developer who mainly works with <strong>TypeScript</strong>, <strong>Node.js</strong> and <strong>React</strong>, but I've also used <strong>Elixir</strong>, <strong>Go</strong> and <strong>Python</strong>.</p>
+      <p>I have experience building full-stack apps as well as setting up <strong>CI/CD pipelines</strong>, configuring <strong>VPS</strong> and managing <strong>DNS</strong>.</p>
+      <p>I've been a <strong>Linux</strong> user since high school and enjoy building <strong>open-source</strong> tools that solve real problems.</p>
+      <div class="tags">
+        <span class="tag">TypeScript</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">React</span>
+        <span class="tag">Go</span>
+        <span class="tag">Python</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Linux</span>
+      </div>
+    </div>
 
-          <div class="hero-links">
-            <a class="hero-link" href="https://github.com/diegorezm" target="_blank">
-              <img src="./assets/github.svg" alt="Github">
-              GitHub
-            </a>
+    <!-- CONTACT -->
+    <div class="note note-lavender" id="contact">
+      <span class="pin">📌</span>
+      <h2>Let's talk</h2>
+      <p>Feel free to reach out to collaborate, discuss opportunities, or just talk tech.</p>
+      <a href="mailto:contact@diegorezm.xyz" class="email-link">✉️ contact@diegorezm.xyz →</a>
+    </div>
 
-            <a class="hero-link" href="https://linkedin.com/in/diegorezm" target="_blank">
-              <img src="./assets/linkedin.webp" alt="Linkedin">
-              LinkedIn
-            </a>
+    <!-- PROJECTS -->
+    <div class="note note-green col-span">
+      <span class="pin">📌</span>
+      <h2>Projects</h2>
+      <div class="projects-note-grid">
 
-            <a class="hero-link" href="#contact">
-              <img src="./assets/mail.svg" alt="Email">
-              Contact
-            </a>
+        <div class="mini-card">
+          <span class="stack-label">TypeScript · Node.js · TanStack</span>
+          <h3>Vibe</h3>
+          <p>A chatbot-powered website builder that generates and modifies Next.js code based on user instructions.</p>
+          <div class="mini-links">
+            <a href="https://github.com/diegorezm/vibe" target="_blank">GitHub ↗</a>
+            <a href="https://www.linkedin.com/posts/diegorezm_ai-ia-desenvolvimento-activity-7346543173751484418-xX1n" target="_blank">Demo ↗</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section id="about">
-      <div class="section-inner">
-        <h2 class="heading-md">About</h2>
-        <p>I'm a <strong>Full-Stack</strong> developer who mainly works with <strong>TypeScript</strong>,
-          <strong>Node.js</strong> and <strong>React</strong>, but I've also used languages like
-          <strong>Elixir</strong>,
-          <strong>Go</strong> and <strong>Python</strong>.
-        </p>
-        <p>I have experience building full-stack applications as well as setting up <strong>CI/CD pipelines</strong>,
-          configuring <strong>VPS</strong> and managing <strong>DNS</strong>.</p>
-        <p>I've been a <strong>Linux</strong> user since high school and enjoy building <strong>open-source</strong>
-          tools that solve real problems.</p>
-
-        <div class="skills">
-          <span class="tag">TypeScript</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">React</span>
-          <span class="tag">Go</span>
-          <span class="tag">Python</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Linux</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="section-inner">
-        <h2 class="heading-md">Projects</h2>
-
-        <div class="projects-grid">
-
-          <div class="project-card">
-            <span class="project-tag">TypeScript · Node.js · TanStack</span>
-            <h3>Vibe</h3>
-            <p>A website builder powered by a chatbot that generates and modifies Next.js project code based on user
-              instructions.</p>
-            <div class="project-card-links">
-              <a class="button" href="https://github.com/diegorezm/vibe" target="_blank">GitHub ↗</a>
-              <a class="button"
-                href="https://www.linkedin.com/posts/diegorezm_ai-ia-desenvolvimento-activity-7346543173751484418-xX1n"
-                target="_blank">Demo ↗</a>
-            </div>
+        <div class="mini-card">
+          <span class="stack-label">TypeScript · Fastify · React</span>
+          <h3>letmeask</h3>
+          <p>AI tool that transcribes audio and lets users ask questions about the content.</p>
+          <div class="mini-links">
+            <a href="https://github.com/diegorezm/letmeask" target="_blank">GitHub ↗</a>
           </div>
-
-          <div class="project-card">
-            <span class="project-tag">TypeScript · Fastify · React</span>
-            <h3>letmeask</h3>
-            <p>A web-based AI tool that transcribes audio into text and lets users interact with the content by asking
-              questions about it.</p>
-            <div class="project-card-links">
-              <a class="button" href="https://github.com/diegorezm/letmeask" target="_blank">GitHub ↗</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <span class="project-tag">Java · Spring Boot · Redis</span>
-            <h3>FastShopping</h3>
-            <p>Performance optimization experiments on a single-node API using Spring Boot, PostgreSQL, and Redis —
-              including stress tests and benchmarks.</p>
-            <div class="project-card-links">
-              <a class="button" href="https://github.com/diegorezm/FastShopping" target="_blank">GitHub ↗</a>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <span class="project-tag">Rust · Ollama · RAG</span>
-            <h3>llm-notebook</h3>
-            <p>Ask AI about your documents — even with no internet access. Built with Rust and Ollama using
-              retrieval-augmented generation.</p>
-            <div class="project-card-links">
-              <a class="button" href="https://github.com/diegorezm/llm-notebook" target="_blank">GitHub ↗</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="section-inner contact-inner">
-        <div>
-          <h2 class="heading-md">Let's talk</h2>
-          <p>Feel free to reach out if you want to collaborate, discuss opportunities, or just talk about technology.
-          </p>
         </div>
 
-        <div class="contact-action">
-          <a class="contact-email" href="mailto:contact@diegorezm.xyz">contact@diegorezm.xyz →</a>
+        <div class="mini-card">
+          <span class="stack-label">Java · Spring Boot · Redis</span>
+          <h3>FastShopping</h3>
+          <p>Performance optimization experiments on a single-node API with PostgreSQL and Redis benchmarks.</p>
+          <div class="mini-links">
+            <a href="https://github.com/diegorezm/FastShopping" target="_blank">GitHub ↗</a>
+          </div>
         </div>
+
+        <div class="mini-card">
+          <span class="stack-label">Rust · Ollama · RAG</span>
+          <h3>llm-notebook</h3>
+          <p>Ask AI about your documents — even offline. Built with Rust and Ollama using RAG.</p>
+          <div class="mini-links">
+            <a href="https://github.com/diegorezm/llm-notebook" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
 
-    <footer>© 2026 Diego Rezende</footer>
+  </div>
 
-  </main>
+  <p class="footer-text">© 2026 Diego Rezende</p>
+
 </body>
-
 </html>

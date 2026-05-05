@@ -64,111 +64,165 @@
 
 <body>
 
-  <div class="topbar">
-    <div class="logo">Diego<span>.dev</span></div>
-    <div class="lang-wrap">
-      <span class="lang-btn active">EN</span>
-      <a class="lang-btn" href="/pt-br">PT-BR</a>
+  <!-- NAV -->
+  <nav>
+    <a class="logo" href="#">Diego.dev</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="/pt-br">PT-BR</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-badge">&#x270F;&#xFE0F; &nbsp;Fullstack Developer</div>
+    <h1>Hi, my name is<br><span>Diego</span></h1>
+    <div class="ornament">&#x2726;</div>
+    <p>I build full-stack apps, tinker with systems programming and love open-source.</p>
+    <div class="social-links">
+      <a href="https://github.com/diegorezm" target="_blank" rel="noreferrer">
+        <img src="./assets/github.svg" alt="GitHub"> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/diegorezm/" target="_blank" rel="noreferrer">
+        <img src="./assets/linkedin.webp" alt="LinkedIn"> LinkedIn
+      </a>
+    </div>
+  </header>
+
+  <!-- HIGHLIGHTS -->
+  <div class="highlights">
+    <div class="highlights-inner">
+      <div class="highlight-item">
+        <div class="icon">&#x1F5A5;&#xFE0F;</div>
+        <h3>Full-Stack</h3>
+        <p>TypeScript, React, Node.js &amp; more</p>
+      </div>
+      <div class="highlight-item">
+        <div class="icon">&#x2699;&#xFE0F;</div>
+        <h3>DevOps</h3>
+        <p>CI/CD, VPS, Docker &amp; DNS</p>
+      </div>
+      <div class="highlight-item">
+        <div class="icon">&#x1F427;</div>
+        <h3>Open-Source</h3>
+        <p>Linux enthusiast since high school</p>
+      </div>
     </div>
   </div>
 
-  <div class="board">
-
-    <!-- HERO -->
-    <div class="note note-yellow col-span" style="max-width:520px;justify-self:center;">
-      <span class="pin"></span>
-      <span class="note-label">✏️ Fullstack Developer</span>
-      <h1>Hi, my name<br>is <em>Diego</em></h1>
-      <p>I build full-stack apps, tinker with systems programming and love open-source.</p>
-      <div class="hero-links">
-        <a class="hero-link" href="https://github.com/diegorezm" target="_blank" rel="noreferrer">
-          <img src="./assets/github.svg" alt="GitHub"> GitHub
-        </a>
-        <a class="hero-link" href="https://linkedin.com/in/diegorezm" target="_blank" rel="noreferrer">
-          <img src="./assets/linkedin.webp" alt="LinkedIn"> LinkedIn
-        </a>
-        <a class="hero-link" href="mailto:contact@diegorezm.xyz">
-          <img src="./assets/mail.svg" alt="Email"> Contact
-        </a>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">&sect; 01</div>
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-frame">
+          <h3>Tech Stack</h3>
+          <div class="tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag sage-tag">Node.js</span>
+            <span class="tag rose-tag">React</span>
+            <span class="tag">Go</span>
+            <span class="tag sage-tag">Python</span>
+            <span class="tag rose-tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag sage-tag">Linux</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>I'm a <strong>Full-Stack</strong> developer who mainly works with <strong>TypeScript</strong>, <strong>Node.js</strong> and <strong>React</strong>, but I've also used <strong>Elixir</strong>, <strong>Go</strong> and <strong>Python</strong>.</p>
+          <p>I have experience building full-stack apps as well as setting up <strong>CI/CD pipelines</strong>, configuring <strong>VPS</strong> and managing <strong>DNS</strong>.</p>
+          <p>I've been a <strong>Linux</strong> user since high school and enjoy building <strong>open-source</strong> tools that solve real problems.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- ABOUT -->
-    <div class="note note-white" style="grid-row:span 2; --pin-rotate: 0deg;">
-      <span class="pin"></span>
-      <h2>About me</h2>
-      <p>I'm a <strong>Full-Stack</strong> developer who mainly works with <strong>TypeScript</strong>, <strong>Node.js</strong> and <strong>React</strong>, but I've also used <strong>Elixir</strong>, <strong>Go</strong> and <strong>Python</strong>.</p>
-      <p>I have experience building full-stack apps as well as setting up <strong>CI/CD pipelines</strong>, configuring <strong>VPS</strong> and managing <strong>DNS</strong>.</p>
-      <p>I've been a <strong>Linux</strong> user since high school and enjoy building <strong>open-source</strong> tools that solve real problems.</p>
-      <div class="skills">
-        <span class="tag">TypeScript</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">React</span>
-        <span class="tag">Go</span>
-        <span class="tag">Python</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Linux</span>
-      </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="note note-lavender" id="contact" style="--pin-rotate: -8deg;">
-      <span class="pin"></span>
-      <h2>Let's talk</h2>
-      <p>Feel free to reach out to collaborate, discuss opportunities, or just talk tech.</p>
-      <a class="contact-email" href="mailto:contact@diegorezm.xyz">✉️ contact@diegorezm.xyz →</a>
-    </div>
-
-    <!-- PROJECTS -->
-    <div class="note note-green col-span">
-      <span class="pin"></span>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label">&sect; 02</div>
       <h2>Projects</h2>
       <div class="projects-grid">
 
         <div class="project-card">
-          <span class="project-tag">TypeScript · Node.js · TanStack</span>
-          <h3>Vibe</h3>
-          <p>A chatbot-powered website builder that generates and modifies Next.js code based on user instructions.</p>
-          <div class="project-card-links">
-            <a class="button" href="https://github.com/diegorezm/vibe" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a class="button" href="https://www.linkedin.com/posts/diegorezm_ai-ia-desenvolvimento-activity-7346543173751484418-xX1n" target="_blank" rel="noreferrer">Demo ↗</a>
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="card-stack">TypeScript &middot; Node.js &middot; TanStack</div>
+            <h3>Vibe</h3>
+            <p>A chatbot-powered website builder that generates and modifies Next.js code based on user instructions.</p>
+            <div class="card-links">
+              <a href="https://github.com/diegorezm/vibe" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
+              <a href="https://www.linkedin.com/posts/diegorezm_ai-ia-desenvolvimento-activity-7346543173751484418-xX1n" target="_blank" rel="noreferrer">Demo &#x2197;</a>
+            </div>
           </div>
         </div>
 
         <div class="project-card">
-          <span class="project-tag">TypeScript · Fastify · React</span>
-          <h3>letmeask</h3>
-          <p>AI tool that transcribes audio and lets users ask questions about the content.</p>
-          <div class="project-card-links">
-            <a class="button" href="https://github.com/diegorezm/letmeask" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <div class="card-top sage"></div>
+          <div class="card-body">
+            <div class="card-stack">TypeScript &middot; Fastify &middot; React</div>
+            <h3>letmeask</h3>
+            <p>AI tool that transcribes audio and lets users ask questions about the content.</p>
+            <div class="card-links">
+              <a href="https://github.com/diegorezm/letmeask" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
+            </div>
           </div>
         </div>
 
         <div class="project-card">
-          <span class="project-tag">Java · Spring Boot · Redis</span>
-          <h3>FastShopping</h3>
-          <p>Performance optimization on a single-node API using Spring Boot, PostgreSQL and Redis.</p>
-          <div class="project-card-links">
-            <a class="button" href="https://github.com/diegorezm/FastShopping" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <div class="card-top terra"></div>
+          <div class="card-body">
+            <div class="card-stack">Java &middot; Spring Boot &middot; Redis</div>
+            <h3>FastShopping</h3>
+            <p>Performance optimization on a single-node API using Spring Boot, PostgreSQL and Redis.</p>
+            <div class="card-links">
+              <a href="https://github.com/diegorezm/FastShopping" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
+            </div>
           </div>
         </div>
 
         <div class="project-card">
-          <span class="project-tag">Rust · Ollama · RAG</span>
-          <h3>llm-notebook</h3>
-          <p>Ask AI about your documents — even offline. Built with Rust and Ollama using RAG.</p>
-          <div class="project-card-links">
-            <a class="button" href="https://github.com/diegorezm/llm-notebook" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <div class="card-top mixed"></div>
+          <div class="card-body">
+            <div class="card-stack">Rust &middot; Ollama &middot; RAG</div>
+            <h3>llm-notebook</h3>
+            <p>Ask AI about your documents &mdash; even offline. Built with Rust and Ollama using RAG.</p>
+            <div class="card-links">
+              <a href="https://github.com/diegorezm/llm-notebook" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
+  </section>
 
-  </div>
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="section-inner">
+      <div class="section-label">&sect; 03</div>
+      <h2>Let's Talk</h2>
+      <p class="sub">Feel free to reach out to collaborate, discuss opportunities, or just talk tech.</p>
+      <div class="ornament">&#x2709;&#xFE0F;</div>
+      <a class="email-link" href="mailto:contact@diegorezm.xyz">contact@diegorezm.xyz</a>
+      <div class="contact-socials">
+        <a href="https://github.com/diegorezm" target="_blank" rel="noreferrer">
+          <img src="./assets/github.svg" alt="GitHub"> GitHub &#x2197;
+        </a>
+        <a href="https://www.linkedin.com/in/diegorezm/" target="_blank" rel="noreferrer">
+          <img src="./assets/linkedin.webp" alt="LinkedIn"> LinkedIn &#x2197;
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <footer>© 2026 Diego Rezende</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Diego Rezende &nbsp;&middot;&nbsp; Built with care &nbsp;&middot;&nbsp; S&atilde;o Paulo, BR</p>
+  </footer>
 
 </body>
 </html>

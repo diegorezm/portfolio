@@ -81,6 +81,7 @@ nav ul a:hover { color: var(--terra); }
   margin-bottom: 1rem;
 }
 .hero h1 span { color: var(--terra); }
+
 .ornament {
   display: flex;
   align-items: center;
@@ -91,6 +92,7 @@ nav ul a:hover { color: var(--terra); }
   font-size: 0.85rem;
   letter-spacing: 0.2em;
 }
+
 .ornament::before, .ornament::after {
   content: '';
   display: block;
@@ -152,7 +154,23 @@ nav ul a:hover { color: var(--terra); }
   padding: 1.2rem 1rem;
   background: var(--card-bg);
 }
-.highlight-item .icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+
+.highlight-item .icon { margin-bottom: 0.4rem;  margin: }
+
+.icon img {
+	width: 1.5rem;
+}
+
+.icon-center {
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+}
+
+.icon-sm img{
+	width: 1rem;
+}
+
 .highlight-item h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1rem;

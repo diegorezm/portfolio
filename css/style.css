@@ -15,34 +15,16 @@
   --border:      #C4896F;
 }
 
+html,
 body {
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Raleway', sans-serif;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
-/* ── NAV ── */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 3rem;
-  border-bottom: 1.5px solid var(--border);
-  background: var(--terra-light);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-nav .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.08em;
-  color: var(--text);
-  text-decoration: none;
-}
-nav ul { list-style: none; display: flex; gap: 2rem; }
-nav ul a {
+.navlink {
   font-family: 'Courier Prime', monospace;
   font-size: 0.78rem;
   letter-spacing: 0.12em;

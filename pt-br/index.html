@@ -1,226 +1,397 @@
 <!DOCTYPE html>
-<html lang="pt-BR" translate="no">
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/reset.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="../css/reset.css" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="../assets/favicon/apple-touch-icon.png"
+        >
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../assets/favicon/favicon-32x32.png"
+        >
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../assets/favicon/favicon-16x16.png"
+        >
+        <link rel="manifest" href="../assets/favicon/site.webmanifest">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+        <link rel="alternate" hreflang="en" href="https://diegorezm.xyz/">
+        <link rel="alternate" hreflang="pt-BR" href="https://diegorezm.xyz/pt-br/">
 
-  <link rel="alternate" hreflang="pt-BR" href="https://diegorezm.xyz/pt-br/">
-  <link rel="alternate" hreflang="en" href="https://diegorezm.xyz/">
+        <title>Diego Rezende | Desenvolvedor Full-Stack</title>
 
-  <title>Diego Rezende | Desenvolvedor Full-Stack</title>
+        <meta
+            name="description"
+            content="Diego Rezende é um Desenvolvedor Full-Stack especializado em TypeScript, Node.js e React. Entusiasta de código aberto e usuário de Linux."
+        >
+        <meta
+            name="keywords"
+            content="Diego Rezende, Desenvolvedor Full-Stack, TypeScript,
+            Node.js, React, Go, PHP, Zig, PostgreSQL, Docker, Linux, open-source, código aberto"
+        >
+        <meta name="author" content="Diego Rezende">
+        <link rel="canonical" href="https://diegorezm.xyz/pt-br/">
 
-  <meta name="description" content="Diego Rezende é um Desenvolvedor Full-Stack especializado em TypeScript, Node.js e React. Entusiasta de open-source e usuário de Linux.">
-  <meta name="keywords" content="Diego Rezende, Desenvolvedor Full-Stack, TypeScript, Node.js, React, Go, Elixir, Zig, PostgreSQL, Docker, Linux, open-source">
-  <meta name="author" content="Diego Rezende">
-  <link rel="canonical" href="https://diegorezm.xyz/pt-br/">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://diegorezm.xyz/pt-br/">
+        <meta property="og:title" content="Diego Rezende | Desenvolvedor Full-Stack">
+        <meta
+            property="og:description"
+            content="Desenvolvedor Full-Stack especializado em TypeScript, Node.js e React. Confira meus projetos e entre em contato."
+        >
+        <meta property="og:image" content="https://diegorezm.xyz/assets/og.png">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://diegorezm.xyz/pt-br/">
-  <meta property="og:title" content="Diego Rezende | Desenvolvedor Full-Stack">
-  <meta property="og:description" content="Desenvolvedor Full-Stack especializado em TypeScript, Node.js e React. Confira meus projetos e entre em contato.">
-  <meta property="og:image" content="https://diegorezm.xyz/assets/og.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Diego Rezende | Desenvolvedor Full-Stack">
+        <meta
+            name="twitter:description"
+            content="Desenvolvedor Full-Stack especializado em TypeScript, Node.js e React"
+        >
+        <meta name="twitter:image" content="https://diegorezm.xyz/assets/og.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Diego Rezende | Desenvolvedor Full-Stack">
-  <meta name="twitter:description" content="Desenvolvedor Full-Stack especializado em TypeScript, Node.js e React.">
-  <meta name="twitter:image" content="https://diegorezm.xyz/assets/og.png">
-
-  <script type="application/ld+json">
+        <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Diego Rezende",
-    "url": "https://diegorezm.xyz",
+    "url": "https://diegorezm.xyz/pt-br/",
     "email": "contact@diegorezm.xyz",
     "jobTitle": "Desenvolvedor Full-Stack",
-    "description": "Desenvolvedor Full-Stack especializado em TypeScript, Node.js e React. Entusiasta de open-source e usuário de Linux, baseado no Brasil.",
+    "description": "Desenvolvedor Full-Stack especializado em TypeScript, Node.js e React. Entusiasta de código aberto e usuário de Linux baseado no Brasil.",
     "image": "https://diegorezm.xyz/assets/og.png",
     "sameAs": ["https://github.com/diegorezm", "https://linkedin.com/in/diegorezm"],
-    "knowsAbout": ["TypeScript","Node.js","React","Go","Python","Elixir","Zig","PostgreSQL","Docker","Linux","CI/CD","Administração de VPS","Gerenciamento de DNS"]
+    "knowsAbout": ["TypeScript","Node.js","React","Go","Python","PHP","Zig","PostgreSQL","Docker","Linux","CI/CD","VPS administration","DNS management"]
   }
   </script>
-  <script type="application/ld+json">
+        <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "Projetos de Diego Rezende",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareSourceCode", "name": "Vibe", "description": "Criador de sites com chatbot que gera e modifica o código de um projeto Next.js conforme as instruções do usuário.", "programmingLanguage": ["TypeScript", "Node.js"], "codeRepository": "https://github.com/diegorezm/vibe", "author": { "@type": "Person", "name": "Diego Rezende" } } },
-      { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareSourceCode", "name": "letmeask", "description": "Ferramenta web com IA que transcreve áudio em texto e permite ao usuário fazer perguntas sobre o conteúdo.", "programmingLanguage": ["TypeScript", "React", "Fastify"], "codeRepository": "https://github.com/diegorezm/letmeask", "author": { "@type": "Person", "name": "Diego Rezende" } } },
-      { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareSourceCode", "name": "FastShopping", "description": "Experimentos de otimização de performance em uma API Java com Spring Boot, PostgreSQL e Redis, incluindo testes de carga.", "programmingLanguage": ["Java", "Spring Boot"], "codeRepository": "https://github.com/diegorezm/FastShopping", "author": { "@type": "Person", "name": "Diego Rezende" } } },
-      { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareSourceCode", "name": "llm-notebook", "description": "Converse com seus documentos mesmo sem acesso à internet. Construído com Rust e Ollama usando RAG.", "programmingLanguage": ["Rust"], "codeRepository": "https://github.com/diegorezm/llm-notebook", "author": { "@type": "Person", "name": "Diego Rezende" } } }
+      { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareSourceCode", "name": "Vibe", "description": "Um criador de sites movido por chatbot que gera e modifica o código de projetos Next.js com base nas instruções do usuário.", "programmingLanguage": ["TypeScript", "Node.js"], "codeRepository": "https://github.com/diegorezm/vibe", "author": { "@type": "Person", "name": "Diego Rezende" } } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareSourceCode", "name": "letmeask", "description": "Uma ferramenta de IA baseada na web que transcreve áudio em texto e permite aos usuários interagir com o conteúdo fazendo perguntas sobre ele.", "programmingLanguage": ["TypeScript", "React", "Fastify"], "codeRepository": "https://github.com/diegorezm/letmeask", "author": { "@type": "Person", "name": "Diego Rezende" } } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareSourceCode", "name": "FastShopping", "description": "Experimentos de otimização de desempenho em uma API Java de nó único usando Spring Boot, PostgreSQL e Redis com testes de estresse.", "programmingLanguage": ["Java", "Spring Boot"], "codeRepository": "https://github.com/diegorezm/FastShopping", "author": { "@type": "Person", "name": "Diego Rezende" } } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareSourceCode", "name": "llm-notebook", "description": "Pergunte à IA sobre seus documentos, mesmo sem acesso à internet. Construído com Rust e Ollama usando RAG.", "programmingLanguage": ["Rust"], "codeRepository": "https://github.com/diegorezm/llm-notebook", "author": { "@type": "Person", "name": "Diego Rezende" } } }
     ]
   }
   </script>
-</head>
+    </head>
 
-<body>
+    <body>
+        <nav>
+            <span class="nav-logo">DR.</span>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Alternar menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <a class="navlink" href="/">EN</a>
-    <div class="hero-kicker">&#x2726; Disponível para trabalho</div>
-    <h1>Olá, meu nome é<br><span>Diego</span></h1>
-    <div class="ornament">&#x2726;</div>
-    <p>Desenvolvedor fullstack, focado em TypeScript, Node.js e React.</p>
-    <div class="social-links">
-      <a href="https://github.com/diegorezm" target="_blank" rel="noreferrer">
-        <img src="../assets/github.svg" alt="GitHub"> GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/diegorezm/" target="_blank" rel="noreferrer">
-        <img src="../assets/linkedin.webp" alt="LinkedIn"> LinkedIn
-      </a>
-    </div>
-  </header>
-
-  <!-- DESTAQUES -->
-  <div class="highlights">
-    <div class="highlights-inner">
-      <div class="highlight-item reveal">
-        <div class="icon icon-center">
-          <img src="../assets/computer.svg" alt="Computer">
-        </div>
-        <h3>Full-Stack</h3>
-        <p>TypeScript, React, Node.js e mais</p>
-      </div>
-      <div class="highlight-item reveal">
-        <div class="icon icon-center">
-          <img src="../assets/bolt.svg" alt="Bolt">
-        </div>
-        <h3>DevOps</h3>
-        <p>CI/CD, VPS, Docker e DNS</p>
-      </div>
-      <div class="highlight-item reveal">
-        <div class="icon icon-center">
-          <img src="../assets/linux.svg" alt="Linux Logo">
-        </div>
-        <h3>Open-Source</h3>
-        <p>Usuário de Linux desde o ensino médio</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SOBRE -->
-  <section id="about">
-    <div class="section-inner">
-      <div class="section-label">&sect; 01</div>
-      <h2>Sobre Mim</h2>
-      <div class="about-grid">
-        <div class="about-frame reveal">
-          <h3>Tech Stack</h3>
-          <div class="tags">
-            <span class="tag">TypeScript</span>
-            <span class="tag sage-tag">Node.js</span>
-            <span class="tag rose-tag">React</span>
-            <span class="tag">Go</span>
-            <span class="tag sage-tag">Python</span>
-            <span class="tag rose-tag">PostgreSQL</span>
-            <span class="tag">Docker</span>
-            <span class="tag sage-tag">Linux</span>
-          </div>
-        </div>
-        <div class="about-text reveal">
-          <p>Sou um desenvolvedor <strong>Full-Stack</strong> que trabalha principalmente com <strong>TypeScript</strong>, <strong>Node.js</strong> e <strong>React</strong>, mas também já utilizei <strong>Elixir</strong>, <strong>Go</strong> e <strong>Python</strong>.</p>
-          <p>Tenho experiência no desenvolvimento de aplicações full-stack e também na configuração de <strong>pipelines CI/CD</strong>, <strong>VPS</strong> e gerenciamento de <strong>DNS</strong>.</p>
-          <p>Sou usuário do <strong>Linux</strong> desde o ensino médio e gosto de criar ferramentas <strong>open-source</strong> que resolvem problemas reais.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJETOS -->
-  <section id="projects">
-    <div class="section-inner">
-      <div class="section-label">&sect; 02</div>
-      <h2>Projetos</h2>
-      <div class="projects-grid">
-
-        <div class="project-card reveal">
-          <div class="card-top"></div>
-          <div class="card-body">
-            <div class="card-stack">TypeScript &middot; Node.js &middot; TanStack</div>
-            <h3>Vibe</h3>
-            <p>Criador de sites com chatbot que gera e modifica o código Next.js conforme as instruções do usuário.</p>
-            <div class="card-links">
-              <a href="https://github.com/diegorezm/vibe" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
-              <a href="https://www.linkedin.com/posts/diegorezm_ai-ia-desenvolvimento-activity-7346543173751484418-xX1n" target="_blank" rel="noreferrer">Demo &#x2197;</a>
+        <section class="hero">
+            <div class="hero-inner">
+                <div>
+                    <h1>Diego<br>Re<span class="highlight">zen</span>de.</h1>
+                    <p class="hero-sub">
+                        Desenvolvo aplicações full-stack, exploro programação de sistemas e adoro código aberto.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-solid">Ver Projetos ↓</a>
+                        <a href="#contact" class="btn btn-outline">Entrar em contato</a>
+                    </div>
+                </div>
+                <div class="hero-panel">
+                    <div class="hero-tag-card">
+                        <span class="hero-tag-emoji"> </span>
+                        <img src="../assets/computer.svg" alt="Computador">
+                        <div>
+                            <div class="hero-tag-title">Full-Stack</div>
+                            <div class="hero-tag-sub">TypeScript, React, Node.js e mais</div>
+                        </div>
+                    </div>
+                    <div class="hero-tag-card">
+                        <img src="../assets/bolt.svg" alt="Raio">
+                        <div>
+                            <div class="hero-tag-title">DevOps</div>
+                            <div class="hero-tag-sub">CI/CD, VPS, Docker e DNS</div>
+                        </div>
+                    </div>
+                    <div class="hero-tag-card">
+                        <img src="../assets/linux.svg" alt="Linux">
+                        <div>
+                            <div class="hero-tag-title">Código Aberto</div>
+                            <div class="hero-tag-sub">Entusiasta de Linux desde o ensino médio</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="project-card reveal">
-          <div class="card-top sage"></div>
-          <div class="card-body">
-            <div class="card-stack">TypeScript &middot; Fastify &middot; React</div>
-            <h3>letmeask</h3>
-            <p>Ferramenta com IA que transcreve áudio e permite ao usuário fazer perguntas sobre o conteúdo.</p>
-            <div class="card-links">
-              <a href="https://github.com/diegorezm/letmeask" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
+        <div class="marquee-strip" aria-hidden="true">
+            <div class="marquee-track">
+                <span class="marquee-item">TypeScript</span>
+                <span class="marquee-item">React</span>
+                <span class="marquee-item">Node.js</span>
+                <span class="marquee-item">PHP</span>
+                <span class="marquee-item">Go</span>
+                <span class="marquee-item">Rust</span>
+                <span class="marquee-item">Docker</span>
+                <span class="marquee-item">PostgreSQL</span>
+                <span class="marquee-item">Linux</span>
+                <span class="marquee-item">CI/CD</span>
+                <span class="marquee-item">TypeScript</span>
+                <span class="marquee-item">React</span>
+                <span class="marquee-item">Node.js</span>
+                <span class="marquee-item">PHP</span>
+                <span class="marquee-item">Go</span>
+                <span class="marquee-item">Rust</span>
+                <span class="marquee-item">Docker</span>
+                <span class="marquee-item">PostgreSQL</span>
+                <span class="marquee-item">Linux</span>
+                <span class="marquee-item">CI/CD</span>
             </div>
-          </div>
         </div>
 
-        <div class="project-card reveal">
-          <div class="card-top terra"></div>
-          <div class="card-body">
-            <div class="card-stack">Java &middot; Spring Boot &middot; Redis</div>
-            <h3>FastShopping</h3>
-            <p>Otimização de performance em uma API com Spring Boot, PostgreSQL e Redis, com testes de carga.</p>
-            <div class="card-links">
-              <a href="https://github.com/diegorezm/FastShopping" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
+        <section id="about" class="section-pad">
+            <div class="container">
+                <div class="section-eyebrow">§ 01</div>
+                <h2 class="section-heading">Sobre Mim</h2>
+                <div class="about-grid">
+                    <div class="about-main reveal">
+                        <div class="about-text">
+                            <h3>Minha Stack</h3>
+                            <p>
+                                Sou um desenvolvedor <strong>Full-Stack</strong> que trabalha principalmente com <strong>TypeScript</strong>, <strong>Node.js</strong> e
+                                <strong>React</strong>, mas também já utilizei
+                                <strong>PHP</strong>, <strong>Go</strong> e
+                                <strong>Python</strong>.
+                            </p>
+                            <p>
+                                Tenho experiência na criação de aplicações full-stack, bem como na configuração de pipelines de <strong>CI/CD</strong>, configuração de
+                                <strong>VPS</strong>
+                                e gerenciamento de <strong>DNS</strong>.
+                            </p>
+                            <p>
+                                Sou usuário de <strong>Linux</strong> desde o ensino médio e gosto de criar ferramentas de <strong>código aberto</strong> que resolvem problemas reais.
+                            </p>
+                        </div>
+                        <div class="tech-stack-box">
+                            <h4>Linguagens e Ferramentas</h4>
+                            <div class="tech-chips">
+                                <span class="tech-chip">TypeScript</span>
+                                <span class="tech-chip">React</span>
+                                <span class="tech-chip">Node.js</span>
+                                <span class="tech-chip">Fastify</span>
+                                <span class="tech-chip">TanStack</span>
+                                <span class="tech-chip">PHP</span>
+                                <span class="tech-chip">Laravel</span>
+                                <span class="tech-chip">Go</span>
+                                <span class="tech-chip">Rust</span>
+                                <span class="tech-chip">Python</span>
+                                <span class="tech-chip">Docker</span>
+                                <span class="tech-chip">PostgreSQL</span>
+                                <span class="tech-chip">Redis</span>
+                                <span class="tech-chip">Linux</span>
+                                <span class="tech-chip">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stat-card reveal">
+                        <div class="stat-label">Foco principal</div>
+                        <div class="stat-big">Full<br>Stack</div>
+                    </div>
+                    <div class="about-stat-card reveal">
+                        <div class="stat-label">Código aberto & self-hosted</div>
+
+                        <div class="stat-big">
+                            <img
+                                src="../assets/linux-colored.png"
+                                alt="Linux"
+                                style="width: 8.5rem;"
+                            >
+                            <br>Linux
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="project-card reveal">
-          <div class="card-top mixed"></div>
-          <div class="card-body">
-            <div class="card-stack">Rust &middot; Ollama &middot; RAG</div>
-            <h3>llm-notebook</h3>
-            <p>Converse com seus documentos mesmo sem internet. Construído com Rust e Ollama usando RAG.</p>
-            <div class="card-links">
-              <a href="https://github.com/diegorezm/llm-notebook" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
+        <section id="projects" class="section-pad">
+            <div class="container">
+                <div class="section-eyebrow">§ 02</div>
+                <h2 class="section-heading">Projetos</h2>
+                <div class="projects-grid">
+                    <div class="project-card reveal">
+                        <div class="project-num">01</div>
+                        <div class="project-meta">TypeScript · Node.js · TanStack</div>
+                        <h3 class="project-title">Vibe</h3>
+                        <p class="project-desc">
+                            Um criador de sites movido por chatbot que gera e modifica o código Next.js com base nas instruções do usuário.
+                        </p>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/diegorezm"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                >GitHub ↗</a
+                            >
+                            <a
+                                href="#"
+                                class="project-link"
+                                style="background:var(--c-lime); border-color:var(--c-lime); color:var(--c-ink);"
+                                >Demo ↗</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal">
+                        <div class="project-num">02</div>
+                        <div class="project-meta">TypeScript · Fastify · React</div>
+                        <h3 class="project-title">letmeask</h3>
+                        <p class="project-desc">
+                            Ferramenta de IA que transcreve áudio e permite aos usuários fazer perguntas sobre o conteúdo.
+                        </p>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/diegorezm"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                >GitHub ↗</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal">
+                        <div class="project-num">03</div>
+                        <div class="project-meta">Java · Spring Boot · Redis</div>
+                        <h3 class="project-title">FastShopping</h3>
+                        <p class="project-desc">
+                            Otimização de desempenho em uma API de nó único usando Spring Boot, PostgreSQL e Redis.
+                        </p>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/diegorezm"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                >GitHub ↗</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal">
+                        <div class="project-num">04</div>
+                        <div class="project-meta">Rust · Ollama · RAG</div>
+                        <h3 class="project-title">llm-notebook</h3>
+                        <p class="project-desc">
+                            Pergunte à IA sobre seus documentos, mesmo offline. Construído com Rust e Ollama usando arquitetura RAG.
+                        </p>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/diegorezm"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                >GitHub ↗</a
+                            >
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-      </div>
-    </div>
-  </section>
+        <section id="contact" class="contact-section">
+            <div class="contact-inner">
+                <div>
+                    <p class="section-eyebrow">§ 03</p>
+                    <h2 class="contact-title">Vamos<br><span>Conversar.</span></h2>
+                    <p class="contact-sub">
+                        Sinta-se à vontade para entrar em contato para colaborar, discutir oportunidades ou apenas falar sobre tecnologia.
+                    </p>
+                    <div class="contact-socials-card">
+                        <a
+                            href="https://github.com/diegorezm"
+                            class="social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src="../assets/github.svg" alt="Logo do Github">
+                        </a>
 
-  <!-- CONTATO -->
-  <section id="contact" class="contact">
-    <div class="section-inner">
-      <div class="section-label">&sect; 03</div>
-      <h2>Vamos Conversar</h2>
-      <p class="sub">Entre em contato se quiser colaborar, discutir oportunidades ou apenas bater um papo sobre tecnologia.</p>
-      <div class="ornament icon-sm">
-        <img src="../assets/mail.svg" alt="Mail">
-      </div>
-      <a class="email-link" href="mailto:contact@diegorezm.xyz">contact@diegorezm.xyz</a>
-      <div class="contact-socials">
-        <a href="https://github.com/diegorezm" target="_blank" rel="noreferrer">
-          <img src="../assets/github.svg" alt="GitHub"> GitHub &#x2197;
-        </a>
-        <a href="https://www.linkedin.com/in/diegorezm/" target="_blank" rel="noreferrer">
-          <img src="../assets/linkedin.webp" alt="LinkedIn"> LinkedIn &#x2197;
-        </a>
-      </div>
-    </div>
-  </section>
+                        <a
+                            href="https://www.linkedin.com/in/diegorezm/"
+                            class="social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src="../assets/linkedin.webp" alt="Logo do Linkedin">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-email-card reveal">
+                    <div class="contact-email-label">
+                        <span style="display: inline-flex; gap: 0.5em;">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-mail-icon lucide-mail"
+                            >
+                                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                            </svg>
+                            Envie uma mensagem
+                        </span>
+                    </div>
+                    <div class="contact-email-addr">contact@diegorezm.xyz</div>
+                    <a
+                        href="mailto:contact@diegorezm.xyz"
+                        class="btn btn-solid-outline"
+                        style="width:100%; justify-content:center;"
+                        >Enviar e-mail →</a
+                    >
+                </div>
+            </div>
+        </section>
 
-  <!-- RODAPÉ -->
-  <footer>
-    <p>&copy; 2026 Diego Rezende</p>
-  </footer>
-
-</body>
+        <footer>
+            <div class="footer-inner">
+                <span class="footer-logo">Diego Rezende.</span>
+                <div class="footer-links">
+                    <a href="#about">Sobre</a>
+                    <a href="#projects">Projetos</a>
+                    <a
+                        href="https://github.com/diegorezm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub</a
+                    >
+                    <a href="mailto:contact@diegorezm.xyz">E-mail</a>
+                </div>
+                <span class="footer-copy">© 2026 Diego Rezende</span>
+            </div>
+        </footer>
+    </body>
 </html>

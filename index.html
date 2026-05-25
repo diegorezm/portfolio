@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="./css/reset.css" rel="stylesheet">
+		<link href="./css/style.css" rel="stylesheet">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./css/reset.css" rel="stylesheet">
-  <link href="./css/style.css" rel="stylesheet">
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./assets/favicon/apple-touch-icon.png"
+		>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon/favicon-32x32.png"
+		>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./assets/favicon/favicon-16x16.png"
+		>
+		<link rel="manifest" href="./assets/favicon/site.webmanifest">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./assets/favicon/site.webmanifest">
+		<link rel="alternate" hreflang="en" href="https://diegorezm.xyz/">
+		<link rel="alternate" hreflang="pt-BR" href="https://diegorezm.xyz/pt-br/">
 
-  <link rel="alternate" hreflang="en" href="https://diegorezm.xyz/">
-  <link rel="alternate" hreflang="pt-BR" href="https://diegorezm.xyz/pt-br/">
+		<title>Diego Rezende | Full-Stack Developer</title>
 
-  <title>Diego Rezende | Full-Stack Developer</title>
+		<meta
+			name="description"
+			content="Diego Rezende is a Full-Stack Developer specializing in TypeScript, Node.js and React. Open-source enthusiast and Linux user."
+		>
+		<meta
+			name="keywords"
+			content="Diego Rezende, Full-Stack Developer, TypeScript, Node.js,
+            React, Go, PHP, Zig, PostgreSQL, Docker, Linux, open-source"
+		>
+		<meta name="author" content="Diego Rezende">
+		<link rel="canonical" href="https://diegorezm.xyz/">
 
-  <meta name="description" content="Diego Rezende is a Full-Stack Developer specializing in TypeScript, Node.js and React. Open-source enthusiast and Linux user.">
-  <meta name="keywords" content="Diego Rezende, Full-Stack Developer, TypeScript, Node.js, React, Go, Elixir, Zig, PostgreSQL, Docker, Linux, open-source">
-  <meta name="author" content="Diego Rezende">
-  <link rel="canonical" href="https://diegorezm.xyz/">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://diegorezm.xyz/">
+		<meta property="og:title" content="Diego Rezende | Full-Stack Developer">
+		<meta
+			property="og:description"
+			content="Full-Stack Developer specializing in TypeScript, Node.js and React. Check out my projects and get in touch."
+		>
+		<meta property="og:image" content="https://diegorezm.xyz/assets/og.png">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://diegorezm.xyz/">
-  <meta property="og:title" content="Diego Rezende | Full-Stack Developer">
-  <meta property="og:description" content="Full-Stack Developer specializing in TypeScript, Node.js and React. Check out my projects and get in touch.">
-  <meta property="og:image" content="https://diegorezm.xyz/assets/og.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Diego Rezende | Full-Stack Developer">
+		<meta
+			name="twitter:description"
+			content="Full-Stack Developer specializing in TypeScript, Node.js and React"
+		>
+		<meta name="twitter:image" content="https://diegorezm.xyz/assets/og.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Diego Rezende | Full-Stack Developer">
-  <meta name="twitter:description" content="Full-Stack Developer specializing in TypeScript, Node.js and React">
-  <meta name="twitter:image" content="https://diegorezm.xyz/assets/og.png">
-
-  <script type="application/ld+json">
+		<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -44,10 +70,10 @@
     "description": "Full-Stack Developer specializing in TypeScript, Node.js and React. Open-source enthusiast and Linux user based in Brazil.",
     "image": "https://diegorezm.xyz/assets/og.png",
     "sameAs": ["https://github.com/diegorezm", "https://linkedin.com/in/diegorezm"],
-    "knowsAbout": ["TypeScript","Node.js","React","Go","Python","Elixir","Zig","PostgreSQL","Docker","Linux","CI/CD","VPS administration","DNS management"]
+    "knowsAbout": ["TypeScript","Node.js","React","Go","Python","PHP","Zig","PostgreSQL","Docker","Linux","CI/CD","VPS administration","DNS management"]
   }
   </script>
-  <script type="application/ld+json">
+		<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -60,167 +86,329 @@
     ]
   }
   </script>
-</head>
+	</head>
 
-<body>
+	<body>
+		<!-- NAV -->
+		<nav>
+			<span class="nav-logo">DR.</span>
+			<ul class="nav-links">
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<button class="hamburger" aria-label="Toggle menu">
+				<span></span><span></span><span></span>
+			</button>
+		</nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <a class="navlink" href="/pt-br">PT-BR</a>
-    <div class="hero-kicker">&#x2726; Available for work</div>
-    <h1>Hi, my name is<br><span>Diego</span></h1>
-    <div class="ornament">&#x2726;</div>
-    <p>I build full-stack apps, tinker with systems programming and love open-source.</p>
-    <div class="social-links">
-      <a href="https://github.com/diegorezm" target="_blank" rel="noreferrer">
-        <img src="./assets/github.svg" alt="GitHub"> GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/diegorezm/" target="_blank" rel="noreferrer">
-        <img src="./assets/linkedin.webp" alt="LinkedIn"> LinkedIn
-      </a>
-    </div>
-  </header>
+		<!-- HERO -->
+		<section class="hero">
+			<div class="hero-inner">
+				<div>
+					<h1>Diego<br>Re<span class="highlight">zen</span>de.</h1>
+					<p class="hero-sub">
+						I build full-stack apps, tinker with systems programming and love
+						open-source.
+					</p>
+					<div class="hero-btns">
+						<a href="#projects" class="btn btn-solid">See Projects ↓</a>
+						<a href="#contact" class="btn btn-outline">Get in touch</a>
+					</div>
+				</div>
+				<div class="hero-panel">
+					<div class="hero-tag-card">
+						<span class="hero-tag-emoji"> </span>
+						<img src="./assets/computer.svg" alt="Computer">
+						<div>
+							<div class="hero-tag-title">Full-Stack</div>
+							<div class="hero-tag-sub">TypeScript, React, Node.js & more</div>
+						</div>
+					</div>
+					<div class="hero-tag-card">
+						<img src="./assets/bolt.svg" alt="Bolt">
+						<div>
+							<div class="hero-tag-title">DevOps</div>
+							<div class="hero-tag-sub">CI/CD, VPS, Docker & DNS</div>
+						</div>
+					</div>
+					<div class="hero-tag-card">
+						<img src="./assets/linux.svg" alt="Linux">
+						<div>
+							<div class="hero-tag-title">Open-Source</div>
+							<div class="hero-tag-sub">Linux enthusiast since high school</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-  <!-- HIGHLIGHTS -->
-  <div class="highlights">
-    <div class="highlights-inner">
-      <div class="highlight-item reveal">
-        <div class="icon icon-center">
-          <img src="./assets/computer.svg" alt="Computer">
-        </div>
-        <h3>Full-Stack</h3>
-        <p>TypeScript, React, Node.js &amp; more</p>
-      </div>
-      <div class="highlight-item reveal">
-        <div class="icon icon-center">
-          <img src="./assets/bolt.svg" alt="Bolt">
-        </div>
-        <h3>DevOps</h3>
-        <p>CI/CD, VPS, Docker &amp; DNS</p>
-      </div>
-      <div class="highlight-item reveal">
-        <div class="icon icon-center">
-          <img src="./assets/linux.svg" alt="Linux Logo">
-        </div>
-        <h3>Open-Source</h3>
-        <p>Linux enthusiast since high school</p>
-      </div>
-    </div>
-  </div>
+		<!-- MARQUEE -->
+		<div class="marquee-strip" aria-hidden="true">
+			<div class="marquee-track">
+				<span class="marquee-item">TypeScript</span>
+				<span class="marquee-item">React</span>
+				<span class="marquee-item">Node.js</span>
+				<span class="marquee-item">PHP</span>
+				<span class="marquee-item">Go</span>
+				<span class="marquee-item">Rust</span>
+				<span class="marquee-item">Docker</span>
+				<span class="marquee-item">PostgreSQL</span>
+				<span class="marquee-item">Linux</span>
+				<span class="marquee-item">CI/CD</span>
+				<span class="marquee-item">TypeScript</span>
+				<span class="marquee-item">React</span>
+				<span class="marquee-item">Node.js</span>
+				<span class="marquee-item">PHP</span>
+				<span class="marquee-item">Go</span>
+				<span class="marquee-item">Rust</span>
+				<span class="marquee-item">Docker</span>
+				<span class="marquee-item">PostgreSQL</span>
+				<span class="marquee-item">Linux</span>
+				<span class="marquee-item">CI/CD</span>
+			</div>
+		</div>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-inner">
-      <div class="section-label">&sect; 01</div>
-      <h2>About Me</h2>
-      <div class="about-grid">
-        <div class="about-frame reveal">
-          <h3>Tech Stack</h3>
-          <div class="tags">
-            <span class="tag">TypeScript</span>
-            <span class="tag sage-tag">Node.js</span>
-            <span class="tag rose-tag">React</span>
-            <span class="tag">Go</span>
-            <span class="tag sage-tag">Python</span>
-            <span class="tag rose-tag">PostgreSQL</span>
-            <span class="tag">Docker</span>
-            <span class="tag sage-tag">Linux</span>
-          </div>
-        </div>
-        <div class="about-text reveal">
-          <p>I'm a <strong>Full-Stack</strong> developer who mainly works with <strong>TypeScript</strong>, <strong>Node.js</strong> and <strong>React</strong>, but I've also used <strong>Elixir</strong>, <strong>Go</strong> and <strong>Python</strong>.</p>
-          <p>I have experience building full-stack apps as well as setting up <strong>CI/CD pipelines</strong>, configuring <strong>VPS</strong> and managing <strong>DNS</strong>.</p>
-          <p>I've been a <strong>Linux</strong> user since high school and enjoy building <strong>open-source</strong> tools that solve real problems.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+		<!-- ABOUT -->
+		<section id="about" class="section-pad">
+			<div class="container">
+				<div class="section-eyebrow">§ 01</div>
+				<h2 class="section-heading">About Me</h2>
+				<div class="about-grid">
+					<div class="about-main reveal">
+						<div class="about-text">
+							<h3>Tech Stack</h3>
+							<p>
+								I'm a <strong>Full-Stack</strong> developer who mainly works
+								with <strong>TypeScript</strong>, <strong>Node.js</strong> and
+								<strong>React</strong>, but I've also used
+								<strong>PHP</strong>, <strong>Go</strong> and
+								<strong>Python</strong>.
+							</p>
+							<p>
+								I have experience building full-stack apps as well as setting up
+								<strong>CI/CD pipelines</strong>, configuring
+								<strong>VPS</strong>
+								and managing <strong>DNS</strong>.
+							</p>
+							<p>
+								I've been a <strong>Linux</strong> user since high school and
+								enjoy building <strong>open-source</strong> tools that solve
+								real problems.
+							</p>
+						</div>
+						<div class="tech-stack-box">
+							<h4>Languages & Tools</h4>
+							<div class="tech-chips">
+								<span class="tech-chip">TypeScript</span>
+								<span class="tech-chip">React</span>
+								<span class="tech-chip">Node.js</span>
+								<span class="tech-chip">Fastify</span>
+								<span class="tech-chip">TanStack</span>
+								<span class="tech-chip">PHP</span>
+								<span class="tech-chip">Laravel</span>
+								<span class="tech-chip">Go</span>
+								<span class="tech-chip">Rust</span>
+								<span class="tech-chip">Python</span>
+								<span class="tech-chip">Docker</span>
+								<span class="tech-chip">PostgreSQL</span>
+								<span class="tech-chip">Redis</span>
+								<span class="tech-chip">Linux</span>
+								<span class="tech-chip">CI/CD</span>
+							</div>
+						</div>
+					</div>
+					<div class="about-stat-card reveal">
+						<div class="stat-label">Primary focus</div>
+						<div class="stat-big">Full<br>Stack</div>
+					</div>
+					<div class="about-stat-card reveal">
+						<div class="stat-label">Open-source & self-hosted</div>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-inner">
-      <div class="section-label">&sect; 02</div>
-      <h2>Projects</h2>
-      <div class="projects-grid">
+						<div class="stat-big">
+							<img
+								src="./assets/linux-colored.png"
+								alt="Linux"
+								style="width: 8.5rem;"
+							>
+							<br>Linux
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-        <div class="project-card reveal">
-          <div class="card-top"></div>
-          <div class="card-body">
-            <div class="card-stack">TypeScript &middot; Node.js &middot; TanStack</div>
-            <h3>Vibe</h3>
-            <p>A chatbot-powered website builder that generates and modifies Next.js code based on user instructions.</p>
-            <div class="card-links">
-              <a href="https://github.com/diegorezm/vibe" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
-              <a href="https://www.linkedin.com/posts/diegorezm_ai-ia-desenvolvimento-activity-7346543173751484418-xX1n" target="_blank" rel="noreferrer">Demo &#x2197;</a>
-            </div>
-          </div>
-        </div>
+		<!-- PROJECTS -->
+		<section id="projects" class="section-pad">
+			<div class="container">
+				<div class="section-eyebrow">§ 02</div>
+				<h2 class="section-heading">Projects</h2>
+				<div class="projects-grid">
+					<div class="project-card reveal">
+						<div class="project-num">01</div>
+						<div class="project-meta">TypeScript · Node.js · TanStack</div>
+						<h3 class="project-title">Vibe</h3>
+						<p class="project-desc">
+							A chatbot-powered website builder that generates and modifies
+							Next.js code based on user instructions.
+						</p>
+						<div class="project-links">
+							<a
+								href="https://github.com/diegorezm"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="project-link"
+								>GitHub ↗</a
+							>
+							<a
+								href="#"
+								class="project-link"
+								style="background:var(--c-lime); border-color:var(--c-lime); color:var(--c-ink);"
+								>Demo ↗</a
+							>
+						</div>
+					</div>
 
-        <div class="project-card reveal">
-          <div class="card-top sage"></div>
-          <div class="card-body">
-            <div class="card-stack">TypeScript &middot; Fastify &middot; React</div>
-            <h3>letmeask</h3>
-            <p>AI tool that transcribes audio and lets users ask questions about the content.</p>
-            <div class="card-links">
-              <a href="https://github.com/diegorezm/letmeask" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
-            </div>
-          </div>
-        </div>
+					<div class="project-card reveal">
+						<div class="project-num">02</div>
+						<div class="project-meta">TypeScript · Fastify · React</div>
+						<h3 class="project-title">letmeask</h3>
+						<p class="project-desc">
+							AI tool that transcribes audio and lets users ask questions about
+							the content.
+						</p>
+						<div class="project-links">
+							<a
+								href="https://github.com/diegorezm"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="project-link"
+								>GitHub ↗</a
+							>
+						</div>
+					</div>
 
-        <div class="project-card reveal">
-          <div class="card-top terra"></div>
-          <div class="card-body">
-            <div class="card-stack">Java &middot; Spring Boot &middot; Redis</div>
-            <h3>FastShopping</h3>
-            <p>Performance optimization on a single-node API using Spring Boot, PostgreSQL and Redis.</p>
-            <div class="card-links">
-              <a href="https://github.com/diegorezm/FastShopping" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
-            </div>
-          </div>
-        </div>
+					<div class="project-card reveal">
+						<div class="project-num">03</div>
+						<div class="project-meta">Java · Spring Boot · Redis</div>
+						<h3 class="project-title">FastShopping</h3>
+						<p class="project-desc">
+							Performance optimization on a single-node API using Spring Boot,
+							PostgreSQL and Redis.
+						</p>
+						<div class="project-links">
+							<a
+								href="https://github.com/diegorezm"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="project-link"
+								>GitHub ↗</a
+							>
+						</div>
+					</div>
 
-        <div class="project-card reveal">
-          <div class="card-top mixed"></div>
-          <div class="card-body">
-            <div class="card-stack">Rust &middot; Ollama &middot; RAG</div>
-            <h3>llm-notebook</h3>
-            <p>Ask AI about your documents &mdash; even offline. Built with Rust and Ollama using RAG.</p>
-            <div class="card-links">
-              <a href="https://github.com/diegorezm/llm-notebook" target="_blank" rel="noreferrer">GitHub &#x2197;</a>
-            </div>
-          </div>
-        </div>
+					<div class="project-card reveal">
+						<div class="project-num">04</div>
+						<div class="project-meta">Rust · Ollama · RAG</div>
+						<h3 class="project-title">llm-notebook</h3>
+						<p class="project-desc">
+							Ask AI about your documents, even offline. Built with Rust and
+							Ollama using RAG architecture.
+						</p>
+						<div class="project-links">
+							<a
+								href="https://github.com/diegorezm"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="project-link"
+								>GitHub ↗</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-      </div>
-    </div>
-  </section>
+		<!-- CONTACT -->
+		<section id="contact" class="contact-section">
+			<div class="contact-inner">
+				<div>
+					<p class="section-eyebrow">§ 03</p>
+					<h2 class="contact-title">Let's<br><span>Talk.</span></h2>
+					<p class="contact-sub">
+						Feel free to reach out to collaborate, discuss opportunities, or
+						just talk tech.
+					</p>
+					<div class="contact-socials-card">
+						<a
+							href="https://github.com/diegorezm"
+							class="social-link"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img src="./assets/github.svg" alt="Github Logo">
+						</a>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="section-inner">
-      <div class="section-label">&sect; 03</div>
-      <h2>Let's Talk</h2>
-      <p class="sub">Feel free to reach out to collaborate, discuss opportunities, or just talk tech.</p>
-      <div class="ornament icon-sm">
-        <img src="./assets/mail.svg" alt="Mail">
-      </div>
-      <a class="email-link" href="mailto:contact@diegorezm.xyz">contact@diegorezm.xyz</a>
-      <div class="contact-socials">
-        <a href="https://github.com/diegorezm" target="_blank" rel="noreferrer">
-          <img src="./assets/github.svg" alt="GitHub"> GitHub &#x2197;
-        </a>
-        <a href="https://www.linkedin.com/in/diegorezm/" target="_blank" rel="noreferrer">
-          <img src="./assets/linkedin.webp" alt="LinkedIn"> LinkedIn &#x2197;
-        </a>
-      </div>
-    </div>
-  </section>
+						<a
+							href="https://www.linkedin.com/in/diegorezm/"
+							class="social-link"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img src="./assets/linkedin.webp" alt="Linkedin Logo">
+						</a>
+					</div>
+				</div>
+				<div class="contact-email-card reveal">
+					<div class="contact-email-label">
+						<span style="display: inline-flex; gap: 0.5em;">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="lucide lucide-mail-icon lucide-mail"
+							>
+								<path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+								<rect x="2" y="4" width="20" height="16" rx="2" />
+							</svg>
+							Drop me a line
+						</span>
+					</div>
+					<div class="contact-email-addr">contact@diegorezm.xyz</div>
+					<a
+						href="mailto:contact@diegorezm.xyz"
+						class="btn btn-solid-outline"
+						style="width:100%; justify-content:center;"
+						>Send email →</a
+					>
+				</div>
+			</div>
+		</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Diego Rezende</p>
-  </footer>
-
-</body>
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer-inner">
+				<span class="footer-logo">Diego Rezende.</span>
+				<div class="footer-links">
+					<a href="#about">About</a>
+					<a href="#projects">Projects</a>
+					<a
+						href="https://github.com/diegorezm"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						GitHub</a
+					>
+					<a href="mailto:contact@diegorezm.xyz">Email</a>
+				</div>
+				<span class="footer-copy">© 2026 Diego Rezende</span>
+			</div>
+		</footer>
+	</body>
 </html>

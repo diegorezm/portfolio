@@ -8,6 +8,7 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://diegorezm.xyz/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://diegorezm.xyz/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diegorezm.xyz/"/>
   </url>
   <url>
     <loc>https://diegorezm.xyz/pt-br/</loc>
@@ -16,5 +17,6 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://diegorezm.xyz/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://diegorezm.xyz/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://diegorezm.xyz/"/>
   </url>
 </urlset>
